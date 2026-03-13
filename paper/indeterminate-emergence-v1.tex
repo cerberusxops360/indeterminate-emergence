@@ -1,0 +1,768 @@
+\documentclass[11pt,a4paper]{article}
+
+% === ENCODING & FONTS ===
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% === MATH ===
+\usepackage{amsmath,amssymb,amsthm}
+
+% === LAYOUT ===
+\usepackage[margin=1in,headheight=14.5pt]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% === TABLES ===
+\usepackage{booktabs}
+\usepackage{array}
+
+% === HYPERLINKS ===
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% === BIBLIOGRAPHY ===
+\usepackage[numbers,sort&compress]{natbib}
+
+% === HEADERS ===
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{Bishop --- Indeterminate Emergence}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% === THEOREM ENVIRONMENTS ===
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\title{%
+  \textbf{Epistemic Security via Indeterminate Emergence}\\[0.3em]
+  \Large Theory and Application of Absence-Preserving Action Systems
+}
+
+\author{%
+  Adam Bishop\\
+  XOps360 LLC\\
+  \href{https://orcid.org/0009-0000-4569-3726}{ORCID: 0009-0000-4569-3726}
+}
+
+\date{March 2026\\[0.5em]\small Preprint --- submitted to IACR Cryptology ePrint Archive\\
+\small License: CC BY 4.0}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+%% ============================================================
+%% ABSTRACT
+%% ============================================================
+\begin{abstract}
+Traditional security systems rely on the concealment of information through cryptographic transformation. In contrast, this paper reconstructs security from first principles, focusing on the \textit{intent} of encryption rather than its historical form. We propose a new security primitive based on \textbf{indeterminate emergence}, wherein meaningful information or system effects do not exist outside authorized contexts and are indistinguishable from non-existence or benign noise to unauthorized observers.
+
+We formalize this primitive using transcript-level indistinguishability over designer-specified hypothesis pairs, drawing on the Pufferfish privacy framework to define composable leakage bounds across adaptive interaction sequences. We introduce a three-plane model (observation, assumption, and action) and define a class of systems capable of real-world efficacy without information collapse. Central to this design is \textbf{absorptive execution}, a mode in which systems maintain computationally indistinguishable observational signals while silently nullifying effects under elevated inference risk.
+
+We define explicit adversary models, prove security properties against each, provide a concrete instantiation for AI capability-set inference resistance, and position the framework against differential privacy, deniable encryption, ORAM, and zero-knowledge proofs. We analyze buildability, limits, and failure modes, and discuss applications in autonomous systems, AI governance, and secure pipelines.
+\end{abstract}
+
+%% ============================================================
+%% 1. INTRODUCTION
+%% ============================================================
+\section{Introduction}
+
+Security has historically been framed as the protection of representations: secrets are encoded, transmitted, and decoded under the assumption that adversaries may observe everything except keys. While effective for confidentiality, this model is poorly aligned with modern systems where the primary risk is not disclosure but \textbf{unintended capability emergence}, inference, or misuse.
+
+This work asks:
+
+\begin{quote}
+If we discard all existing definitions of encryption but retain its intent, what should a secure system look like?
+\end{quote}
+
+Our answer replaces secrecy with \textbf{epistemic indeterminacy}: a formal guarantee that no feasible adversary can determine, through observation of a system's behavior, whether meaningful structure, capability, or effect exists.
+
+\textbf{Contributions.} We make four contributions:
+
+\begin{enumerate}
+  \item A formal security primitive, indeterminate emergence, defined over hypothesis-pair indistinguishability in the Pufferfish framework, with composable leakage bounds.
+  \item Absorptive execution: a degradation mode that enforces the leakage budget by silently nullifying effects while maintaining observational invariance.
+  \item Explicit adversary models (passive, active adaptive, insider, colluding endpoint) with per-model security guarantees.
+  \item A concrete instantiation demonstrating capability-set inference resistance for AI agent systems.
+\end{enumerate}
+
+%% ============================================================
+%% 2. RECONSTRUCTION OF INTENT
+%% ============================================================
+\section{Reconstruction of Intent}
+
+The irreducible intent behind encryption is not scrambling symbols, but ensuring that:
+
+\begin{quote}
+Artifacts may exist, move, and act in hostile environments such that only intended situations can produce meaning or effect.
+\end{quote}
+
+This reframing reveals that:
+
+\begin{itemize}
+  \item ``Unreadable'' is weaker than ``non-existent.'' A ciphertext announces that a secret exists; indeterminate emergence does not.
+  \item Silence can be informative. A system that refuses access leaks the existence of something worth refusing.
+  \item Preventing \textit{knowledge formation} may be more important than hiding data. Inference from behavioral patterns can be as damaging as key compromise.
+\end{itemize}
+
+%% ============================================================
+%% 3. SYSTEM MODEL
+%% ============================================================
+\section{System Model}
+
+\subsection{Observation Plane}
+
+The observation plane defines everything an external observer can measure: outputs, timing, errors, silence, rates, and resource usage.
+
+Let:
+\begin{itemize}
+  \item $S \in \mathcal{S}$: hidden system state
+  \item $a \in \mathcal{A}$: action taken by an external actor
+  \item $O \in \mathcal{O}$: observable output
+  \item $E \in \mathcal{E}$: effect space (world-changing outcomes)
+\end{itemize}
+
+The system is defined by:
+
+\textbf{Observation Channel:}
+\begin{equation}
+O \sim C(O \mid S, a)
+\end{equation}
+
+\textbf{Effect Function:}
+\begin{equation}
+E = F(S, a)
+\end{equation}
+
+Security concerns the information content of $O$, not the internal structure of $S$.
+
+\textbf{Observation scope.} We define the adversary's total observation at time $t$ as:
+\begin{equation}
+O_t = (O^{sys}_t, O^{env}_t)
+\end{equation}
+
+where $O^{sys}_t$ captures system-emitted signals (responses, timing, resource signatures) and $O^{env}_t$ captures environmentally mediated signals (downstream effects observable through the world). Security guarantees are parameterized by the adversary's accessible observation set; claims are scoped accordingly (see Section~\ref{sec:adversary}).
+
+\subsection{Assumptive Plane}
+
+Observers maintain beliefs over hypotheses $H$. Let $P_t(H)$ denote the belief distribution at time $t$, updated via:
+\begin{equation}
+P_{t+1}(H) = U(P_t(H), O_t, a_t)
+\end{equation}
+
+We define \textbf{epistemic collapse} as:
+\begin{equation}
+\exists H^* \subset H_{sens} : P_t(H^*) \to 1
+\end{equation}
+
+where $H_{sens}$ represents sensitive hypotheses. Importantly, certainty about \textit{absence} is also information leakage: learning that a system definitely lacks a capability is itself a collapse event.
+
+\subsection{Action Plane}
+
+Attackers learn by acting. Penetration is active experimentation.
+
+A secure system must allow real effects (efficacy) without producing learnable evidence. This yields the core constraint, formalized in the next section.
+
+%% ============================================================
+%% 4. FORMAL SECURITY MODEL
+%% ============================================================
+\section{Formal Security Model}
+
+\subsection{Secrets, Discriminators, and Adjacency}
+
+We adopt a Pufferfish-style framework~\cite{kifer2014pufferfish} to define security over designer-specified hypothesis pairs rather than neighboring databases.
+
+\textbf{Secrets.} Let $\mathcal{S}^* = \{s_i\}$ be a set of protected facts about the system (e.g., ``tool $X$ is in the capability set,'' ``the system is in absorption mode,'' ``policy $P$ is active''). These are specified by the system designer.
+
+\textbf{Discriminative pairs.} Let $\mathcal{D} = \{(s_i, s_j)\}$ be pairs of secrets the adversary should not be able to distinguish. For example: (tool $X$ exists, tool $X$ does not exist).
+
+\textbf{Observation mechanism.} Let $\mathcal{M}$ be the mechanism that generates transcripts given secrets and actions:
+\begin{equation}
+T_n = (a_1, O_1, a_2, O_2, \ldots, a_n, O_n) \sim \mathcal{M}(s, a_{1:n})
+\end{equation}
+
+where the adversary adaptively selects $a_t$ based on prior observations $T_{t-1}$.
+
+\subsection{Transcript Indistinguishability}
+
+\begin{definition}[Epistemic Security]\label{def:epistemic-security}
+A system satisfies $(\varepsilon, \delta)$-epistemic security with respect to secret set $\mathcal{S}^*$ and discriminative pairs $\mathcal{D}$ if for all $(s_i, s_j) \in \mathcal{D}$, all adaptive adversaries, and all measurable transcript sets $\mathcal{T}$:
+\begin{equation}\label{eq:indist}
+\Pr[T_n \in \mathcal{T} \mid s_i] \le e^{\varepsilon} \Pr[T_n \in \mathcal{T} \mid s_j] + \delta
+\end{equation}
+\end{definition}
+
+This definition provides:
+\begin{itemize}
+  \item \textbf{Composability.} Standard and advanced composition theorems~\cite{dwork2010boosting} apply directly. Under $k$-fold adaptive composition, the total privacy loss is bounded by $O(\sqrt{k \ln(1/\delta')} \cdot \varepsilon)$.
+  \item \textbf{Operational meaning.} No hypothesis test applied to transcripts can distinguish $s_i$ from $s_j$ with advantage greater than $e^\varepsilon - 1 + \delta$.
+  \item \textbf{Hypothesis-pair flexibility.} Unlike standard DP, the adjacency relation is domain-specific, defined by the designer over the secrets that matter.
+\end{itemize}
+
+\subsection{Leakage Budget}
+
+\begin{definition}[Leakage Budget]\label{def:budget}
+Each system context is assigned a total leakage budget $B = (\varepsilon_{total}, \delta_{total})$. The system maintains a privacy accountant that tracks cumulative leakage across interactions. At each step $t$, the interaction consumes $(\varepsilon_t, \delta_t)$ from the budget. The system enforces:
+\begin{equation}\label{eq:budget}
+\sum_{t=1}^{n} \varepsilon_t \le \varepsilon_{total}, \quad 1 - \prod_{t=1}^{n}(1 - \delta_t) \le \delta_{total}
+\end{equation}
+(or tighter bounds under advanced composition).
+\end{definition}
+
+When the budget is exhausted, the system transitions to absorption mode (Section~\ref{sec:absorptive}).
+
+\subsection{Non-Collapse Guarantee}
+
+\begin{theorem}[Non-Collapse]\label{thm:noncollapse}
+Under $(\varepsilon, \delta)$-epistemic security with budget $B$, for all adaptive adversaries with query access bounded only by the budget, and for all discriminative pairs $(s_i, s_j) \in \mathcal{D}$:
+\begin{equation}\label{eq:noncollapse}
+P(s_i \mid T_n) \le \frac{e^{\varepsilon_{total}} P(s_i)}{e^{\varepsilon_{total}} P(s_i) + (1 - \delta_{total})(1 - P(s_i))}
+\end{equation}
+where $P(s_i)$ is the adversary's prior. For small $\varepsilon_{total}$ and $\delta_{total}$, posterior concentration is bounded and epistemic collapse is prevented.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Follows from the definition of transcript indistinguishability and Bayes' rule. The $e^\varepsilon$ likelihood ratio bound limits how far the posterior can shift from the prior.
+\end{proof}
+
+%% ============================================================
+%% 5. ARCHITECTURE
+%% ============================================================
+\section{Architecture}
+
+\subsection{Sealed Capability Actuation}
+
+Efficacy is provided by a sealed capability actuator:
+
+\begin{itemize}
+  \item \textbf{Intent Interface.} Accepts standardized action forms specifying \textit{intent}, not implementation. The interface exposes a fixed, public action vocabulary.
+  \item \textbf{Capability Token.} Encodes authorized action classes, rate limits, and budget allotments for the current session. Token contents are opaque to the interface.
+  \item \textbf{Policy Verifier.} Checks the action request against the capability token and emits a fixed-format, non-informative receipt. All receipts have identical structure regardless of outcome.
+  \item \textbf{Sealed Executor.} Interprets and acts using protected context. Operates within a defined isolation boundary (process isolation, TEE, or equivalent). The executor's internal state, memory access patterns, and computation are non-observable from outside the boundary.
+  \item \textbf{Channel Shaper.} Enforces observational invariance: constant-rate output, fixed-size responses, bounded timing variance. Ensures $O^{sys}$ is drawn from a state-independent distribution up to the tolerance $\eta$.
+  \item \textbf{Effect Committer.} The single point at which effects leave the system boundary. Applies effects conditionally based on mode.
+\end{itemize}
+
+\subsection{Absorptive Execution}\label{sec:absorptive}
+
+Rather than denial or shutdown, systems enter \textbf{absorption mode} when the leakage budget is near exhaustion or under elevated inference risk.
+
+\textbf{Normal Mode:}
+\begin{equation}
+O \sim Q(O \mid a), \quad E = F(S, a)
+\end{equation}
+
+\textbf{Absorption Mode:}
+\begin{equation}
+O \sim Q(O \mid a), \quad E = \varnothing
+\end{equation}
+
+\textbf{Indistinguishability claim (computational).} For any PPT distinguisher $\mathcal{D}$:
+\begin{equation}
+\left|\Pr[\mathcal{D}(O^{sys}_{1:n}) = 1 \mid \text{Normal}] - \Pr[\mathcal{D}(O^{sys}_{1:n}) = 1 \mid \text{Absorb}]\right| \le \text{negl}(\lambda)
+\end{equation}
+
+\textbf{Indistinguishability claim (statistical, implementer's target).} Under the Resource Trace Model (defined below):
+\begin{equation}
+D_{TV}\big(P(O^{sys} \mid \text{Normal}, h, a),\; P(O^{sys} \mid \text{Absorb}, h, a)\big) \le \eta
+\end{equation}
+
+\textbf{Resource Trace Model.} To make the indistinguishability claims meaningful, we specify what the adversary can observe about execution:
+
+\begin{itemize}
+  \item \textbf{Level 1 (network-only):} Adversary sees response content and coarse timing (e.g., round-trip time at millisecond granularity). This is the weakest adversary and the easiest to satisfy.
+  \item \textbf{Level 2 (system-level):} Adversary additionally observes system call traces, memory allocation patterns, and fine-grained timing.
+  \item \textbf{Level 3 (co-located):} Adversary shares hardware and can observe cache timing, power consumption, or EM emanations.
+\end{itemize}
+
+Claims at Level~1 are achievable with standard channel shaping (fixed-size responses, padded timing, constant-rate I/O). Levels~2 and~3 require increasingly constrained execution environments (dedicated processes, TEEs) and are analogous to the challenges faced by constant-time cryptographic implementations~\cite{bernstein2005cache, coppens2009practical}.
+
+\textbf{Engineering requirement.} In absorption mode, the sealed executor must perform a \textit{dummy computation} of equivalent resource profile to the real computation, not simply no-op. This ensures resource-trace indistinguishability at the appropriate level.
+
+\textbf{Key property.} Absorption is the mechanism that enforces the leakage budget. Once the budget is exhausted, absorption ensures no further leakage (up to $\eta$). The budget is the policy; absorption is the enforcement; the composition theorem is the guarantee.
+
+\subsection{Absorption Transition and Meta-Leakage}
+
+The transition to absorption mode must itself be non-informative.
+
+\textbf{Budget uniformity.} If different contexts receive different budgets based on sensitivity, the onset of absorption reveals sensitivity level. Two mitigations:
+
+\begin{enumerate}
+  \item \textbf{Uniform budgets:} All contexts receive identical budgets regardless of actual sensitivity. Eliminates the inference but wastes budget on non-sensitive interactions.
+  \item \textbf{Randomized thresholds:} Absorption onset is stochastic: the system may enter absorption before budget exhaustion with some probability. The adversary observes absorption but cannot determine whether it was triggered by budget exhaustion or random early cutoff.
+\end{enumerate}
+
+\textbf{Stickiness.} Once a context enters absorption, it remains absorbed until an out-of-band reset by an authorized party. This prevents adversaries from probing the absorption boundary by testing whether the system ``comes back.''
+
+\textbf{DoS consideration.} An adversary who makes many queries can exhaust the budget and force absorption, effectively denying service. Mitigations include identity-bound budget partitioning (each identity gets an independent budget) and rate limiting at the intent interface. Note that identity binding is itself a design constraint: if identities are free, partitioning is ineffective. This represents a safety-over-liveness tradeoff that should be explicit in deployment.
+
+%% ============================================================
+%% 6. ADVERSARY MODELS
+%% ============================================================
+\section{Adversary Models and Security Claims}\label{sec:adversary}
+
+We define four adversary classes, in order of increasing power, and state which security properties hold against each.
+
+\subsection{Passive Transcript Observer}
+
+\textbf{Capability.} Observes $O^{sys}$ only (network responses and coarse timing). Cannot inject actions.
+
+\textbf{Security claim.} For all discriminative pairs $(s_i, s_j) \in \mathcal{D}$:
+\begin{equation}
+\Pr[T_n \in \mathcal{T} \mid s_i] \le e^{\varepsilon} \Pr[T_n \in \mathcal{T} \mid s_j] + \delta
+\end{equation}
+
+This is the strongest guarantee and follows directly from the observation channel design and channel shaping.
+
+\subsection{Active Adaptive Querier}
+
+\textbf{Capability.} Chooses actions $a_t$ adaptively based on prior observations $T_{t-1}$. Bounded to $n$ queries (or bounded by budget depletion, whichever comes first).
+
+\textbf{Security claim.} Transcript indistinguishability holds under adaptive composition. After budget exhaustion, absorption ensures:
+\begin{equation}
+I(H_{sens}; O^{sys}_{t} \mid T_{t-1}, a_t) \le \eta \quad \forall t > t_{absorb}
+\end{equation}
+
+\textbf{Note on replay.} If the adversary replays the same action to average out noise, each replay is a query that consumes budget. The adversary trades budget for variance reduction. The composition theorem accounts for this: the total leakage is bounded regardless of whether queries are novel or repeated. Replay detection is therefore not strictly necessary for security, though it may be desirable for efficiency (preserving budget for legitimate interactions).
+
+\subsection{Insider with Partial Context}
+
+\textbf{Capability.} Observes all signals outside the sealed executor boundary: intent interface inputs, policy verifier decisions, capability token metadata (but not token contents), timing of commits, and any logs produced by components outside the executor.
+
+\textbf{Security claim.} Indistinguishability holds for secrets whose distinguishing information is contained entirely within the sealed executor. The insider \textit{may} learn whether absorption has occurred (depending on the execution model) and \textit{may} learn capability token metadata. These leakages are explicitly scoped:
+\begin{equation}
+I(H_{sens}^{exec}; O^{insider}_t \mid T_{t-1}) \le \varepsilon_{insider}
+\end{equation}
+
+where $H_{sens}^{exec}$ denotes secrets fully contained within the executor, and $\varepsilon_{insider}$ is quantified for the specific boundary implementation.
+
+\textbf{Residual risk.} Secrets that span the executor boundary (e.g., the existence of a capability token for a specific action class, if token metadata reveals this) are not protected against insiders. This is a fundamental limit, not a failure of the framework.
+
+\subsection{Colluding Endpoint}
+
+\textbf{Capability.} The entity that receives effects (API, database, physical actuator) is adversarial or compromised. It can observe whether real effects arrived and correlate with action timing.
+
+\textbf{Security claim.} The framework \textbf{does not} protect against this adversary for effect-existence secrets. If the adversary receives effects, it knows effects occurred. This is a fundamental limit: you cannot hide effects from their recipient.
+
+However, the framework \textit{does} protect all non-endpoint observers: for any party whose observation set does not include $O^{env}$ at the effect endpoint, the full transcript indistinguishability guarantee holds.
+
+\textbf{Formal scoping.} For adversary $\mathcal{A}$ with observation set $\mathcal{O}_\mathcal{A}$:
+\begin{itemize}
+  \item If $O^{env}_{endpoint} \notin \mathcal{O}_\mathcal{A}$: full $(\varepsilon, \delta)$-epistemic security holds.
+  \item If $O^{env}_{endpoint} \in \mathcal{O}_\mathcal{A}$: only $O^{sys}$-based properties hold; effect existence is revealed.
+\end{itemize}
+
+%% ============================================================
+%% 7. WORKED EXAMPLE
+%% ============================================================
+\section{Worked Example: AI Capability-Set Inference Resistance}
+
+We instantiate the framework for a concrete and timely problem: preventing an external observer from determining which tools an AI agent has access to.
+
+\subsection{Setting}
+
+An AI agent operates with access to a tool registry (file system, web APIs, code execution, database queries). An external observer watches the agent's API calls and outputs. The adversary's goal is to determine the agent's \textbf{capability set}---which tools are authorized for the current session.
+
+\textbf{Why this matters.} Knowledge of the capability set enables targeted attacks: social engineering the agent toward a capability it has but shouldn't use in context, inferring organizational security posture from capability footprint, or identifying high-value targets by capability profile.
+
+\subsection{Mapping to Framework}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}p{4cm}p{8.5cm}@{}}
+\toprule
+\textbf{Framework Component} & \textbf{Instantiation} \\
+\midrule
+Secrets $\mathcal{S}^*$ & Which tools are in the capability set \\
+Discriminative pairs $\mathcal{D}$ & (tool $X$ present, tool $X$ absent) for each tool $X$ \\
+Intent Interface & Natural-language action requests from the agent \\
+Capability Token & Session-specific tool authorization list + budget \\
+Policy Verifier & Checks request against token; emits fixed-format receipt \\
+Sealed Executor & Invokes tool or enters absorption \\
+Channel Shaper & Fixed-size responses; padded latency; constant-rate output \\
+Effect Committer & Passes tool output to agent (or returns null result) \\
+\bottomrule
+\end{tabular}
+\caption{Mapping of framework components to the AI capability-set inference resistance instantiation.}
+\label{tab:mapping}
+\end{table}
+
+\subsection{Observation Channel Design}
+
+The critical design requirement is that the following three scenarios produce indistinguishable observations:
+
+\begin{enumerate}
+  \item \textbf{Tool not available:} Agent requests tool $X$, which is not in the capability set.
+  \item \textbf{Tool available, request denied by policy:} Tool $X$ is available, but the current request violates a policy constraint.
+  \item \textbf{Tool available, executed, returned empty:} Tool $X$ is available, request is permitted, execution occurs, but the result is empty or null.
+\end{enumerate}
+
+For all three cases, the observation channel emits:
+\begin{equation}
+O = (\texttt{receipt}_{fixed}, \texttt{payload}_{null}, \texttt{timing}_{padded})
+\end{equation}
+
+where \texttt{receipt\_fixed} has identical structure across all outcomes, \texttt{payload\_null} is a fixed-size null result indistinguishable from an empty tool response, and \texttt{timing\_padded} is drawn from a fixed latency distribution.
+
+\subsection{Indistinguishability Argument}
+
+For a passive observer: all three scenarios produce identical observation distributions by construction. The observer's transcript is drawn from the same distribution regardless of which tools are in the capability set.
+
+For an active adaptive querier: each query consumes budget. The adversary can submit action requests designed to probe for specific tools, but each probe reveals at most $\varepsilon$ bits about the tool's presence (bounded by the per-interaction leakage). After $n$ probes, total leakage is bounded by composition.
+
+For the colluding endpoint: if the tool's target endpoint (e.g., an external API) is adversarial, it can observe whether a real API call arrived. This reveals tool presence to \textit{that endpoint}. All other observers retain full indistinguishability guarantees.
+
+\subsection{Absorption in Practice}
+
+When the budget for a session is near exhaustion (e.g., an adversary has made many probing requests), the system enters absorption:
+
+\begin{itemize}
+  \item Requests continue to receive fixed-format receipts and null payloads.
+  \item No tool invocations occur.
+  \item The agent receives plausible null results and must handle gracefully.
+\end{itemize}
+
+The agent's behavior in absorption may itself be informative (e.g., it may change its strategy). This is a known limitation: the framework protects the \textit{system's} observation channel, not the \textit{agent's} downstream behavior. Protecting agent behavior is a separate research problem.
+
+\subsection{Evaluation Plan}
+
+To validate the framework empirically:
+
+\begin{enumerate}
+  \item \textbf{Divergence measurement.} For each discriminative pair, sample transcripts under both hypotheses and estimate $D_{TV}$ and $D_{KL}$ between transcript distributions. Verify that measured divergence falls within the theoretical bound $\eta$.
+  \item \textbf{Distinguisher evaluation.} Train a binary classifier on transcripts labeled by tool presence/absence. Measure classifier advantage. Verify advantage is bounded by $e^{\varepsilon_{total}} - 1 + \delta_{total}$.
+  \item \textbf{Budget depletion test.} Simulate an adaptive adversary executing an optimal probing strategy. Measure the number of queries required to achieve a target posterior concentration. Verify this exceeds the budget.
+\end{enumerate}
+
+%% ============================================================
+%% 8. SIDE CHANNELS
+%% ============================================================
+\section{Side Channels and Flux}
+
+Side channels arise from emergent coupling across layers, what we term ``flux.'' Rather than eliminating all leakage (impossible), we:
+
+\begin{enumerate}
+  \item \textbf{Define a dominant, state-independent observation process} (the channel shaper) that produces the bulk of the adversary's observations.
+  \item \textbf{Drown residual signals} by ensuring that side-channel leakage is small relative to the dominant process noise.
+  \item \textbf{Bound adversary adaptivity} through the leakage budget, which limits the number of observations available for side-channel exploitation.
+\end{enumerate}
+
+Security thus becomes a problem of \textbf{information geometry} (shaping the observation manifold so that sensitive hypotheses are indistinguishable) rather than a problem of perfect secrecy.
+
+\textbf{Effect-observation closure.} When effects re-enter the observation channel through the environment (e.g., the adversary queries a database that the system wrote to), $O^{env}$ expands. Our guarantees are explicitly scoped to the adversary's accessible observation set $\mathcal{O}_\mathcal{A}$. If $O^{env}$ includes downstream effects, deniability about effect existence is impossible for that adversary. The framework's guarantees hold for all observers whose observation set does not include the effect endpoint.
+
+%% ============================================================
+%% 9. PRIVACY ACCOUNTANT
+%% ============================================================
+\section{Privacy Accountant}
+
+The system's leakage budget is enforced by a \textbf{privacy accountant}, not a heuristic anomaly detector. This design choice eliminates most failure modes associated with threshold-based monitoring.
+
+\subsection{Accountant Design}
+
+\textbf{Inputs.} At each interaction $t$, the accountant receives:
+\begin{itemize}
+  \item The per-interaction leakage cost $(\varepsilon_t, \delta_t)$, determined by the observation channel mechanism and action type.
+  \item The cumulative budget consumed so far.
+\end{itemize}
+
+\textbf{Decision function.} The accountant maintains a running total and triggers absorption when:
+\begin{equation}
+\sum_{t'=1}^{t} \varepsilon_{t'} \ge \varepsilon_{total} - \varepsilon_{margin}
+\end{equation}
+
+where $\varepsilon_{margin}$ is a safety margin. Under randomized thresholds, the trigger point is drawn from a distribution over $[\varepsilon_{total} - \varepsilon_{margin}, \varepsilon_{total}]$ at session start.
+
+\textbf{Transition policy.} Absorption is sticky: once triggered, the context remains absorbed until out-of-band reset.
+
+\subsection{Accountant Properties}
+
+\begin{itemize}
+  \item \textbf{No oracle risk.} The accountant is a counter, not a classifier. Its behavior is deterministic given the interaction history and does not depend on the content of sensitive hypotheses.
+  \item \textbf{Meta-leakage.} The accountant's state (how much budget remains) is not directly observable, but the \textit{onset of absorption} may be indirectly observable if the adversary detects behavioral changes. Mitigation: randomized thresholds or uniform budgets (Section~5.3).
+  \item \textbf{DoS.} Addressable through identity-bound budget partitioning and rate limiting.
+\end{itemize}
+
+\subsection{Relationship to Heuristic Monitoring}
+
+In some deployments, a heuristic monitor (anomaly detection, action entropy scoring) may supplement the accountant to detect adversarial behavior \textit{before} significant budget is consumed. However, the security guarantees rest on the accountant alone; the heuristic monitor is an efficiency optimization, not a security mechanism.
+
+%% ============================================================
+%% 10. CONSIDERED AND REJECTED
+%% ============================================================
+\section{Considered and Rejected Approaches}
+
+\textbf{Metadata-as-Encryption.} Rejected: metadata must be readable; encrypting it creates a new metadata layer.
+
+\textbf{Context-as-Key.} Rejected: context is replicable without physical or cryptographic anchors.
+
+\textbf{Obfuscation.} Rejected: collapses under inspection; security-through-obscurity.
+
+\textbf{Pure Cryptography (as sufficient).} Rejected: meaning always exists in ciphertext; key compromise is catastrophic and retroactive. Indeterminate emergence avoids retroactive collapse because meaning never exists outside the authorized context, so there is nothing to retroactively reveal.
+
+Each of these approaches informed the final model but failed to meet the reconstructed intent.
+
+%% ============================================================
+%% 11. COMPARISON TO CLASSICAL CRYPTO
+%% ============================================================
+\section{Comparison to Classical Cryptography}
+
+We compare indeterminate emergence to classical cryptography along three dimensions:
+
+\textbf{Adversary advantage.} Under standard assumptions, a PPT adversary's advantage against a well-implemented cryptosystem is negligible in the security parameter. Under indeterminate emergence, the adversary's advantage is bounded by $e^{\varepsilon_{total}} - 1 + \delta_{total}$, which is non-negligible but tunable and explicit.
+
+\textbf{Failure mode.} Classical crypto fails catastrophically on key compromise: the adversary gains access to all past and current plaintexts. Indeterminate emergence degrades monotonically: budget exhaustion triggers absorption, which halts further leakage. There is no single point of failure that retroactively reveals past interactions.
+
+\textbf{What the adversary learns on success.} A successful attack on classical crypto reveals the plaintext: everything, all at once. A ``successful'' probing campaign against an indeterminate emergence system yields bounded, forward-only information: the adversary may increase posterior probability on some hypotheses, but never gains certainty, and past observations cannot be retroactively reinterpreted.
+
+\textbf{The tradeoff.} Indeterminate emergence trades per-query security strength for graceful degradation and absence of retroactive collapse. This tradeoff is favorable in settings where the threat is behavioral inference rather than data exfiltration, and where the consequence of partial leakage is manageable but catastrophic disclosure is not.
+
+%% ============================================================
+%% 12. RELATED WORK
+%% ============================================================
+\section{Related Work}
+
+\subsection{Differential Privacy}
+
+Differential privacy~\cite{dwork2006calibrating} provides composable indistinguishability guarantees for database queries. Our framework adopts DP's composition machinery but applies it to action transcripts rather than query answers, and uses Pufferfish-style~\cite{kifer2014pufferfish} hypothesis-pair adjacency rather than neighboring-database adjacency.
+
+\subsection{Deniable Encryption and Steganography}
+
+Deniable encryption~\cite{canetti1997deniable} ensures that a ciphertext is consistent with multiple possible plaintexts, preventing coercion. Steganography hides the existence of communication within innocuous cover traffic. Our framework extends deniability from stored data to \textbf{real-time effects and capabilities}: the system doesn't just deny what message was sent, but whether any meaningful action was taken.
+
+\subsection{Oblivious RAM}
+
+ORAM~\cite{goldreich1996software} hides memory access patterns from an adversary observing storage. Our channel shaper serves an analogous function for the observation plane, ensuring that observable behavior is independent of system state. The key difference is that ORAM protects data access patterns within a computation, while our framework protects the existence and nature of the computation itself.
+
+\subsection{Zero-Knowledge Proofs}
+
+ZK proofs~\cite{goldwasser1985knowledge} allow proving a statement without revealing why it's true. Our policy verifier's fixed-format receipts serve a similar function: the receipt proves the request was processed without revealing the policy decision or the capabilities consulted.
+
+\subsection{Secure Multi-Party Computation}
+
+MPC ensures that intermediate values never exist in any single location. This aligns with our principle that meaning should never exist outside the sealed executor: just as MPC distributes a secret across parties, indeterminate emergence confines meaning to an authorized execution context.
+
+\subsection{Cyber Deception and Honeypots}
+
+Honeypots~\cite{spitzner2003honeypots} are systems that appear functional but produce no real effects, designed to be indistinguishable from real systems. Absorptive execution has structural similarity: it produces observations without real effects. The key difference is that honeypots are static deceptions (separate systems), while absorption is a dynamic mode that the \textit{same system} enters and exits. Our framework provides formal guarantees on the mode transition's indistinguishability, which honeypots typically lack.
+
+\subsection{Novelty Summary}
+
+We unify transcript indistinguishability (from DP), deniability of existence (from deniable encryption), access pattern hiding (from ORAM), proof without revelation (from ZK), and non-existence of intermediate values (from MPC) into a single action-centric framework. The novel primitive is absorptive execution, which extends deniability from stored data to real-time effects and capabilities, enforced by a composable leakage budget.
+
+%% ============================================================
+%% 13. BUILDABILITY
+%% ============================================================
+\section{Buildability}
+
+No new cryptographic primitives are required; however, the composition of capability systems, sealed execution, channel shaping, and privacy accounting is novel and demands rigorous specification and evaluation.
+
+The system is buildable using:
+\begin{itemize}
+  \item \textbf{Capability token systems} for action authorization (e.g., Macaroons~\cite{birgisson2014macaroons}, UCAN).
+  \item \textbf{Process isolation or TEEs} for sealed execution (e.g., SGX, SEV, or application-level sandboxing).
+  \item \textbf{Constant-signature interfaces} for channel shaping (fixed-size responses, padded timing via techniques from traffic analysis resistance~\cite{dyer2012peekaboo}).
+  \item \textbf{Privacy accounting libraries} for budget tracking (e.g., Google's DP library, Opacus).
+  \item \textbf{Policy engines} for action verification (e.g., OPA, Cedar).
+\end{itemize}
+
+The integration and invariance enforcement across these components is where the implementation challenge lies, and each instantiation must be evaluated against the Resource Trace Model (Section~5.2) for the target deployment.
+
+%% ============================================================
+%% 14. LIMITS
+%% ============================================================
+\section{Limits}
+
+Absolute security is impossible. Specific limits of this framework include:
+
+\begin{enumerate}
+  \item \textbf{Colluding endpoint.} Effect existence cannot be hidden from the entity that receives effects.
+  \item \textbf{Agent behavioral leakage.} The framework protects the system's observation channel, not the downstream behavior of agents that consume system outputs.
+  \item \textbf{Modeling assumptions.} Guarantees depend on the designer's specification of $\mathcal{S}^*$ and $\mathcal{D}$. Misspecified secrets or discriminative pairs leave blind spots.
+  \item \textbf{Non-copyable anchors.} Context-as-key approaches fail without physical or cryptographic anchors. The framework does not create new anchors; it works within existing trust boundaries.
+  \item \textbf{Dynamic sensitivity.} $H_{sens}$ is treated as a design parameter. Adaptive or context-dependent sensitivity classification is future work.
+  \item \textbf{Budget-liveness tradeoff.} Adversaries can force absorption by exhausting budgets, creating a denial-of-service vector mitigated but not eliminated by identity partitioning.
+\end{enumerate}
+
+%% ============================================================
+%% 15. APPLICATIONS
+%% ============================================================
+\section{Applications}
+
+\begin{itemize}
+  \item \textbf{AI agent governance:} Preventing capability-set inference and unauthorized capability discovery.
+  \item \textbf{Autonomous toolchains:} Allowing agents to act without revealing what they can do.
+  \item \textbf{Secure CI/CD:} Pipelines that execute deployments without revealing infrastructure topology.
+  \item \textbf{Capability containment:} Systems where the existence of a capability is itself sensitive.
+  \item \textbf{Policy enforcement:} Environments where denial signals are as informative as access.
+  \item \textbf{Adversarial ML defense:} Preventing model probing from revealing training data properties or architectural details.
+\end{itemize}
+
+%% ============================================================
+%% 16. CONCLUSION
+%% ============================================================
+\section{Conclusion}
+
+By reconstructing security from intent rather than tradition, we arrive at a system where meaning does not need to be hidden because it does not exist outside authorized contexts. Indeterminate emergence provides strong, composable, and governance-aligned security properties suitable for modern autonomous systems.
+
+The framework is defined over explicit adversary models, provides composable leakage bounds via Pufferfish-style transcript indistinguishability, degrades gracefully through absorptive execution, and is instantiable with existing components. Its limits (colluding endpoints, agent behavioral leakage, and the modeling burden of specifying secrets) are fundamental and explicitly scoped rather than hidden.
+
+\bigskip
+
+\noindent\textbf{The strongest security signal is not silence, but the inability to determine whether silence is meaningful, accidental, or impossible.}
+
+%% ============================================================
+%% APPENDICES
+%% ============================================================
+\appendix
+
+\section{Formal Definitions and Proofs}
+
+\subsection{Notation Summary}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{@{}cl@{}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning} \\
+\midrule
+$\mathcal{S}^*$ & Protected secrets (designer-specified) \\
+$\mathcal{D}$ & Discriminative pairs \\
+$T_n$ & Transcript of $n$ interactions \\
+$(\varepsilon, \delta)$ & Per-interaction leakage parameters \\
+$B = (\varepsilon_{total}, \delta_{total})$ & Leakage budget \\
+$\eta$ & Absorptive mode observational tolerance \\
+$\lambda$ & Computational security parameter \\
+$O^{sys}, O^{env}$ & System and environment observation components \\
+$H_{sens}$ & Sensitive hypotheses \\
+\bottomrule
+\end{tabular}
+\caption{Notation summary.}
+\label{tab:notation}
+\end{table}
+
+\subsection{Proof of Theorem~\ref{thm:noncollapse} (Non-Collapse)}
+
+By Definition~\ref{def:epistemic-security}, for any transcript set $\mathcal{T}$ and discriminative pair $(s_i, s_j)$:
+\begin{equation}
+\Pr[T_n \in \mathcal{T} \mid s_i] \le e^{\varepsilon_{total}} \Pr[T_n \in \mathcal{T} \mid s_j] + \delta_{total}
+\end{equation}
+
+By Bayes' rule, the posterior ratio satisfies:
+\begin{equation}
+\frac{P(s_i \mid T_n)}{P(s_j \mid T_n)} = \frac{P(T_n \mid s_i)}{P(T_n \mid s_j)} \cdot \frac{P(s_i)}{P(s_j)} \le e^{\varepsilon_{total}} \cdot \frac{P(s_i)}{P(s_j)}
+\end{equation}
+
+(ignoring $\delta_{total}$ for the clean bound; the full bound incorporates $\delta$ via standard techniques).
+
+For uniform prior $P(s_i) = P(s_j) = 1/2$:
+\begin{equation}
+P(s_i \mid T_n) \le \frac{e^{\varepsilon_{total}}}{1 + e^{\varepsilon_{total}}}
+\end{equation}
+
+For $\varepsilon_{total} = 1$: $P(s_i \mid T_n) \le 0.731$. For $\varepsilon_{total} = 0.1$: $P(s_i \mid T_n) \le 0.525$.
+
+Epistemic collapse ($P(s_i \mid T_n) \to 1$) is prevented for any finite budget. \qed
+
+\subsection{Composition Theorem (Standard)}
+
+Under $k$ adaptive interactions each satisfying $(\varepsilon, \delta)$-epistemic security:
+\begin{equation}
+(\varepsilon_{total}, \delta_{total}) = (k\varepsilon, k\delta) \quad \text{(basic composition)}
+\end{equation}
+
+Under advanced composition~\cite{dwork2010boosting}:
+\begin{equation}
+\varepsilon_{total} = \sqrt{2k \ln(1/\delta')} \cdot \varepsilon + k\varepsilon(e^\varepsilon - 1), \quad \delta_{total} = k\delta + \delta'
+\end{equation}
+
+for any $\delta' > 0$.
+
+\subsection{Absorptive Mode Indistinguishability}
+
+Under the Resource Trace Model at Level~1, absorptive mode satisfies the statistical claim if:
+
+\begin{enumerate}
+  \item Response content is drawn from the same fixed distribution $Q(O \mid a)$ in both modes.
+  \item Response timing is drawn from a fixed latency distribution $\Lambda$ independent of mode.
+  \item Response size is constant.
+\end{enumerate}
+
+Conditions 1--3 are achievable by construction (fixed-format receipts, constant-size payloads, padded timing). Under these conditions, $D_{TV}(P(O^{sys} \mid \text{Normal}), P(O^{sys} \mid \text{Absorb})) = 0$ at Level~1.
+
+At Levels~2 and~3, the claim depends on the executor's ability to match resource profiles between real and dummy computation, which is an implementation-specific guarantee.
+
+\section{Reference Architecture}
+
+\begin{figure}[h]
+\begin{small}
+\begin{verbatim}
++---------------------------------------------------------------+
+|                    External Actor                              |
+|                         |                                      |
+|                   Action Request                               |
+|                         v                                      |
+|              +---------------------+                           |
+|              |   Intent Interface   |  Fixed action vocabulary |
+|              +----------+----------+                           |
+|                         |                                      |
+|                         v                                      |
+|              +---------------------+                           |
+|              |  Capability Token   |  Opaque to interface      |
+|              |      Check          |                           |
+|              +----------+----------+                           |
+|                         |                                      |
+|                         v                                      |
+|              +---------------------+    +------------------+   |
+|              |   Policy Verifier   |--->|  Fixed Receipt   |   |
+|              |                     |    |  (to actor)      |   |
+|              +----------+----------+    +------------------+   |
+|                         |                                      |
+|                +--------+--------+                             |
+|                v                 v                              |
+|   +-------------------+  +---------------+                     |
+|   |  Sealed Executor  |  |   Privacy     |                     |
+|   |  (isolation       |  |  Accountant   |                     |
+|   |   boundary)       |  |  (budget      |                     |
+|   |                   |  |   tracking)   |                     |
+|   |  Normal: execute  |  +-------+-------+                     |
+|   |  Absorb: dummy    |<---------+                             |
+|   +--------+----------+  mode signal                           |
+|            |                                                   |
+|            v                                                   |
+|   +---------------------+                                      |
+|   |   Channel Shaper    |  Constant rate, fixed size,          |
+|   |                     |  bounded timing variance             |
+|   +----------+----------+                                      |
+|              |                                                 |
+|              v                                                 |
+|   +---------------------+                                      |
+|   |  Effect Committer   |---------->  External World           |
+|   |  (conditional)      |            (effects or null)         |
+|   +---------------------+                                      |
++---------------------------------------------------------------+
+\end{verbatim}
+\end{small}
+\caption{Reference architecture for an indeterminate emergence system.}
+\label{fig:architecture}
+\end{figure}
+
+\section{Intended Use}
+
+This paper supports implementation, verification, and audit of systems designed for:
+\begin{itemize}
+  \item AI agent governance and capability containment
+  \item Secure action pipelines with inference resistance
+  \item Inference security research
+  \item Systems where the existence of capability is itself sensitive
+\end{itemize}
+
+%% ============================================================
+%% BIBLIOGRAPHY
+%% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

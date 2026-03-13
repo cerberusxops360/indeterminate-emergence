@@ -12,3 +12,16 @@ poc/results/*.png
 poc/results/*.csv
 .DS_Store
 Thumbs.db
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
