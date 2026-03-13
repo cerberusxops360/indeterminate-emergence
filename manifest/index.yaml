@@ -51,3 +51,33 @@ objects:
     tier: T1
     status: active
     path: "CLAUDE.md"
+
+  - fingerprint: "fp-docu-20260313-ecbac609-ecba"
+    type: document
+    name: "LaTeX Source"
+    content_hash: "sha256:ecbac609be20381ebacb1f06790e0f831477f934cd702498be0ec75151fe1e06"
+    tier: T1
+    status: active
+    path: "paper/indeterminate-emergence-v1.tex"
+    relationships:
+      - type: DERIVED_FROM
+        target: "fp-rpap-20260313-572b0581-572b"
+
+  - fingerprint: "fp-docu-20260313-d3ba8464-d3ba"
+    type: document
+    name: "BibTeX Bibliography"
+    content_hash: "sha256:d3ba84649d290bf6ee554cccfa35cc8ffd87d864125e666744f0f577c0f2d9ab"
+    tier: T2
+    status: active
+    path: "paper/references.bib"
+
+  - fingerprint: "fp-docu-20260313-1f2e72db-1f2e"
+    type: document
+    name: "Submission PDF"
+    content_hash: "sha256:1f2e72dbd73e040e6bf57856a012b0e7afc5242cddd8907d6dbb58c77ce9c3a0"
+    tier: T1
+    status: draft
+    path: "paper/indeterminate-emergence-v1.pdf"
+    relationships:
+      - type: DERIVED_FROM
+        target: "fp-docu-20260313-ecbac609-ecba"
