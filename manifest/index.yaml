@@ -1,0 +1,53 @@
+# ADAM Manifest -- indeterminate-emergence
+# Project ID: ADAM-PROJ-IE
+# Author: Adam Bishop, XOps360 LLC
+# Generated: 2026-03-13
+
+objects:
+  - fingerprint: "fp-rpap-20260313-572b0581-572b"
+    type: research_paper
+    name: "Indeterminate Emergence Paper v1"
+    content_hash: "sha256:572b058149bf2888526484f585dd6f8293b2d7ac0c3b340bb0092a2cf9d941e0"
+    tier: T1
+    status: draft
+    path: "paper/indeterminate-emergence-v1.md"
+    relationships:
+      - type: PRODUCES
+        target: "fp-blog-20260313-931661a6-9316"
+      - type: SPECIFIES
+        target: "docs/POC_SPECIFICATION.md"
+
+  - fingerprint: "fp-blog-20260313-931661a6-9316"
+    type: blog_post
+    name: "What If Security Meant Non-Existence"
+    content_hash: "sha256:931661a6fa94e8e8f515ef392b3dd8f8bd1e0496525c7e1cd155eeaadd05a567"
+    tier: T1
+    status: draft
+    path: "blog/what-if-security-meant-non-existence.md"
+    relationships:
+      - type: DERIVED_FROM
+        target: "fp-rpap-20260313-572b0581-572b"
+
+  - fingerprint: "fp-docu-20260313-7d4a8ed1-7d4a"
+    type: document
+    name: "PoC Specification"
+    content_hash: "sha256:7d4a8ed111d729d17b49815aa58750835789d2b1f59dc28a9cd463524470e132"
+    tier: T1
+    status: active
+    path: "docs/POC_SPECIFICATION.md"
+
+  - fingerprint: "fp-docu-20260313-023c2c91-023c"
+    type: document
+    name: "Project Plan"
+    content_hash: "sha256:023c2c919fb7bccdf83ab7cdd5cac8c2e94cdedc4dcef6b880082d0eb7be6319"
+    tier: T1
+    status: active
+    path: "docs/PROJECT_PLAN.md"
+
+  - fingerprint: "fp-conf-20260313-136d4789-136d"
+    type: configuration
+    name: "CLAUDE.md Execution Contract"
+    content_hash: "sha256:136d478919ce672a4dbd2067ecc0024b8cab0cd3f7495abee4d307046e642d0c"
+    tier: T1
+    status: active
+    path: "CLAUDE.md"
