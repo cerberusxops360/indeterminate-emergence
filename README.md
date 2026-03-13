@@ -19,10 +19,11 @@ composition to provide formal guarantees against capability inference attacks.
 
 ## Paper
 
-The full paper is available in `paper/indeterminate-emergence-v1.md`. It defines
-the formal security model, proves non-collapse guarantees, specifies four
-adversary tiers, and works through a concrete application to AI capability-set
-inference resistance.
+The full paper is available on the
+[IACR Cryptology ePrint Archive](https://eprint.iacr.org/2026/108326)
+and in `paper/indeterminate-emergence-v1.md`. It defines the formal security
+model, proves non-collapse guarantees, specifies four adversary tiers, and works
+through a concrete application to AI capability-set inference resistance.
 
 ## Proof of Concept
 
@@ -50,13 +51,21 @@ has access to. See `docs/POC_SPECIFICATION.md` for the full build spec.
 
 - [x] Theory paper (revised draft with full citations)
 - [x] Blog post
-- [ ] IACR ePrint submission
+- [x] IACR ePrint submission
 - [ ] Proof of concept
 - [ ] Empirical evaluation
 
 ## Citation
 
-BibTeX entry will be added after IACR ePrint publication.
+```bibtex
+@misc{bishop2026indeterminate,
+  author = {Adam Bishop},
+  title = {Indeterminate Emergence: Security Through Non-Existence},
+  howpublished = {Cryptology ePrint Archive, Paper 2026/108326},
+  year = {2026},
+  url = {https://eprint.iacr.org/2026/108326}
+}
+```
 
 ## License
 

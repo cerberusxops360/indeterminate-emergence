@@ -248,13 +248,14 @@ python -m eval.budget_depletion
 - [ ] Run blog post through writing standards audit
 - [ ] Tag: v0.1-paper
 
-### Phase 2: IACR ePrint Submission (Primary)
+### Phase 2: IACR ePrint Submission (Complete)
 
-- [ ] Create IACR ePrint account at https://eprint.iacr.org/
-- [ ] Convert paper to LaTeX
-- [ ] Generate PDF from LaTeX
-- [ ] Submit PDF to IACR ePrint (categorize under "foundations" or "applications")
-- [ ] Update README with ePrint link and BibTeX
+- [x] Create IACR ePrint account at https://eprint.iacr.org/
+- [x] Convert paper to LaTeX
+- [x] Generate PDF from LaTeX
+- [x] Submit PDF to IACR ePrint (categorize under "foundations" or "applications")
+- [x] Update README with ePrint link and BibTeX
+- [x] Published: https://eprint.iacr.org/2026/108326
 
 ### Phase 2B: arXiv Submission (Deferred)
 
