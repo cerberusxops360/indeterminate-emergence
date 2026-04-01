@@ -1,6 +1,17 @@
 # CLAUDE.md — Execution Contract
 ## indeterminate-emergence
 
+## Framework Dependencies
+> Canonical specs live in [shared-library](https://github.com/cerberusxops360/shared-library).
+> Read these before modifying any framework-level behavior in this repo.
+
+| Dependency | Spec | Why |
+|------------|------|-----|
+| Voice & Writing Standards | `standards/voice-writing/VOICE-STANDARDS.md` | Paper: MODERATE filter. Blog post: STRICT filter. |
+| Epistemic Security | `frameworks/epistemic-security/ES-SPEC.md` | This repo IS the canonical implementation |
+
+---
+
 **Repo:** `cerberusxops360/indeterminate-emergence`  
 **Project Type:** Open research — security theory + proof of concept  
 **Author:** Adam Bishop, XOps360 LLC  
@@ -158,11 +169,17 @@ indeterminate-emergence/
 
 6. **`git status` at session start.** Confirm clean working tree before beginning new work.
 
-7. **KNOWN_ISSUES.md-first debugging.** If you encounter a bug, log it in KNOWN_ISSUES.md before attempting a fix. If the fix works, remove the entry and commit both the fix and the KNOWN_ISSUES.md update.
+7. **Set git identity at session start:**
+   ```bash
+   git config user.name "Adam Bishop"
+   git config user.email "adam@xops360.com"
+   ```
 
-8. **Pin all dependencies.** No floating versions in requirements.txt. Every package gets an exact version.
+8. **KNOWN_ISSUES.md-first debugging.** If you encounter a bug, log it in KNOWN_ISSUES.md before attempting a fix. If the fix works, remove the entry and commit both the fix and the KNOWN_ISSUES.md update.
 
-9. **No silent failures.** Every function either returns a result or raises an exception with a clear message. The proxy endpoint always returns HTTP 200 — but internal logging must capture all errors.
+9. **Pin all dependencies.** No floating versions in requirements.txt. Every package gets an exact version.
+
+10. **No silent failures.** Every function either returns a result or raises an exception with a clear message. The proxy endpoint always returns HTTP 200 — but internal logging must capture all errors.
 
 ---
 
