@@ -1,3 +1,10 @@
+## Infrastructure Governance
+This repo is classified as **T4 — Isolated** under the Infrastructure Governance Standard.
+Before modifying shared infrastructure, read: `shared-library/standards/INFRASTRUCTURE-GOVERNANCE.md`
+- **Deploy target:** local-only (research)
+- **Dependencies:** None
+- **Dependents:** None
+
 # CLAUDE.md — Execution Contract
 ## indeterminate-emergence
 
