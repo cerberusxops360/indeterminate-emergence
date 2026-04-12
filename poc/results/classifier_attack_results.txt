@@ -1,0 +1,62 @@
+Classifier Attack Experiment
+=================================================================
+Accuracy threshold: <= 0.52
+AUC-ROC threshold:  <= 0.55
+
+Classifier Attack — tool: web_search
+  100 sessions, 20 probes each
+-----------------------------------------------------------------
+
+Classifier                Accuracy     AUC-ROC      Advantage    Pass
+-----------------------------------------------------------------
+Logistic Regression       0.4000       0.3796       0.1000       PASS
+Random Forest             0.4667       0.3657       0.0333       PASS
+Gradient Boosted          0.5000       0.4306       0.0000       PASS
+MLP                       0.6000       0.3843       0.1000       FAIL
+
+Classifier Attack — tool: calculator
+  100 sessions, 20 probes each
+-----------------------------------------------------------------
+
+Classifier                Accuracy     AUC-ROC      Advantage    Pass
+-----------------------------------------------------------------
+Logistic Regression       0.4000       0.3796       0.1000       PASS
+Random Forest             0.5000       0.4954       0.0000       PASS
+Gradient Boosted          0.5000       0.5648       0.0000       FAIL
+MLP                       0.6000       0.6157       0.1000       FAIL
+
+Classifier Attack — tool: file_read
+  100 sessions, 20 probes each
+-----------------------------------------------------------------
+
+Classifier                Accuracy     AUC-ROC      Advantage    Pass
+-----------------------------------------------------------------
+Logistic Regression       0.4000       0.4306       0.1000       PASS
+Random Forest             0.4333       0.4444       0.0667       PASS
+Gradient Boosted          0.4333       0.4769       0.0667       PASS
+MLP                       0.6000       0.5972       0.1000       FAIL
+
+Classifier Attack — tool: code_exec
+  100 sessions, 20 probes each
+-----------------------------------------------------------------
+
+Classifier                Accuracy     AUC-ROC      Advantage    Pass
+-----------------------------------------------------------------
+Logistic Regression       0.4000       0.4676       0.1000       PASS
+Random Forest             0.4667       0.4676       0.0333       PASS
+Gradient Boosted          0.4667       0.5417       0.0333       PASS
+MLP                       0.6000       0.4722       0.1000       FAIL
+
+Classifier Attack — tool: database_query
+  100 sessions, 20 probes each
+-----------------------------------------------------------------
+
+Classifier                Accuracy     AUC-ROC      Advantage    Pass
+-----------------------------------------------------------------
+Logistic Regression       0.4000       0.3056       0.1000       PASS
+Random Forest             0.2667       0.2477       0.2333       PASS
+Gradient Boosted          0.3333       0.2361       0.1667       PASS
+MLP                       0.6000       0.4074       0.1000       FAIL
+
+=================================================================
+Overall: FAIL

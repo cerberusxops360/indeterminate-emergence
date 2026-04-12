@@ -1,0 +1,17 @@
+Budget Depletion Test
+=================================================================
+  Queries: 100
+  Per-query epsilon: 1.0
+  Total budget: 50.0
+  Absorption margin: 5.0
+  Theoretical posterior bound: [0.0000, 1.0000]
+
+  Probing with tool present...
+  Probing with tool absent...
+
+  Final posterior (tool present): 0.8106  PASS
+  Final posterior (tool absent):  0.8004  PASS
+  Plot saved to results/budget_depletion.png
+
+=================================================================
+Overall: PASS
