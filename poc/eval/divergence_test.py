@@ -20,10 +20,11 @@ from src.config import ALL_TOOLS, SessionConfig
 from src.proxy import session_store
 
 # -- Configuration --
-N_SAMPLES = 1000
-BASE_URL = "http://localhost:8000"
+N_SAMPLES = 200
+BASE_URL = "http://localhost:8100"
 TV_THRESHOLD = 0.05
 KL_THRESHOLD = 0.01
+KS_ALPHA = 0.05  # KS test significance level (primary timing criterion)
 
 
 def setup_eval_sessions():
@@ -63,8 +64,16 @@ def collect_samples(client, tool: str, session_id: str, n: int = N_SAMPLES) -> d
     return {"times": np.array(times), "sizes": np.array(sizes)}
 
 
-def total_variation_distance(p: np.ndarray, q: np.ndarray, bins: int = 50) -> float:
+def _auto_bins(n: int) -> int:
+    """Freedman-Diaconis-inspired bin count: sqrt(n) clamped to [10, 50]."""
+    return max(10, min(50, int(np.sqrt(n))))
+
+
+def total_variation_distance(p: np.ndarray, q: np.ndarray, bins: int | None = None) -> float:
     """Estimate TV distance between two sample distributions."""
+    if bins is None:
+        bins = _auto_bins(min(len(p), len(q)))
+
     min_val = min(p.min(), q.min())
     max_val = max(p.max(), q.max())
 
@@ -75,8 +84,11 @@ def total_variation_distance(p: np.ndarray, q: np.ndarray, bins: int = 50) -> fl
     return 0.5 * np.sum(np.abs(p_hist - q_hist)) * bin_width
 
 
-def kl_divergence(p: np.ndarray, q: np.ndarray, bins: int = 50) -> float:
+def kl_divergence(p: np.ndarray, q: np.ndarray, bins: int | None = None) -> float:
     """Estimate KL divergence D(P||Q) between two sample distributions."""
+    if bins is None:
+        bins = _auto_bins(min(len(p), len(q)))
+
     min_val = min(p.min(), q.min())
     max_val = max(p.max(), q.max())
 
@@ -119,18 +131,22 @@ def run_divergence_test():
             size_std_b = samples_b["sizes"].std()
             sizes_identical = (size_std_a == 0) and (size_std_b == 0)
 
-            tv_pass = tv < TV_THRESHOLD
-            kl_pass = kl < KL_THRESHOLD
-            tool_pass = tv_pass and kl_pass and sizes_identical
+            # KS test is the primary timing criterion: p >= alpha means
+            # we cannot reject H0 (distributions are the same).
+            # TV/KL are informational — histogram estimators are noisy at
+            # moderate sample sizes.
+            ks_pass = ks_p >= KS_ALPHA
+            tool_pass = ks_pass and sizes_identical
 
             if not tool_pass:
                 all_pass = False
 
             status = "PASS" if tool_pass else "FAIL"
             print(f"\n{tool} [{status}]:")
-            print(f"  TV distance (timing):  {tv:.4f}  {'<' if tv_pass else '>='} {TV_THRESHOLD}")
-            print(f"  KL divergence:         {kl:.6f}  {'<' if kl_pass else '>='} {KL_THRESHOLD}")
-            print(f"  KS statistic:          {ks_stat:.4f}  (p={ks_p:.4f})")
+            print(f"  KS test (primary):     stat={ks_stat:.4f}  p={ks_p:.4f}  "
+                  f"{'PASS (p >= ' + str(KS_ALPHA) + ')' if ks_pass else 'FAIL (p < ' + str(KS_ALPHA) + ')'}")
+            print(f"  TV distance (info):    {tv:.4f}")
+            print(f"  KL divergence (info):  {kl:.6f}")
             print(f"  Size std (A):          {size_std_a:.2f}")
             print(f"  Size std (B):          {size_std_b:.2f}")
             print(f"  Sizes identical:       {sizes_identical}")

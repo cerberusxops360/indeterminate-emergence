@@ -27,7 +27,7 @@ N_QUERIES = 100
 PER_QUERY_EPSILON = 1.0
 TOTAL_BUDGET = 50.0
 ABSORPTION_MARGIN = 5.0
-BASE_URL = "http://localhost:8000"
+BASE_URL = "http://localhost:8100"
 
 
 def setup_budget_sessions():

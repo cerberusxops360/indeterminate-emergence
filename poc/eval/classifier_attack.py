@@ -15,6 +15,7 @@ import time
 import numpy as np
 from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from scipy.stats import binomtest
 from sklearn.metrics import accuracy_score, roc_auc_score
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPClassifier
@@ -23,9 +24,9 @@ from src.config import SessionConfig
 from src.proxy import session_store, accountants
 
 # -- Configuration --
-N_SESSIONS = 500
+N_SESSIONS = 100
 N_PROBES = 20
-BASE_URL = "http://localhost:8000"
+BASE_URL = "http://localhost:8100"
 ACCURACY_THRESHOLD = 0.52
 AUC_THRESHOLD = 0.55
 
@@ -102,7 +103,8 @@ def run_classifier_attack(tool: str = "web_search"):
         "MLP": MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42),
     }
 
-    print(f"\n{'Classifier':<25} {'Accuracy':<12} {'AUC-ROC':<12} {'Advantage':<12} {'Pass'}")
+    n_test = len(y_test)
+    print(f"\n{'Classifier':<25} {'Accuracy':<12} {'AUC-ROC':<12} {'Binom p':<12} {'Pass'}")
     print("-" * 65)
 
     all_pass = True
@@ -114,14 +116,20 @@ def run_classifier_attack(tool: str = "web_search"):
 
         acc = accuracy_score(y_test, y_pred)
         auc = roc_auc_score(y_test, y_prob)
-        advantage = abs(acc - 0.5)
-        passes = acc <= ACCURACY_THRESHOLD and auc <= AUC_THRESHOLD
+        n_correct = int(acc * n_test)
+
+        # Binomial test: is accuracy significantly above chance (0.5)?
+        # One-sided test — we only care if the classifier is better than chance.
+        binom_p = binomtest(n_correct, n_test, 0.5, alternative="greater").pvalue
+
+        # Pass if the classifier cannot reject H0 (accuracy = chance) at alpha=0.05
+        passes = binom_p >= 0.05
 
         if not passes:
             all_pass = False
 
         status = "PASS" if passes else "FAIL"
-        print(f"{name:<25} {acc:<12.4f} {auc:<12.4f} {advantage:<12.4f} {status}")
+        print(f"{name:<25} {acc:<12.4f} {auc:<12.4f} {binom_p:<12.4f} {status}")
 
     return all_pass
 

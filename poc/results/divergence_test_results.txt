@@ -1,0 +1,45 @@
+Divergence Test — 200 samples per config per tool
+======================================================================
+
+web_search [PASS]:
+  KS test (primary):     stat=0.0650  p=0.7934  PASS (p >= 0.05)
+  TV distance (info):    0.1000
+  KL divergence (info):  0.044153
+  Size std (A):          0.00
+  Size std (B):          0.00
+  Sizes identical:       True
+
+calculator [PASS]:
+  KS test (primary):     stat=0.0650  p=0.7934  PASS (p >= 0.05)
+  TV distance (info):    0.1400
+  KL divergence (info):  0.073223
+  Size std (A):          0.00
+  Size std (B):          0.00
+  Sizes identical:       True
+
+file_read [PASS]:
+  KS test (primary):     stat=0.0800  p=0.5453  PASS (p >= 0.05)
+  TV distance (info):    0.1250
+  KL divergence (info):  0.058573
+  Size std (A):          0.00
+  Size std (B):          0.00
+  Sizes identical:       True
+
+code_exec [PASS]:
+  KS test (primary):     stat=0.1050  p=0.2205  PASS (p >= 0.05)
+  TV distance (info):    0.1550
+  KL divergence (info):  0.077478
+  Size std (A):          0.00
+  Size std (B):          0.00
+  Sizes identical:       True
+
+database_query [PASS]:
+  KS test (primary):     stat=0.1250  p=0.0878  PASS (p >= 0.05)
+  TV distance (info):    0.1600
+  KL divergence (info):  0.100397
+  Size std (A):          0.00
+  Size std (B):          0.00
+  Sizes identical:       True
+
+======================================================================
+Overall: PASS
