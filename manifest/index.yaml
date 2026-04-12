@@ -81,3 +81,107 @@ objects:
     relationships:
       - type: DERIVED_FROM
         target: "fp-docu-20260313-ecbac609-ecba"
+
+  # PoC Components
+  - fingerprint: "fp-pocc-20260411-917d8794-917d"
+    type: poc_component
+    name: "Configuration & Policy"
+    content_hash: "sha256:917d87947652869a3c37e500f9225cce8092738a1daab9c199bbbf99b9c1ba09"
+    tier: T1
+    status: active
+    path: "poc/src/config.py"
+    relationships:
+      - type: IMPLEMENTS
+        target: "docs/POC_SPECIFICATION.md#4.2"
+
+  - fingerprint: "fp-pocc-20260411-d1d2e2d8-d1d2"
+    type: poc_component
+    name: "Sealed Executor"
+    content_hash: "sha256:d1d2e2d87c687ce69d57c91da642b132787471ff88c5670d688716df8d763e9f"
+    tier: T1
+    status: active
+    path: "poc/src/executor.py"
+    relationships:
+      - type: IMPLEMENTS
+        target: "docs/POC_SPECIFICATION.md#4.3"
+
+  - fingerprint: "fp-pocc-20260411-3d2ee862-3d2e"
+    type: poc_component
+    name: "Channel Shaper"
+    content_hash: "sha256:3d2ee862207f0d86a2a3f9248877bb2ebf824c5dc2235be6beb98ffb8e229296"
+    tier: T1
+    status: active
+    path: "poc/src/channel_shaper.py"
+    relationships:
+      - type: IMPLEMENTS
+        target: "docs/POC_SPECIFICATION.md#4.4"
+
+  - fingerprint: "fp-pocc-20260411-7c9d4cfa-7c9d"
+    type: poc_component
+    name: "Privacy Accountant"
+    content_hash: "sha256:7c9d4cfa859e784ba15f827effd1c3e8745e78a27cd6db2f5dac0c1332d1b0f7"
+    tier: T1
+    status: active
+    path: "poc/src/accountant.py"
+    relationships:
+      - type: IMPLEMENTS
+        target: "docs/POC_SPECIFICATION.md#4.5"
+
+  - fingerprint: "fp-pocc-20260411-515d799b-515d"
+    type: poc_component
+    name: "Intent Interface (Proxy)"
+    content_hash: "sha256:515d799baeaf9d17d31cc6ab3f2025de080f800809205a7f31e67f8b9b66e282"
+    tier: T1
+    status: active
+    path: "poc/src/proxy.py"
+    relationships:
+      - type: IMPLEMENTS
+        target: "docs/POC_SPECIFICATION.md#4.1"
+      - type: DEPENDS_ON
+        target: "fp-pocc-20260411-917d8794-917d"
+      - type: DEPENDS_ON
+        target: "fp-pocc-20260411-d1d2e2d8-d1d2"
+      - type: DEPENDS_ON
+        target: "fp-pocc-20260411-3d2ee862-3d2e"
+      - type: DEPENDS_ON
+        target: "fp-pocc-20260411-7c9d4cfa-7c9d"
+
+  # Evaluation Experiments
+  - fingerprint: "fp-eval-20260411-236a760b-236a"
+    type: eval_experiment
+    name: "Divergence Test"
+    content_hash: "sha256:236a760b260e10d11f1b60f9c3a1276e9ee50c56e4df5405993182a76fe060ea"
+    tier: T1
+    status: active
+    path: "poc/eval/divergence_test.py"
+    relationships:
+      - type: VALIDATES
+        target: "observation_indistinguishability"
+      - type: USES
+        target: "fp-pocc-20260411-515d799b-515d"
+
+  - fingerprint: "fp-eval-20260411-368690b6-3686"
+    type: eval_experiment
+    name: "Classifier Attack"
+    content_hash: "sha256:368690b6cc2277919013e31d13fb5b3e81f3c547ef155c3644b62c156f335026"
+    tier: T1
+    status: active
+    path: "poc/eval/classifier_attack.py"
+    relationships:
+      - type: VALIDATES
+        target: "classifier_resistance"
+      - type: USES
+        target: "fp-pocc-20260411-515d799b-515d"
+
+  - fingerprint: "fp-eval-20260411-11f8deb8-11f8"
+    type: eval_experiment
+    name: "Budget Depletion"
+    content_hash: "sha256:11f8deb8170d7ca3fe6c43e104ae637a9cff73fba1a3326053862a6e6fd5d918"
+    tier: T1
+    status: active
+    path: "poc/eval/budget_depletion.py"
+    relationships:
+      - type: VALIDATES
+        target: "budget_enforcement"
+      - type: USES
+        target: "fp-pocc-20260411-515d799b-515d"
