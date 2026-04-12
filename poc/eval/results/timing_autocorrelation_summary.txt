@@ -1,0 +1,40 @@
+Experiment 5: Timing Autocorrelation
+======================================================================
+Samples: 500 per path
+
+Distribution statistics (shaped, server-side):
+                                     authorized   unauthorized
+  ------------------------------------------------------------
+  mean (ms)                             302.355        306.138
+  std (ms)                               55.786         56.764
+  p5 (ms)                               213.360        216.556
+  p50 (ms)                              300.319        306.363
+  p95 (ms)                              392.240        391.780
+  p99 (ms)                              399.284        399.670
+
+  KS statistic:                  0.074000
+  KS p-value:                    0.129396
+  KS result (alpha=0.05):         PASS — distributions indistinguishable
+
+Autocorrelation (lags 1-10):
+  lag        authorized   unauthorized
+  ------------------------------------
+  1             -0.0286        -0.0647
+  2             -0.0233        -0.0339
+  3             -0.1125         0.0347
+  4             -0.0668         0.0415
+  5              0.0595         0.0703
+  6             -0.0130         0.0208
+  7             -0.0176        -0.0436
+  8             -0.0035        -0.0046
+  9             -0.0215         0.0093
+  10             0.0567        -0.0005
+
+  Max |ACF| lags 1-10 — authorized:   0.1125
+  Max |ACF| lags 1-10 — unauthorized: 0.0703
+  (Values >0.10 suggest temporal leakage in the timing series)
+
+======================================================================
+Distribution indistinguishable: True
+Autocorrelation below threshold: False
+Overall: FAIL

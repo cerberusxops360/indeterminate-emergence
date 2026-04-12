@@ -1,0 +1,1736 @@
+18:28:13.384429 execve("/usr/bin/python3", ["python3", "-c", "import asyncio, sys\nsys.path.ins"...], 0x7fff0009eeb0 /* 33 vars */) = 0 <0.000263>
+18:28:13.384866 brk(NULL)               = 0x23b7a000 <0.000007>
+18:28:13.384967 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46c9a6000 <0.000014>
+18:28:13.385075 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory) <0.000008>
+18:28:13.385173 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000010>
+18:28:13.385210 fstat(3, {st_mode=S_IFREG|0644, st_size=24523, ...}) = 0 <0.000006>
+18:28:13.385238 mmap(NULL, 24523, PROT_READ, MAP_PRIVATE, 3, 0) = 0x79a46c9a0000 <0.000008>
+18:28:13.385261 close(3)                = 0 <0.000005>
+18:28:13.385283 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000008>
+18:28:13.385307 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000006>
+18:28:13.385330 fstat(3, {st_mode=S_IFREG|0644, st_size=952616, ...}) = 0 <0.000006>
+18:28:13.385351 mmap(NULL, 950296, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46c8b7000 <0.000008>
+18:28:13.385373 mmap(0x79a46c8c7000, 520192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x10000) = 0x79a46c8c7000 <0.000013>
+18:28:13.385400 mmap(0x79a46c946000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8f000) = 0x79a46c946000 <0.000010>
+18:28:13.385425 mmap(0x79a46c99e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xe7000) = 0x79a46c99e000 <0.000010>
+18:28:13.385459 close(3)                = 0 <0.000006>
+18:28:13.385479 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3 <0.000009>
+18:28:13.385504 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000007>
+18:28:13.385526 fstat(3, {st_mode=S_IFREG|0644, st_size=113000, ...}) = 0 <0.000006>
+18:28:13.385548 mmap(NULL, 110744, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46c89b000 <0.000008>
+18:28:13.385569 mmap(0x79a46c89d000, 73728, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x79a46c89d000 <0.000014>
+18:28:13.385597 mmap(0x79a46c8af000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x79a46c8af000 <0.000010>
+18:28:13.385630 mmap(0x79a46c8b5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x79a46c8b5000 <0.000009>
+18:28:13.385667 close(3)                = 0 <0.000006>
+18:28:13.385687 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libexpat.so.1", O_RDONLY|O_CLOEXEC) = 3 <0.000009>
+18:28:13.385713 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000008>
+18:28:13.385736 fstat(3, {st_mode=S_IFREG|0644, st_size=174336, ...}) = 0 <0.000005>
+18:28:13.385759 mmap(NULL, 176256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46c86f000 <0.000010>
+18:28:13.385782 mmap(0x79a46c873000, 118784, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x79a46c873000 <0.000010>
+18:28:13.385806 mmap(0x79a46c890000, 32768, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x21000) = 0x79a46c890000 <0.000009>
+18:28:13.385829 mmap(0x79a46c898000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x79a46c898000 <0.000009>
+18:28:13.385860 close(3)                = 0 <0.000006>
+18:28:13.385880 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000008>
+18:28:13.385903 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832 <0.000006>
+18:28:13.385924 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000006>
+18:28:13.385945 fstat(3, {st_mode=S_IFREG|0755, st_size=2125328, ...}) = 0 <0.000006>
+18:28:13.385966 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784 <0.000005>
+18:28:13.385986 mmap(NULL, 2170256, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46c600000 <0.000010>
+18:28:13.386010 mmap(0x79a46c628000, 1605632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x79a46c628000 <0.000011>
+18:28:13.386041 mmap(0x79a46c7b0000, 323584, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b0000) = 0x79a46c7b0000 <0.000012>
+18:28:13.386068 mmap(0x79a46c7ff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1fe000) = 0x79a46c7ff000 <0.000009>
+18:28:13.386095 mmap(0x79a46c805000, 52624, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x79a46c805000 <0.000009>
+18:28:13.386126 close(3)                = 0 <0.000006>
+18:28:13.386157 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46c86d000 <0.000008>
+18:28:13.386187 arch_prctl(ARCH_SET_FS, 0x79a46c86e080) = 0 <0.000006>
+18:28:13.386208 set_tid_address(0x79a46c86e350) = 1792470 <0.000006>
+18:28:13.386227 set_robust_list(0x79a46c86e360, 24) = 0 <0.000006>
+18:28:13.386246 rseq(0x79a46c86e9a0, 0x20, 0, 0x53053053) = 0 <0.000005>
+18:28:13.386310 mprotect(0x79a46c7ff000, 16384, PROT_READ) = 0 <0.000010>
+18:28:13.386339 mprotect(0x79a46c898000, 8192, PROT_READ) = 0 <0.000008>
+18:28:13.386362 mprotect(0x79a46c8b5000, 4096, PROT_READ) = 0 <0.000008>
+18:28:13.386399 mprotect(0x79a46c99e000, 4096, PROT_READ) = 0 <0.000010>
+18:28:13.386435 mprotect(0xa27000, 4096, PROT_READ) = 0 <0.000010>
+18:28:13.386462 mprotect(0x79a46c9de000, 8192, PROT_READ) = 0 <0.000010>
+18:28:13.386496 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0 <0.000006>
+18:28:13.386527 munmap(0x79a46c9a0000, 24523) = 0 <0.000010>
+18:28:13.386591 getrandom("\x90\xce\x6d\xdf\xfe\xe8\xae\xbb", 8, GRND_NONBLOCK) = 8 <0.000009>
+18:28:13.386623 brk(NULL)               = 0x23b7a000 <0.000007>
+18:28:13.386647 brk(0x23b9b000)         = 0x23b9b000 <0.000009>
+18:28:13.386701 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3 <0.000012>
+18:28:13.386736 fstat(3, {st_mode=S_IFREG|0644, st_size=3055776, ...}) = 0 <0.000007>
+18:28:13.386765 mmap(NULL, 3055776, PROT_READ, MAP_PRIVATE, 3, 0) = 0x79a46c200000 <0.000011>
+18:28:13.386799 close(3)                = 0 <0.000007>
+18:28:13.386851 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000011>
+18:28:13.386882 fstat(3, {st_mode=S_IFREG|0644, st_size=27028, ...}) = 0 <0.000008>
+18:28:13.386910 mmap(NULL, 27028, PROT_READ, MAP_SHARED, 3, 0) = 0x79a46c866000 <0.000011>
+18:28:13.386938 close(3)                = 0 <0.000007>
+18:28:13.386964 futex(0x79a46c80472c, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000008>
+18:28:13.387057 getrandom("\xd2\x85\x02\x1b\x89\xcd\xdb\xf4\xce\x2d\xe7\x74\x39\x56\x18\x3e\xee\x64\xbb\xed\x05\xe1\x35\xd0", 24, GRND_NONBLOCK) = 24 <0.000008>
+18:28:13.387159 gettid()                = 1792470 <0.000007>
+18:28:13.387204 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46c500000 <0.000014>
+18:28:13.387239 mmap(NULL, 266240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46c825000 <0.000012>
+18:28:13.387279 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46c1df000 <0.000010>
+18:28:13.388517 brk(0x23bbc000)         = 0x23bbc000 <0.000020>
+18:28:13.390420 mmap(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46c9a2000 <0.000022>
+18:28:13.390732 brk(0x23bdd000)         = 0x23bdd000 <0.000109>
+18:28:13.391547 newfstatat(AT_FDCWD, "/home/xops360/.local/bin/python3", 0x7ffcb243deb0, 0) = -1 ENOENT (No such file or directory) <0.000018>
+18:28:13.391615 newfstatat(AT_FDCWD, "/home/xops360/.npm-global/bin/python3", 0x7ffcb243deb0, 0) = -1 ENOENT (No such file or directory) <0.000109>
+18:28:13.391772 newfstatat(AT_FDCWD, "/usr/local/sbin/python3", 0x7ffcb243deb0, 0) = -1 ENOENT (No such file or directory) <0.000009>
+18:28:13.391821 newfstatat(AT_FDCWD, "/usr/local/bin/python3", 0x7ffcb243deb0, 0) = -1 ENOENT (No such file or directory) <0.000015>
+18:28:13.391859 newfstatat(AT_FDCWD, "/usr/sbin/python3", 0x7ffcb243deb0, 0) = -1 ENOENT (No such file or directory) <0.000007>
+18:28:13.391885 newfstatat(AT_FDCWD, "/usr/bin/python3", {st_mode=S_IFREG|0755, st_size=8020928, ...}, 0) = 0 <0.000009>
+18:28:13.391932 openat(AT_FDCWD, "/usr/pyvenv.cfg", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000009>
+18:28:13.391967 openat(AT_FDCWD, "/usr/bin/pyvenv.cfg", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000007>
+18:28:13.392003 readlink("/usr/bin/python3", "python3.12", 4096) = 10 <0.000008>
+18:28:13.392036 readlink("/usr/bin/python3.12", 0x7ffcb2438ed0, 4096) = -1 EINVAL (Invalid argument) <0.000007>
+18:28:13.392062 openat(AT_FDCWD, "/usr/bin/python3._pth", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000007>
+18:28:13.392087 openat(AT_FDCWD, "/usr/bin/python3.12._pth", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000007>
+18:28:13.392112 openat(AT_FDCWD, "/usr/bin/pybuilddir.txt", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000006>
+18:28:13.392137 newfstatat(AT_FDCWD, "/usr/bin/Modules/Setup.local", 0x7ffcb243deb0, 0) = -1 ENOENT (No such file or directory) <0.000006>
+18:28:13.392164 newfstatat(AT_FDCWD, "/usr/bin/lib/python312.zip", 0x7ffcb243dc70, 0) = -1 ENOENT (No such file or directory) <0.000007>
+18:28:13.392190 newfstatat(AT_FDCWD, "/usr/lib/python312.zip", 0x7ffcb243dcd0, 0) = -1 ENOENT (No such file or directory) <0.000006>
+18:28:13.392217 newfstatat(AT_FDCWD, "/usr/bin/lib/python3.12/os.py", 0x7ffcb243dcd0, 0) = -1 ENOENT (No such file or directory) <0.000006>
+18:28:13.392239 newfstatat(AT_FDCWD, "/usr/bin/lib/python3.12/os.pyc", 0x7ffcb243dcd0, 0) = -1 ENOENT (No such file or directory) <0.000006>
+18:28:13.392262 newfstatat(AT_FDCWD, "/usr/lib/python3.12/os.py", {st_mode=S_IFREG|0644, st_size=39786, ...}, 0) = 0 <0.000007>
+18:28:13.392290 newfstatat(AT_FDCWD, "/usr/bin/lib/python3.12/lib-dynload", 0x7ffcb243dcd0, 0) = -1 ENOENT (No such file or directory) <0.000006>
+18:28:13.392314 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000007>
+18:28:13.392339 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000006>
+18:28:13.393375 brk(0x23bfe000)         = 0x23bfe000 <0.000014>
+18:28:13.393556 openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 3 <0.000015>
+18:28:13.393589 fstat(3, {st_mode=S_IFREG|0644, st_size=3552, ...}) = 0 <0.000012>
+18:28:13.393770 fstat(3, {st_mode=S_IFREG|0644, st_size=3552, ...}) = 0 <0.000014>
+18:28:13.393815 read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0\0\6\0\0\0\0"..., 4096) = 3552 <0.000015>
+18:28:13.393852 lseek(3, -2260, SEEK_CUR) = 1292 <0.000011>
+18:28:13.393885 read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0\0\6\0\0\0\0"..., 4096) = 2260 <0.000008>
+18:28:13.393915 close(3)                = 0 <0.000009>
+18:28:13.394181 newfstatat(AT_FDCWD, "/usr/lib/python312.zip", 0x7ffcb243d700, 0) = -1 ENOENT (No such file or directory) <0.000112>
+18:28:13.394349 newfstatat(AT_FDCWD, "/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000010>
+18:28:13.394411 newfstatat(AT_FDCWD, "/usr/lib/python312.zip", 0x7ffcb243da80, 0) = -1 ENOENT (No such file or directory) <0.000007>
+18:28:13.394450 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000007>
+18:28:13.394482 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000007>
+18:28:13.394528 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000008>
+18:28:13.394560 openat(AT_FDCWD, "/usr/lib/python3.12", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000011>
+18:28:13.394589 fstat(3, {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0 <0.000006>
+18:28:13.394630 getdents64(3, 0x23bdff90 /* 203 entries */, 32768) = 6784 <0.000090>
+18:28:13.394835 getdents64(3, 0x23bdff90 /* 0 entries */, 32768) = 0 <0.000007>
+18:28:13.394858 close(3)                = 0 <0.000009>
+18:28:13.394920 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243da80, 0) = -1 ENOENT (No such file or directory) <0.000009>
+18:28:13.394967 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/__init__.abi3.so", 0x7ffcb243da80, 0) = -1 ENOENT (No such file or directory) <0.000008>
+18:28:13.395000 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/__init__.so", 0x7ffcb243da80, 0) = -1 ENOENT (No such file or directory) <0.000008>
+18:28:13.395031 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/__init__.py", {st_mode=S_IFREG|0644, st_size=5884, ...}, 0) = 0 <0.000008>
+18:28:13.395121 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/__init__.py", {st_mode=S_IFREG|0644, st_size=5884, ...}, 0) = 0 <0.000008>
+18:28:13.395167 openat(AT_FDCWD, "/usr/lib/python3.12/encodings/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000011>
+18:28:13.395196 fcntl(3, F_GETFD)       = 0x1 (flags FD_CLOEXEC) <0.000007>
+18:28:13.395220 fstat(3, {st_mode=S_IFREG|0644, st_size=5790, ...}) = 0 <0.000007>
+18:28:13.395246 ioctl(3, TCGETS, 0x7ffcb243d6c0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000007>
+18:28:13.395344 lseek(3, 0, SEEK_CUR)   = 0 <0.000008>
+18:28:13.395377 lseek(3, 0, SEEK_CUR)   = 0 <0.000007>
+18:28:13.395398 fstat(3, {st_mode=S_IFREG|0644, st_size=5790, ...}) = 0 <0.000007>
+18:28:13.395425 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\374\26\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 5791) = 5790 <0.000009>
+18:28:13.395452 read(3, "", 1)          = 0 <0.000007>
+18:28:13.395478 close(3)                = 0 <0.000007>
+18:28:13.396092 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000008>
+18:28:13.396151 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000007>
+18:28:13.396191 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000007>
+18:28:13.396220 openat(AT_FDCWD, "/usr/lib/python3.12/encodings", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000009>
+18:28:13.396243 fstat(3, {st_mode=S_IFDIR|0755, st_size=20480, ...}) = 0 <0.000006>
+18:28:13.396266 getdents64(3, 0x23be9760 /* 125 entries */, 32768) = 4224 <0.000054>
+18:28:13.396383 getdents64(3, 0x23be9760 /* 0 entries */, 32768) = 0 <0.000006>
+18:28:13.396403 close(3)                = 0 <0.000008>
+18:28:13.396455 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/aliases.py", {st_mode=S_IFREG|0644, st_size=15677, ...}, 0) = 0 <0.000008>
+18:28:13.396520 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/aliases.py", {st_mode=S_IFREG|0644, st_size=15677, ...}, 0) = 0 <0.000007>
+18:28:13.396559 openat(AT_FDCWD, "/usr/lib/python3.12/encodings/__pycache__/aliases.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000009>
+18:28:13.396583 fstat(3, {st_mode=S_IFREG|0644, st_size=12408, ...}) = 0 <0.000006>
+18:28:13.396613 ioctl(3, TCGETS, 0x7ffcb243cc40) = -1 ENOTTY (Inappropriate ioctl for device) <0.000008>
+18:28:13.396645 lseek(3, 0, SEEK_CUR)   = 0 <0.000006>
+18:28:13.396666 lseek(3, 0, SEEK_CUR)   = 0 <0.000006>
+18:28:13.396685 fstat(3, {st_mode=S_IFREG|0644, st_size=12408, ...}) = 0 <0.000006>
+18:28:13.396708 read(3, "\313\r\r\n\0\0\0\0\326\320\246i==\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 12409) = 12408 <0.000012>
+18:28:13.396735 read(3, "", 1)          = 0 <0.000006>
+18:28:13.396757 close(3)                = 0 <0.000006>
+18:28:13.396855 brk(0x23c20000)         = 0x23c20000 <0.000010>
+18:28:13.397115 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000007>
+18:28:13.397148 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/utf_8.py", {st_mode=S_IFREG|0644, st_size=1005, ...}, 0) = 0 <0.000006>
+18:28:13.397198 newfstatat(AT_FDCWD, "/usr/lib/python3.12/encodings/utf_8.py", {st_mode=S_IFREG|0644, st_size=1005, ...}, 0) = 0 <0.000006>
+18:28:13.397230 openat(AT_FDCWD, "/usr/lib/python3.12/encodings/__pycache__/utf_8.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000007>
+18:28:13.397250 fstat(3, {st_mode=S_IFREG|0644, st_size=2147, ...}) = 0 <0.000005>
+18:28:13.397269 ioctl(3, TCGETS, 0x7ffcb243d750) = -1 ENOTTY (Inappropriate ioctl for device) <0.000005>
+18:28:13.397293 lseek(3, 0, SEEK_CUR)   = 0 <0.000005>
+18:28:13.397311 lseek(3, 0, SEEK_CUR)   = 0 <0.000005>
+18:28:13.397327 fstat(3, {st_mode=S_IFREG|0644, st_size=2147, ...}) = 0 <0.000005>
+18:28:13.397344 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\355\3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 2148) = 2147 <0.000006>
+18:28:13.397362 read(3, "", 1)          = 0 <0.000005>
+18:28:13.397380 close(3)                = 0 <0.000005>
+18:28:13.397522 rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000006>
+18:28:13.397550 rt_sigaction(SIGXFSZ, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397664 rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000006>
+18:28:13.397685 rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397703 rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397721 rt_sigaction(SIGILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397738 rt_sigaction(SIGTRAP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397755 rt_sigaction(SIGABRT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397772 rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397789 rt_sigaction(SIGFPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397805 rt_sigaction(SIGKILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397822 rt_sigaction(SIGUSR1, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397839 rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397855 rt_sigaction(SIGUSR2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397872 rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, 8) = 0 <0.000005>
+18:28:13.397888 rt_sigaction(SIGALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397905 rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397922 rt_sigaction(SIGSTKFLT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397938 rt_sigaction(SIGCHLD, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397955 rt_sigaction(SIGCONT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397972 rt_sigaction(SIGSTOP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.397988 rt_sigaction(SIGTSTP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398005 rt_sigaction(SIGTTIN, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398021 rt_sigaction(SIGTTOU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398038 rt_sigaction(SIGURG, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398054 rt_sigaction(SIGXCPU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398071 rt_sigaction(SIGXFSZ, NULL, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, 8) = 0 <0.000005>
+18:28:13.398088 rt_sigaction(SIGVTALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398104 rt_sigaction(SIGPROF, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398121 rt_sigaction(SIGWINCH, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398138 rt_sigaction(SIGIO, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398155 rt_sigaction(SIGPWR, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398174 rt_sigaction(SIGSYS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398191 rt_sigaction(SIGRT_2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398207 rt_sigaction(SIGRT_3, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398224 rt_sigaction(SIGRT_4, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398241 rt_sigaction(SIGRT_5, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398257 rt_sigaction(SIGRT_6, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398274 rt_sigaction(SIGRT_7, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398290 rt_sigaction(SIGRT_8, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398307 rt_sigaction(SIGRT_9, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398323 rt_sigaction(SIGRT_10, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398340 rt_sigaction(SIGRT_11, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398357 rt_sigaction(SIGRT_12, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398373 rt_sigaction(SIGRT_13, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398390 rt_sigaction(SIGRT_14, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398410 rt_sigaction(SIGRT_15, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398426 rt_sigaction(SIGRT_16, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398440 rt_sigaction(SIGRT_17, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398455 rt_sigaction(SIGRT_18, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398470 rt_sigaction(SIGRT_19, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398484 rt_sigaction(SIGRT_20, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398499 rt_sigaction(SIGRT_21, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398514 rt_sigaction(SIGRT_22, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398529 rt_sigaction(SIGRT_23, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398544 rt_sigaction(SIGRT_24, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398558 rt_sigaction(SIGRT_25, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398573 rt_sigaction(SIGRT_26, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398588 rt_sigaction(SIGRT_27, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398610 rt_sigaction(SIGRT_28, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398627 rt_sigaction(SIGRT_29, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000005>
+18:28:13.398642 rt_sigaction(SIGRT_30, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398658 rt_sigaction(SIGRT_31, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398672 rt_sigaction(SIGRT_32, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398688 rt_sigaction(SIGINT, {sa_handler=0x6e7170, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0 <0.000004>
+18:28:13.398711 fstat(0, {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x3), ...}) = 0 <0.000005>
+18:28:13.398995 fcntl(0, F_GETFD)       = 0 <0.000005>
+18:28:13.399012 fstat(0, {st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x3), ...}) = 0 <0.000005>
+18:28:13.399030 ioctl(0, TCGETS, 0x7ffcb243de40) = -1 ENOTTY (Inappropriate ioctl for device) <0.000005>
+18:28:13.399052 lseek(0, 0, SEEK_CUR)   = 0 <0.000005>
+18:28:13.399072 ioctl(0, TCGETS, 0x7ffcb243e0d0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000004>
+18:28:13.399097 fcntl(1, F_GETFD)       = 0 <0.000005>
+18:28:13.399113 fstat(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0 <0.000005>
+18:28:13.399130 ioctl(1, TCGETS, 0x7ffcb243de40) = -1 ENOTTY (Inappropriate ioctl for device) <0.000005>
+18:28:13.399150 lseek(1, 0, SEEK_CUR)   = -1 ESPIPE (Illegal seek) <0.000004>
+18:28:13.399168 ioctl(1, TCGETS, 0x7ffcb243e0d0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000004>
+18:28:13.399189 fcntl(2, F_GETFD)       = 0 <0.000004>
+18:28:13.399204 fstat(2, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0 <0.000004>
+18:28:13.399220 ioctl(2, TCGETS, 0x7ffcb243de40) = -1 ENOTTY (Inappropriate ioctl for device) <0.000005>
+18:28:13.399241 lseek(2, 0, SEEK_CUR)   = -1 ESPIPE (Illegal seek) <0.000004>
+18:28:13.399257 ioctl(2, TCGETS, 0x7ffcb243e0d0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000004>
+18:28:13.399680 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46c0df000 <0.000009>
+18:28:13.400538 newfstatat(AT_FDCWD, "/usr/bin/pyvenv.cfg", 0x7ffcb243d6c0, 0) = -1 ENOENT (No such file or directory) <0.000008>
+18:28:13.400582 newfstatat(AT_FDCWD, "/usr/pyvenv.cfg", 0x7ffcb243d720, 0) = -1 ENOENT (No such file or directory) <0.000005>
+18:28:13.400612 geteuid()               = 1000 <0.000004>
+18:28:13.400626 getuid()                = 1000 <0.000003>
+18:28:13.400637 getegid()               = 1000 <0.000003>
+18:28:13.400648 getgid()                = 1000 <0.000003>
+18:28:13.400675 newfstatat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000006>
+18:28:13.400698 openat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000006>
+18:28:13.400713 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000003>
+18:28:13.400726 getdents64(3, 0x23c0ffb0 /* 22 entries */, 32768) = 872 <0.000013>
+18:28:13.400752 getdents64(3, 0x23c0ffb0 /* 0 entries */, 32768) = 0 <0.000003>
+18:28:13.400764 close(3)                = 0 <0.000004>
+18:28:13.400789 newfstatat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000005>
+18:28:13.400808 openat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000004>
+18:28:13.400821 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000003>
+18:28:13.400833 getdents64(3, 0x23c0ffb0 /* 2 entries */, 32768) = 48 <0.000005>
+18:28:13.400847 getdents64(3, 0x23c0ffb0 /* 0 entries */, 32768) = 0 <0.000003>
+18:28:13.400857 close(3)                = 0 <0.000003>
+18:28:13.400869 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000004>
+18:28:13.400885 openat(AT_FDCWD, "/usr/lib/python3/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000004>
+18:28:13.400897 fstat(3, {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0 <0.000003>
+18:28:13.400908 getdents64(3, 0x23c0ffb0 /* 201 entries */, 32768) = 8120 <0.000049>
+18:28:13.400993 getdents64(3, 0x23c0ffb0 /* 0 entries */, 32768) = 0 <0.000004>
+18:28:13.401005 close(3)                = 0 <0.000007>
+18:28:13.401033 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/distutils-precedence.pth", {st_mode=S_IFREG|0644, st_size=151, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000004>
+18:28:13.401053 openat(AT_FDCWD, "/usr/lib/python3/dist-packages/distutils-precedence.pth", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.401067 fstat(3, {st_mode=S_IFREG|0644, st_size=151, ...}) = 0 <0.000003>
+18:28:13.401079 ioctl(3, TCGETS, 0x7ffcb243d590) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.401094 lseek(3, 0, SEEK_CUR)   = 0 <0.000003>
+18:28:13.401122 read(3, "import os; var = 'SETUPTOOLS_USE"..., 8192) = 151 <0.000004>
+18:28:13.401245 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000004>
+18:28:13.401270 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000004>
+18:28:13.401288 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.401308 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000004>
+18:28:13.401323 openat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4 <0.000004>
+18:28:13.401336 fstat(4, {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0 <0.000003>
+18:28:13.401347 brk(0x23c42000)         = 0x23c42000 <0.000005>
+18:28:13.401360 getdents64(4, 0x23c196e0 /* 49 entries */, 32768) = 3104 <0.000020>
+18:28:13.401395 getdents64(4, 0x23c196e0 /* 0 entries */, 32768) = 0 <0.000003>
+18:28:13.401406 brk(0x23c3a000)         = 0x23c3a000 <0.000009>
+18:28:13.401423 close(4)                = 0 <0.000004>
+18:28:13.401444 newfstatat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.401461 newfstatat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.401541 newfstatat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.401556 openat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4 <0.000004>
+18:28:13.401568 fstat(4, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000003>
+18:28:13.401580 getdents64(4, 0x23c196e0 /* 22 entries */, 32768) = 872 <0.000008>
+18:28:13.401599 getdents64(4, 0x23c196e0 /* 0 entries */, 32768) = 0 <0.000006>
+18:28:13.401614 close(4)                = 0 <0.000004>
+18:28:13.401633 newfstatat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.401650 newfstatat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.401668 newfstatat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.401682 openat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4 <0.000004>
+18:28:13.401695 fstat(4, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000003>
+18:28:13.401707 getdents64(4, 0x23c196e0 /* 2 entries */, 32768) = 48 <0.000004>
+18:28:13.401719 getdents64(4, 0x23c196e0 /* 0 entries */, 32768) = 0 <0.000003>
+18:28:13.401729 close(4)                = 0 <0.000003>
+18:28:13.401745 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000004>
+18:28:13.401759 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.401775 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.401789 openat(AT_FDCWD, "/usr/lib/python3/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4 <0.000004>
+18:28:13.401801 fstat(4, {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0 <0.000003>
+18:28:13.401813 getdents64(4, 0x23c196e0 /* 201 entries */, 32768) = 8120 <0.000044>
+18:28:13.401888 getdents64(4, 0x23c196e0 /* 0 entries */, 32768) = 0 <0.000003>
+18:28:13.401898 close(4)                = 0 <0.000005>
+18:28:13.401922 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/_distutils_hack/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243d1a0, 0) = -1 ENOENT (No such file or directory) <0.000004>
+18:28:13.401937 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/_distutils_hack/__init__.abi3.so", 0x7ffcb243d1a0, 0) = -1 ENOENT (No such file or directory) <0.000004>
+18:28:13.401951 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/_distutils_hack/__init__.so", 0x7ffcb243d1a0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.401964 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/_distutils_hack/__init__.py", {st_mode=S_IFREG|0644, st_size=6299, ...}, 0) = 0 <0.000004>
+18:28:13.401997 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/_distutils_hack/__init__.py", {st_mode=S_IFREG|0644, st_size=6299, ...}, 0) = 0 <0.000003>
+18:28:13.402014 openat(AT_FDCWD, "/usr/lib/python3/dist-packages/_distutils_hack/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000005>
+18:28:13.402026 fstat(4, {st_mode=S_IFREG|0644, st_size=9998, ...}) = 0 <0.000003>
+18:28:13.402037 ioctl(4, TCGETS, 0x7ffcb243ce40) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.402052 lseek(4, 0, SEEK_CUR)   = 0 <0.000003>
+18:28:13.402062 lseek(4, 0, SEEK_CUR)   = 0 <0.000003>
+18:28:13.402071 fstat(4, {st_mode=S_IFREG|0644, st_size=9998, ...}) = 0 <0.000002>
+18:28:13.402082 read(4, "\313\r\r\n\0\0\0\0\332;\222h\233\30\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 9999) = 9998 <0.000005>
+18:28:13.402095 read(4, "", 1)          = 0 <0.000002>
+18:28:13.402105 close(4)                = 0 <0.000003>
+18:28:13.402213 read(3, "", 8192)       = 0 <0.000003>
+18:28:13.402227 close(3)                = 0 <0.000003>
+18:28:13.402241 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope.interface-6.1-nspkg.pth", {st_mode=S_IFREG|0644, st_size=529, ...}, AT_SYMLINK_NOFOLLOW) = 0 <0.000004>
+18:28:13.402258 openat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope.interface-6.1-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.402270 fstat(3, {st_mode=S_IFREG|0644, st_size=529, ...}) = 0 <0.000003>
+18:28:13.402280 ioctl(3, TCGETS, 0x7ffcb243d5f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.402292 lseek(3, 0, SEEK_CUR)   = 0 <0.000003>
+18:28:13.402307 read(3, "import sys, types, os;has_mfs = "..., 8192) = 529 <0.000003>
+18:28:13.402481 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000004>
+18:28:13.402499 newfstatat(AT_FDCWD, "/usr/lib/python3.12/types.py", {st_mode=S_IFREG|0644, st_size=10993, ...}, 0) = 0 <0.000004>
+18:28:13.402529 newfstatat(AT_FDCWD, "/usr/lib/python3.12/types.py", {st_mode=S_IFREG|0644, st_size=10993, ...}, 0) = 0 <0.000003>
+18:28:13.402545 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/types.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000004>
+18:28:13.402557 fstat(4, {st_mode=S_IFREG|0644, st_size=14939, ...}) = 0 <0.000003>
+18:28:13.402568 ioctl(4, TCGETS, 0x7ffcb243cf70) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.402580 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.402590 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.402599 fstat(4, {st_mode=S_IFREG|0644, st_size=14939, ...}) = 0 <0.000003>
+18:28:13.402614 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\361*\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 14940) = 14939 <0.000004>
+18:28:13.402626 read(4, "", 1)          = 0 <0.000003>
+18:28:13.402637 close(4)                = 0 <0.000004>
+18:28:13.402783 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.402798 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243cd90, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.402813 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib/__init__.abi3.so", 0x7ffcb243cd90, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.402825 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib/__init__.so", 0x7ffcb243cd90, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.402837 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib/__init__.py", {st_mode=S_IFREG|0644, st_size=4774, ...}, 0) = 0 <0.000003>
+18:28:13.402864 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib/__init__.py", {st_mode=S_IFREG|0644, st_size=4774, ...}, 0) = 0 <0.000003>
+18:28:13.402878 openat(AT_FDCWD, "/usr/lib/python3.12/importlib/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000004>
+18:28:13.402889 fstat(4, {st_mode=S_IFREG|0644, st_size=4565, ...}) = 0 <0.000002>
+18:28:13.402900 ioctl(4, TCGETS, 0x7ffcb243ca30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.402912 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.402921 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.402929 fstat(4, {st_mode=S_IFREG|0644, st_size=4565, ...}) = 0 <0.000002>
+18:28:13.402938 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\246\22\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 4566) = 4565 <0.000003>
+18:28:13.402948 read(4, "", 1)          = 0 <0.000002>
+18:28:13.402957 close(4)                = 0 <0.000002>
+18:28:13.403006 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.403021 newfstatat(AT_FDCWD, "/usr/lib/python3.12/warnings.py", {st_mode=S_IFREG|0644, st_size=21760, ...}, 0) = 0 <0.000003>
+18:28:13.403045 newfstatat(AT_FDCWD, "/usr/lib/python3.12/warnings.py", {st_mode=S_IFREG|0644, st_size=21760, ...}, 0) = 0 <0.000003>
+18:28:13.403058 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/warnings.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000004>
+18:28:13.403069 fstat(4, {st_mode=S_IFREG|0644, st_size=23792, ...}) = 0 <0.000003>
+18:28:13.403079 ioctl(4, TCGETS, 0x7ffcb243c3c0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.403090 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.403098 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.403106 fstat(4, {st_mode=S_IFREG|0644, st_size=23792, ...}) = 0 <0.000002>
+18:28:13.403116 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\0U\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 23793) = 23792 <0.000009>
+18:28:13.403132 read(4, "", 1)          = 0 <0.000002>
+18:28:13.403140 close(4)                = 0 <0.000002>
+18:28:13.403286 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.403300 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.403315 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.403326 openat(AT_FDCWD, "/usr/lib/python3.12/importlib", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4 <0.000003>
+18:28:13.403336 fstat(4, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.403346 getdents64(4, 0x23c2a5d0 /* 14 entries */, 32768) = 456 <0.000007>
+18:28:13.403361 getdents64(4, 0x23c2a5d0 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.403370 close(4)                = 0 <0.000003>
+18:28:13.403384 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib/_abc.py", {st_mode=S_IFREG|0644, st_size=1354, ...}, 0) = 0 <0.000003>
+18:28:13.403407 newfstatat(AT_FDCWD, "/usr/lib/python3.12/importlib/_abc.py", {st_mode=S_IFREG|0644, st_size=1354, ...}, 0) = 0 <0.000003>
+18:28:13.403421 openat(AT_FDCWD, "/usr/lib/python3.12/importlib/__pycache__/_abc.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000003>
+18:28:13.403432 fstat(4, {st_mode=S_IFREG|0644, st_size=1643, ...}) = 0 <0.000003>
+18:28:13.403442 ioctl(4, TCGETS, 0x7ffcb243c870) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.403453 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.403462 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.403470 fstat(4, {st_mode=S_IFREG|0644, st_size=1643, ...}) = 0 <0.000002>
+18:28:13.403479 read(4, "\313\r\r\n\0\0\0\0\326\320\246iJ\5\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 1644) = 1643 <0.000003>
+18:28:13.403488 read(4, "", 1)          = 0 <0.000002>
+18:28:13.403497 close(4)                = 0 <0.000002>
+18:28:13.403553 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.403568 newfstatat(AT_FDCWD, "/usr/lib/python3.12/threading.py", {st_mode=S_IFREG|0644, st_size=60123, ...}, 0) = 0 <0.000004>
+18:28:13.403634 newfstatat(AT_FDCWD, "/usr/lib/python3.12/threading.py", {st_mode=S_IFREG|0644, st_size=60123, ...}, 0) = 0 <0.000007>
+18:28:13.403683 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/threading.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000004>
+18:28:13.403694 fstat(4, {st_mode=S_IFREG|0644, st_size=65346, ...}) = 0 <0.000003>
+18:28:13.403706 ioctl(4, TCGETS, 0x7ffcb243c870) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.403722 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.403731 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.403739 fstat(4, {st_mode=S_IFREG|0644, st_size=65346, ...}) = 0 <0.000002>
+18:28:13.403748 brk(0x23c5c000)         = 0x23c5c000 <0.000004>
+18:28:13.403758 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\333\352\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 65347) = 65346 <0.000018>
+18:28:13.403783 read(4, "", 1)          = 0 <0.000003>
+18:28:13.403793 close(4)                = 0 <0.000002>
+18:28:13.404026 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.404042 newfstatat(AT_FDCWD, "/usr/lib/python3.12/functools.py", {st_mode=S_IFREG|0644, st_size=38126, ...}, 0) = 0 <0.000003>
+18:28:13.404067 newfstatat(AT_FDCWD, "/usr/lib/python3.12/functools.py", {st_mode=S_IFREG|0644, st_size=38126, ...}, 0) = 0 <0.000003>
+18:28:13.404081 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/functools.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000004>
+18:28:13.404092 fstat(4, {st_mode=S_IFREG|0644, st_size=40506, ...}) = 0 <0.000002>
+18:28:13.404102 ioctl(4, TCGETS, 0x7ffcb243c200) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.404114 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.404123 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.404130 fstat(4, {st_mode=S_IFREG|0644, st_size=40506, ...}) = 0 <0.000002>
+18:28:13.404139 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\356\224\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\7\0\0"..., 40507) = 40506 <0.000006>
+18:28:13.404152 read(4, "", 1)          = 0 <0.000002>
+18:28:13.404161 close(4)                = 0 <0.000002>
+18:28:13.404299 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.404313 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243bef0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.404327 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections/__init__.abi3.so", 0x7ffcb243bef0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.404339 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections/__init__.so", 0x7ffcb243bef0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.404350 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections/__init__.py", {st_mode=S_IFREG|0644, st_size=52378, ...}, 0) = 0 <0.000003>
+18:28:13.404373 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections/__init__.py", {st_mode=S_IFREG|0644, st_size=52378, ...}, 0) = 0 <0.000003>
+18:28:13.404387 openat(AT_FDCWD, "/usr/lib/python3.12/collections/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000004>
+18:28:13.404397 fstat(4, {st_mode=S_IFREG|0644, st_size=73089, ...}) = 0 <0.000002>
+18:28:13.404407 ioctl(4, TCGETS, 0x7ffcb243bb90) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.404418 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.404428 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.404435 fstat(4, {st_mode=S_IFREG|0644, st_size=73089, ...}) = 0 <0.000002>
+18:28:13.404446 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\232\314\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 73090) = 73089 <0.000023>
+18:28:13.404476 read(4, "", 1)          = 0 <0.000003>
+18:28:13.404485 close(4)                = 0 <0.000003>
+18:28:13.404797 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000005>
+18:28:13.404816 newfstatat(AT_FDCWD, "/usr/lib/python3.12/keyword.py", {st_mode=S_IFREG|0644, st_size=1073, ...}, 0) = 0 <0.000003>
+18:28:13.404843 newfstatat(AT_FDCWD, "/usr/lib/python3.12/keyword.py", {st_mode=S_IFREG|0644, st_size=1073, ...}, 0) = 0 <0.000003>
+18:28:13.404857 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/keyword.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000005>
+18:28:13.404869 fstat(4, {st_mode=S_IFREG|0644, st_size=1041, ...}) = 0 <0.000003>
+18:28:13.404879 ioctl(4, TCGETS, 0x7ffcb243b520) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.404891 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.404901 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.404909 fstat(4, {st_mode=S_IFREG|0644, st_size=1041, ...}) = 0 <0.000002>
+18:28:13.404917 read(4, "\313\r\r\n\0\0\0\0\326\320\246i1\4\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\3\0\0"..., 1042) = 1041 <0.000003>
+18:28:13.404927 read(4, "", 1)          = 0 <0.000002>
+18:28:13.404936 close(4)                = 0 <0.000003>
+18:28:13.404979 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.404993 newfstatat(AT_FDCWD, "/usr/lib/python3.12/operator.py", {st_mode=S_IFREG|0644, st_size=10965, ...}, 0) = 0 <0.000003>
+18:28:13.405016 newfstatat(AT_FDCWD, "/usr/lib/python3.12/operator.py", {st_mode=S_IFREG|0644, st_size=10965, ...}, 0) = 0 <0.000003>
+18:28:13.405029 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/operator.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000004>
+18:28:13.405040 fstat(4, {st_mode=S_IFREG|0644, st_size=17364, ...}) = 0 <0.000002>
+18:28:13.405050 ioctl(4, TCGETS, 0x7ffcb243b520) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.405060 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.405069 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.405076 fstat(4, {st_mode=S_IFREG|0644, st_size=17364, ...}) = 0 <0.000002>
+18:28:13.405085 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\325*\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 17365) = 17364 <0.000004>
+18:28:13.405096 read(4, "", 1)          = 0 <0.000002>
+18:28:13.405105 close(4)                = 0 <0.000002>
+18:28:13.405269 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.405284 newfstatat(AT_FDCWD, "/usr/lib/python3.12/reprlib.py", {st_mode=S_IFREG|0644, st_size=6569, ...}, 0) = 0 <0.000003>
+18:28:13.405308 newfstatat(AT_FDCWD, "/usr/lib/python3.12/reprlib.py", {st_mode=S_IFREG|0644, st_size=6569, ...}, 0) = 0 <0.000003>
+18:28:13.405322 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/reprlib.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000004>
+18:28:13.405332 fstat(4, {st_mode=S_IFREG|0644, st_size=9909, ...}) = 0 <0.000002>
+18:28:13.405342 ioctl(4, TCGETS, 0x7ffcb243b520) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.405353 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.405361 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.405369 fstat(4, {st_mode=S_IFREG|0644, st_size=9909, ...}) = 0 <0.000002>
+18:28:13.405378 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\251\31\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 9910) = 9909 <0.000003>
+18:28:13.405388 read(4, "", 1)          = 0 <0.000002>
+18:28:13.405396 close(4)                = 0 <0.000002>
+18:28:13.405924 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000005>
+18:28:13.405963 newfstatat(AT_FDCWD, "/usr/lib/python3.12/_weakrefset.py", {st_mode=S_IFREG|0644, st_size=5893, ...}, 0) = 0 <0.000004>
+18:28:13.405991 newfstatat(AT_FDCWD, "/usr/lib/python3.12/_weakrefset.py", {st_mode=S_IFREG|0644, st_size=5893, ...}, 0) = 0 <0.000003>
+18:28:13.406007 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/_weakrefset.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 4 <0.000005>
+18:28:13.406019 fstat(4, {st_mode=S_IFREG|0644, st_size=11751, ...}) = 0 <0.000002>
+18:28:13.406028 ioctl(4, TCGETS, 0x7ffcb243c200) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.406039 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.406048 lseek(4, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.406056 fstat(4, {st_mode=S_IFREG|0644, st_size=11751, ...}) = 0 <0.000002>
+18:28:13.406065 read(4, "\313\r\r\n\0\0\0\0\326\320\246i\5\27\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 11752) = 11751 <0.000004>
+18:28:13.406076 read(4, "", 1)          = 0 <0.000002>
+18:28:13.406085 close(4)                = 0 <0.000003>
+18:28:13.406264 gettid()                = 1792470 <0.000003>
+18:28:13.406358 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.406375 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243d690, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.406390 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope/__init__.abi3.so", 0x7ffcb243d690, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.406402 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope/__init__.so", 0x7ffcb243d690, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.406413 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope/__init__.py", {st_mode=S_IFREG|0644, st_size=56, ...}, 0) = 0 <0.000003>
+18:28:13.406439 read(3, "", 8192)       = 0 <0.000003>
+18:28:13.406451 close(3)                = 0 <0.000003>
+18:28:13.406462 newfstatat(AT_FDCWD, "/usr/lib/python3.12/dist-packages", 0x7ffcb243d950, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.406504 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.406519 newfstatat(AT_FDCWD, "/usr/lib/python3.12/sitecustomize.py", {st_mode=S_IFREG|0644, st_size=155, ...}, 0) = 0 <0.000004>
+18:28:13.406545 newfstatat(AT_FDCWD, "/usr/lib/python3.12/sitecustomize.py", {st_mode=S_IFREG|0644, st_size=155, ...}, 0) = 0 <0.000003>
+18:28:13.406559 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/sitecustomize.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.406570 fstat(3, {st_mode=S_IFREG|0644, st_size=300, ...}) = 0 <0.000002>
+18:28:13.406580 ioctl(3, TCGETS, 0x7ffcb243d230) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.406592 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.406602 lseek(3, 0, SEEK_CUR)   = 0 <0.000003>
+18:28:13.406612 fstat(3, {st_mode=S_IFREG|0644, st_size=300, ...}) = 0 <0.000002>
+18:28:13.406621 read(3, "\313\r\r\n\0\0\0\0\221\376Rh\233\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 301) = 300 <0.000003>
+18:28:13.406630 read(3, "", 1)          = 0 <0.000002>
+18:28:13.406639 close(3)                = 0 <0.000003>
+18:28:13.406669 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.406685 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.406699 newfstatat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.406713 newfstatat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.406727 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.406740 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/apport_python_hook.py", {st_mode=S_IFREG|0644, st_size=8695, ...}, 0) = 0 <0.000003>
+18:28:13.406763 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages/apport_python_hook.py", {st_mode=S_IFREG|0644, st_size=8695, ...}, 0) = 0 <0.000003>
+18:28:13.406776 openat(AT_FDCWD, "/usr/lib/python3/dist-packages/__pycache__/apport_python_hook.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.406787 fstat(3, {st_mode=S_IFREG|0644, st_size=8876, ...}) = 0 <0.000003>
+18:28:13.406797 ioctl(3, TCGETS, 0x7ffcb243cbc0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.406808 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.406817 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.406824 fstat(3, {st_mode=S_IFREG|0644, st_size=8876, ...}) = 0 <0.000002>
+18:28:13.406833 read(3, "\313\r\r\n\0\0\0\0\247\22!f\367!\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 8877) = 8876 <0.000004>
+18:28:13.406843 read(3, "", 1)          = 0 <0.000002>
+18:28:13.406852 close(3)                = 0 <0.000002>
+18:28:13.406899 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.406927 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.406943 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.406958 newfstatat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.406973 newfstatat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.406986 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.407073 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.407085 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407099 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407115 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407126 openat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000003>
+18:28:13.407136 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.407146 getdents64(3, 0x23c1f9b0 /* 8 entries */, 32768) = 240 <0.000006>
+18:28:13.407160 getdents64(3, 0x23c1f9b0 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.407169 close(3)                = 0 <0.000003>
+18:28:13.407183 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.407195 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243dec0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.407209 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__init__.abi3.so", 0x7ffcb243dec0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.407220 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__init__.so", 0x7ffcb243dec0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.407231 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__init__.py", {st_mode=S_IFREG|0644, st_size=1220, ...}, 0) = 0 <0.000003>
+18:28:13.407257 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__init__.py", {st_mode=S_IFREG|0644, st_size=1220, ...}, 0) = 0 <0.000003>
+18:28:13.407271 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.407282 fstat(3, {st_mode=S_IFREG|0644, st_size=1457, ...}) = 0 <0.000002>
+18:28:13.407292 ioctl(3, TCGETS, 0x7ffcb243db60) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.407304 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.407313 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.407321 fstat(3, {st_mode=S_IFREG|0644, st_size=1457, ...}) = 0 <0.000002>
+18:28:13.407330 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\304\4\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 1458) = 1457 <0.000003>
+18:28:13.407339 read(3, "", 1)          = 0 <0.000002>
+18:28:13.407348 close(3)                = 0 <0.000002>
+18:28:13.407380 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407394 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407409 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407420 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000003>
+18:28:13.407430 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.407439 getdents64(3, 0x23c1f9b0 /* 36 entries */, 32768) = 1256 <0.000009>
+18:28:13.407458 getdents64(3, 0x23c1f9b0 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.407466 close(3)                = 0 <0.000003>
+18:28:13.407480 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/base_events.py", {st_mode=S_IFREG|0644, st_size=77971, ...}, 0) = 0 <0.000003>
+18:28:13.407504 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/base_events.py", {st_mode=S_IFREG|0644, st_size=77971, ...}, 0) = 0 <0.000003>
+18:28:13.407518 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/base_events.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.407528 fstat(3, {st_mode=S_IFREG|0644, st_size=86610, ...}) = 0 <0.000002>
+18:28:13.407538 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.407549 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.407558 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.407566 fstat(3, {st_mode=S_IFREG|0644, st_size=86610, ...}) = 0 <0.000002>
+18:28:13.407575 brk(0x23c88000)         = 0x23c88000 <0.000004>
+18:28:13.407585 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\2230\1\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 86611) = 86610 <0.000033>
+18:28:13.407625 read(3, "", 1)          = 0 <0.000002>
+18:28:13.407634 close(3)                = 0 <0.000002>
+18:28:13.407868 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407882 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407900 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.407912 openat(AT_FDCWD, "/usr/lib/python3.12/collections", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000003>
+18:28:13.407921 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.407930 getdents64(3, 0x23c527e0 /* 5 entries */, 32768) = 144 <0.000004>
+18:28:13.407942 getdents64(3, 0x23c527e0 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.407950 close(3)                = 0 <0.000003>
+18:28:13.407963 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections/abc.py", {st_mode=S_IFREG|0644, st_size=119, ...}, 0) = 0 <0.000003>
+18:28:13.407988 newfstatat(AT_FDCWD, "/usr/lib/python3.12/collections/abc.py", {st_mode=S_IFREG|0644, st_size=119, ...}, 0) = 0 <0.000003>
+18:28:13.408002 openat(AT_FDCWD, "/usr/lib/python3.12/collections/__pycache__/abc.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.408013 fstat(3, {st_mode=S_IFREG|0644, st_size=249, ...}) = 0 <0.000003>
+18:28:13.408022 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.408034 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.408042 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.408050 fstat(3, {st_mode=S_IFREG|0644, st_size=249, ...}) = 0 <0.000002>
+18:28:13.408059 read(3, "\313\r\r\n\0\0\0\0\326\320\246iw\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 250) = 249 <0.000003>
+18:28:13.408068 read(3, "", 1)          = 0 <0.000002>
+18:28:13.408076 close(3)                = 0 <0.000002>
+18:28:13.408203 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.408214 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.408230 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.408243 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243cd70, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.408256 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/__init__.abi3.so", 0x7ffcb243cd70, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.408267 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/__init__.so", 0x7ffcb243cd70, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.408277 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/__init__.py", {st_mode=S_IFREG|0644, st_size=38, ...}, 0) = 0 <0.000003>
+18:28:13.408302 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/__init__.py", {st_mode=S_IFREG|0644, st_size=38, ...}, 0) = 0 <0.000003>
+18:28:13.408316 openat(AT_FDCWD, "/usr/lib/python3.12/concurrent/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.408328 fstat(3, {st_mode=S_IFREG|0644, st_size=139, ...}) = 0 <0.000003>
+18:28:13.408338 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.408349 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.408359 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.408366 fstat(3, {st_mode=S_IFREG|0644, st_size=139, ...}) = 0 <0.000002>
+18:28:13.408375 read(3, "\313\r\r\n\0\0\0\0\326\320\246i&\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 140) = 139 <0.000002>
+18:28:13.408384 read(3, "", 1)          = 0 <0.000002>
+18:28:13.408393 close(3)                = 0 <0.000002>
+18:28:13.408416 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.408429 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.408444 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.408455 openat(AT_FDCWD, "/usr/lib/python3.12/concurrent", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000003>
+18:28:13.408465 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.408474 getdents64(3, 0x23c527e0 /* 5 entries */, 32768) = 144 <0.000005>
+18:28:13.408485 getdents64(3, 0x23c527e0 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.408493 close(3)                = 0 <0.000003>
+18:28:13.408504 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243d1e0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.408516 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/__init__.abi3.so", 0x7ffcb243d1e0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.408527 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/__init__.so", 0x7ffcb243d1e0, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.408537 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/__init__.py", {st_mode=S_IFREG|0644, st_size=1558, ...}, 0) = 0 <0.000003>
+18:28:13.408561 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/__init__.py", {st_mode=S_IFREG|0644, st_size=1558, ...}, 0) = 0 <0.000003>
+18:28:13.408574 openat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.408584 fstat(3, {st_mode=S_IFREG|0644, st_size=1250, ...}) = 0 <0.000002>
+18:28:13.408593 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.408607 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.408616 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.408624 fstat(3, {st_mode=S_IFREG|0644, st_size=1250, ...}) = 0 <0.000002>
+18:28:13.408635 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\26\6\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 1251) = 1250 <0.000019>
+18:28:13.408662 read(3, "", 1)          = 0 <0.000002>
+18:28:13.408671 close(3)                = 0 <0.000003>
+18:28:13.408707 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.408720 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.408735 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.408746 openat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000003>
+18:28:13.408756 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.408765 getdents64(3, 0x23c527e0 /* 7 entries */, 32768) = 208 <0.000004>
+18:28:13.408776 getdents64(3, 0x23c527e0 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.408785 close(3)                = 0 <0.000003>
+18:28:13.408797 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/_base.py", {st_mode=S_IFREG|0644, st_size=22833, ...}, 0) = 0 <0.000003>
+18:28:13.408818 newfstatat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/_base.py", {st_mode=S_IFREG|0644, st_size=22833, ...}, 0) = 0 <0.000003>
+18:28:13.408832 openat(AT_FDCWD, "/usr/lib/python3.12/concurrent/futures/__pycache__/_base.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.408843 fstat(3, {st_mode=S_IFREG|0644, st_size=32188, ...}) = 0 <0.000002>
+18:28:13.408852 ioctl(3, TCGETS, 0x7ffcb243c810) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.408863 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.408872 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.408880 fstat(3, {st_mode=S_IFREG|0644, st_size=32188, ...}) = 0 <0.000002>
+18:28:13.408888 read(3, "\313\r\r\n\0\0\0\0\326\320\246i1Y\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0"..., 32189) = 32188 <0.000005>
+18:28:13.408900 read(3, "", 1)          = 0 <0.000002>
+18:28:13.408909 close(3)                = 0 <0.000002>
+18:28:13.409003 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.409013 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.409029 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.409041 newfstatat(AT_FDCWD, "/usr/lib/python3.12/logging/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243c500, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.409054 newfstatat(AT_FDCWD, "/usr/lib/python3.12/logging/__init__.abi3.so", 0x7ffcb243c500, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.409065 newfstatat(AT_FDCWD, "/usr/lib/python3.12/logging/__init__.so", 0x7ffcb243c500, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.409076 newfstatat(AT_FDCWD, "/usr/lib/python3.12/logging/__init__.py", {st_mode=S_IFREG|0644, st_size=83437, ...}, 0) = 0 <0.000003>
+18:28:13.409098 newfstatat(AT_FDCWD, "/usr/lib/python3.12/logging/__init__.py", {st_mode=S_IFREG|0644, st_size=83437, ...}, 0) = 0 <0.000003>
+18:28:13.409112 openat(AT_FDCWD, "/usr/lib/python3.12/logging/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.409122 fstat(3, {st_mode=S_IFREG|0644, st_size=95463, ...}) = 0 <0.000003>
+18:28:13.409132 ioctl(3, TCGETS, 0x7ffcb243c1a0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.409143 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.409151 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.409159 fstat(3, {st_mode=S_IFREG|0644, st_size=95463, ...}) = 0 <0.000002>
+18:28:13.409170 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\355E\1\0\343\0\0\0\0\0\0\0\0\0\0\0\0\f\0\0"..., 95464) = 95463 <0.000031>
+18:28:13.409208 read(3, "", 1)          = 0 <0.000003>
+18:28:13.409217 close(3)                = 0 <0.000003>
+18:28:13.409240 brk(0x23cbd000)         = 0x23cbd000 <0.000004>
+18:28:13.409451 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46bfdf000 <0.000005>
+18:28:13.409507 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.409518 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.409535 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.409549 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243be90, 0) = -1 ENOENT (No such file or directory) <0.000004>
+18:28:13.409562 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/__init__.abi3.so", 0x7ffcb243be90, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.409574 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/__init__.so", 0x7ffcb243be90, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.409585 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/__init__.py", {st_mode=S_IFREG|0644, st_size=16315, ...}, 0) = 0 <0.000003>
+18:28:13.409614 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/__init__.py", {st_mode=S_IFREG|0644, st_size=16315, ...}, 0) = 0 <0.000003>
+18:28:13.409629 openat(AT_FDCWD, "/usr/lib/python3.12/re/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.409641 fstat(3, {st_mode=S_IFREG|0644, st_size=17938, ...}) = 0 <0.000003>
+18:28:13.409651 ioctl(3, TCGETS, 0x7ffcb243bb30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.409662 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.409671 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.409679 fstat(3, {st_mode=S_IFREG|0644, st_size=17938, ...}) = 0 <0.000002>
+18:28:13.409688 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\273?\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0"..., 17939) = 17938 <0.000005>
+18:28:13.409699 read(3, "", 1)          = 0 <0.000002>
+18:28:13.409708 close(3)                = 0 <0.000003>
+18:28:13.409770 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.409780 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.409795 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.409809 newfstatat(AT_FDCWD, "/usr/lib/python3.12/enum.py", {st_mode=S_IFREG|0644, st_size=81636, ...}, 0) = 0 <0.000003>
+18:28:13.409831 newfstatat(AT_FDCWD, "/usr/lib/python3.12/enum.py", {st_mode=S_IFREG|0644, st_size=81636, ...}, 0) = 0 <0.000003>
+18:28:13.409844 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/enum.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.409854 fstat(3, {st_mode=S_IFREG|0644, st_size=80708, ...}) = 0 <0.000005>
+18:28:13.409866 ioctl(3, TCGETS, 0x7ffcb243b4c0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.409876 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.409885 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.409893 fstat(3, {st_mode=S_IFREG|0644, st_size=80708, ...}) = 0 <0.000002>
+18:28:13.409902 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\344>\1\0\343\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0"..., 80709) = 80708 <0.000009>
+18:28:13.409918 read(3, "", 1)          = 0 <0.000002>
+18:28:13.409926 close(3)                = 0 <0.000002>
+18:28:13.410712 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000013>
+18:28:13.410763 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.410779 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.410791 openat(AT_FDCWD, "/usr/lib/python3.12/re", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000004>
+18:28:13.410801 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000003>
+18:28:13.410811 getdents64(3, 0x23c7ad60 /* 8 entries */, 32768) = 248 <0.000006>
+18:28:13.410824 getdents64(3, 0x23c7ad60 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.410832 close(3)                = 0 <0.000003>
+18:28:13.410846 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/_compiler.py", {st_mode=S_IFREG|0644, st_size=26089, ...}, 0) = 0 <0.000003>
+18:28:13.410873 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/_compiler.py", {st_mode=S_IFREG|0644, st_size=26089, ...}, 0) = 0 <0.000003>
+18:28:13.410888 openat(AT_FDCWD, "/usr/lib/python3.12/re/__pycache__/_compiler.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.410898 fstat(3, {st_mode=S_IFREG|0644, st_size=26516, ...}) = 0 <0.000003>
+18:28:13.410908 ioctl(3, TCGETS, 0x7ffcb243b050) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.410920 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.410929 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.410937 fstat(3, {st_mode=S_IFREG|0644, st_size=26516, ...}) = 0 <0.000002>
+18:28:13.410946 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\351e\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\10\0\0"..., 26517) = 26516 <0.000005>
+18:28:13.410957 read(3, "", 1)          = 0 <0.000002>
+18:28:13.410966 close(3)                = 0 <0.000002>
+18:28:13.411117 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.411134 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/_parser.py", {st_mode=S_IFREG|0644, st_size=41201, ...}, 0) = 0 <0.000003>
+18:28:13.411161 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/_parser.py", {st_mode=S_IFREG|0644, st_size=41201, ...}, 0) = 0 <0.000003>
+18:28:13.411176 openat(AT_FDCWD, "/usr/lib/python3.12/re/__pycache__/_parser.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.411187 fstat(3, {st_mode=S_IFREG|0644, st_size=42007, ...}) = 0 <0.000003>
+18:28:13.411196 ioctl(3, TCGETS, 0x7ffcb243a570) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.411207 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.411217 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.411224 fstat(3, {st_mode=S_IFREG|0644, st_size=42007, ...}) = 0 <0.000002>
+18:28:13.411233 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\361\240\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\v\0\0"..., 42008) = 42007 <0.000006>
+18:28:13.411245 read(3, "", 1)          = 0 <0.000002>
+18:28:13.411254 close(3)                = 0 <0.000003>
+18:28:13.411378 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.411393 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/_constants.py", {st_mode=S_IFREG|0644, st_size=5930, ...}, 0) = 0 <0.000003>
+18:28:13.411418 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/_constants.py", {st_mode=S_IFREG|0644, st_size=5930, ...}, 0) = 0 <0.000003>
+18:28:13.411432 openat(AT_FDCWD, "/usr/lib/python3.12/re/__pycache__/_constants.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.411442 fstat(3, {st_mode=S_IFREG|0644, st_size=5296, ...}) = 0 <0.000002>
+18:28:13.411452 ioctl(3, TCGETS, 0x7ffcb2439f00) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.411462 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.411471 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.411479 fstat(3, {st_mode=S_IFREG|0644, st_size=5296, ...}) = 0 <0.000002>
+18:28:13.411488 read(3, "\313\r\r\n\0\0\0\0\326\320\246i*\27\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\24\0\0"..., 5297) = 5296 <0.000003>
+18:28:13.411498 read(3, "", 1)          = 0 <0.000002>
+18:28:13.411506 close(3)                = 0 <0.000002>
+18:28:13.411764 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.411780 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/_casefix.py", {st_mode=S_IFREG|0644, st_size=5446, ...}, 0) = 0 <0.000003>
+18:28:13.411805 newfstatat(AT_FDCWD, "/usr/lib/python3.12/re/_casefix.py", {st_mode=S_IFREG|0644, st_size=5446, ...}, 0) = 0 <0.000003>
+18:28:13.411819 openat(AT_FDCWD, "/usr/lib/python3.12/re/__pycache__/_casefix.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.411830 fstat(3, {st_mode=S_IFREG|0644, st_size=1816, ...}) = 0 <0.000002>
+18:28:13.411840 ioctl(3, TCGETS, 0x7ffcb243a9e0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.411850 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.411859 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.411867 fstat(3, {st_mode=S_IFREG|0644, st_size=1816, ...}) = 0 <0.000002>
+18:28:13.411876 read(3, "\313\r\r\n\0\0\0\0\326\320\246iF\25\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 1817) = 1816 <0.000003>
+18:28:13.411885 read(3, "", 1)          = 0 <0.000002>
+18:28:13.411893 close(3)                = 0 <0.000002>
+18:28:13.412095 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.412106 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.412123 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.412137 newfstatat(AT_FDCWD, "/usr/lib/python3.12/copyreg.py", {st_mode=S_IFREG|0644, st_size=7614, ...}, 0) = 0 <0.000003>
+18:28:13.412162 newfstatat(AT_FDCWD, "/usr/lib/python3.12/copyreg.py", {st_mode=S_IFREG|0644, st_size=7614, ...}, 0) = 0 <0.000003>
+18:28:13.412177 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/copyreg.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.412187 fstat(3, {st_mode=S_IFREG|0644, st_size=7414, ...}) = 0 <0.000003>
+18:28:13.412198 ioctl(3, TCGETS, 0x7ffcb243b4c0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.412209 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.412218 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.412225 fstat(3, {st_mode=S_IFREG|0644, st_size=7414, ...}) = 0 <0.000002>
+18:28:13.412234 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\276\35\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 7415) = 7414 <0.000003>
+18:28:13.412244 read(3, "", 1)          = 0 <0.000002>
+18:28:13.412253 close(3)                = 0 <0.000002>
+18:28:13.412324 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.412334 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.412349 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.412362 newfstatat(AT_FDCWD, "/usr/lib/python3.12/traceback.py", {st_mode=S_IFREG|0644, st_size=46325, ...}, 0) = 0 <0.000003>
+18:28:13.412384 newfstatat(AT_FDCWD, "/usr/lib/python3.12/traceback.py", {st_mode=S_IFREG|0644, st_size=46325, ...}, 0) = 0 <0.000003>
+18:28:13.412398 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/traceback.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.412408 fstat(3, {st_mode=S_IFREG|0644, st_size=51523, ...}) = 0 <0.000002>
+18:28:13.412418 ioctl(3, TCGETS, 0x7ffcb243bb30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.412429 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.412438 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.412446 fstat(3, {st_mode=S_IFREG|0644, st_size=51523, ...}) = 0 <0.000002>
+18:28:13.412456 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\365\264\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 51524) = 51523 <0.000017>
+18:28:13.412480 read(3, "", 1)          = 0 <0.000002>
+18:28:13.412489 close(3)                = 0 <0.000003>
+18:28:13.412643 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.412654 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.412670 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.412683 newfstatat(AT_FDCWD, "/usr/lib/python3.12/linecache.py", {st_mode=S_IFREG|0644, st_size=5649, ...}, 0) = 0 <0.000003>
+18:28:13.412706 newfstatat(AT_FDCWD, "/usr/lib/python3.12/linecache.py", {st_mode=S_IFREG|0644, st_size=5649, ...}, 0) = 0 <0.000003>
+18:28:13.412720 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/linecache.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.412730 fstat(3, {st_mode=S_IFREG|0644, st_size=6401, ...}) = 0 <0.000002>
+18:28:13.412739 ioctl(3, TCGETS, 0x7ffcb243b4c0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.412750 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.412759 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.412766 fstat(3, {st_mode=S_IFREG|0644, st_size=6401, ...}) = 0 <0.000002>
+18:28:13.412775 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\21\26\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 6402) = 6401 <0.000003>
+18:28:13.412785 read(3, "", 1)          = 0 <0.000002>
+18:28:13.412794 close(3)                = 0 <0.000002>
+18:28:13.412835 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.412845 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.412860 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.412873 newfstatat(AT_FDCWD, "/usr/lib/python3.12/tokenize.py", {st_mode=S_IFREG|0644, st_size=21214, ...}, 0) = 0 <0.000003>
+18:28:13.412894 newfstatat(AT_FDCWD, "/usr/lib/python3.12/tokenize.py", {st_mode=S_IFREG|0644, st_size=21214, ...}, 0) = 0 <0.000003>
+18:28:13.412907 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/tokenize.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.412918 fstat(3, {st_mode=S_IFREG|0644, st_size=24775, ...}) = 0 <0.000002>
+18:28:13.412927 ioctl(3, TCGETS, 0x7ffcb243ae50) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.412937 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.412946 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.412953 fstat(3, {st_mode=S_IFREG|0644, st_size=24775, ...}) = 0 <0.000002>
+18:28:13.412962 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\336R\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\t\0\0"..., 24776) = 24775 <0.000004>
+18:28:13.412973 read(3, "", 1)          = 0 <0.000002>
+18:28:13.412982 close(3)                = 0 <0.000003>
+18:28:13.413551 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.413562 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.413580 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.413593 newfstatat(AT_FDCWD, "/usr/lib/python3.12/token.py", {st_mode=S_IFREG|0644, st_size=2479, ...}, 0) = 0 <0.000003>
+18:28:13.413623 newfstatat(AT_FDCWD, "/usr/lib/python3.12/token.py", {st_mode=S_IFREG|0644, st_size=2479, ...}, 0) = 0 <0.000003>
+18:28:13.413638 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/token.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.413649 fstat(3, {st_mode=S_IFREG|0644, st_size=3557, ...}) = 0 <0.000003>
+18:28:13.413659 ioctl(3, TCGETS, 0x7ffcb243a7e0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.413670 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.413679 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.413687 fstat(3, {st_mode=S_IFREG|0644, st_size=3557, ...}) = 0 <0.000002>
+18:28:13.413696 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\257\t\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\20\0\0"..., 3558) = 3557 <0.000003>
+18:28:13.413706 read(3, "", 1)          = 0 <0.000002>
+18:28:13.413715 close(3)                = 0 <0.000003>
+18:28:13.414192 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000004>
+18:28:13.414204 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.414222 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.414235 newfstatat(AT_FDCWD, "/usr/lib/python3.12/textwrap.py", {st_mode=S_IFREG|0644, st_size=19718, ...}, 0) = 0 <0.000003>
+18:28:13.414261 newfstatat(AT_FDCWD, "/usr/lib/python3.12/textwrap.py", {st_mode=S_IFREG|0644, st_size=19718, ...}, 0) = 0 <0.000003>
+18:28:13.414276 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/textwrap.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.414287 fstat(3, {st_mode=S_IFREG|0644, st_size=18293, ...}) = 0 <0.000002>
+18:28:13.414297 ioctl(3, TCGETS, 0x7ffcb243b4c0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.414308 lseek(3, 0, SEEK_CUR)   = 0 <0.000101>
+18:28:13.414422 lseek(3, 0, SEEK_CUR)   = 0 <0.000006>
+18:28:13.414438 fstat(3, {st_mode=S_IFREG|0644, st_size=18293, ...}) = 0 <0.000006>
+18:28:13.414455 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\6M\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 18294) = 18293 <0.000012>
+18:28:13.414478 read(3, "", 1)          = 0 <0.000003>
+18:28:13.414489 close(3)                = 0 <0.000004>
+18:28:13.415033 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000009>
+18:28:13.415069 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.415091 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.415106 newfstatat(AT_FDCWD, "/usr/lib/python3.12/contextlib.py", {st_mode=S_IFREG|0644, st_size=27637, ...}, 0) = 0 <0.000003>
+18:28:13.415141 newfstatat(AT_FDCWD, "/usr/lib/python3.12/contextlib.py", {st_mode=S_IFREG|0644, st_size=27637, ...}, 0) = 0 <0.000003>
+18:28:13.415158 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/contextlib.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.415171 fstat(3, {st_mode=S_IFREG|0644, st_size=30376, ...}) = 0 <0.000002>
+18:28:13.415181 ioctl(3, TCGETS, 0x7ffcb243b4c0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.415193 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.415203 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.415210 fstat(3, {st_mode=S_IFREG|0644, st_size=30376, ...}) = 0 <0.000002>
+18:28:13.415222 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\365k\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\7\0\0"..., 30377) = 30376 <0.000008>
+18:28:13.415237 read(3, "", 1)          = 0 <0.000002>
+18:28:13.415246 close(3)                = 0 <0.000003>
+18:28:13.415652 brk(0x23cdf000)         = 0x23cdf000 <0.000005>
+18:28:13.415772 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000004>
+18:28:13.415785 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.415804 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.415817 newfstatat(AT_FDCWD, "/usr/lib/python3.12/weakref.py", {st_mode=S_IFREG|0644, st_size=21513, ...}, 0) = 0 <0.000003>
+18:28:13.415845 newfstatat(AT_FDCWD, "/usr/lib/python3.12/weakref.py", {st_mode=S_IFREG|0644, st_size=21513, ...}, 0) = 0 <0.000003>
+18:28:13.415861 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/weakref.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.415872 fstat(3, {st_mode=S_IFREG|0644, st_size=31348, ...}) = 0 <0.000002>
+18:28:13.415882 ioctl(3, TCGETS, 0x7ffcb243bb30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.415894 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.415903 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.415911 fstat(3, {st_mode=S_IFREG|0644, st_size=31348, ...}) = 0 <0.000002>
+18:28:13.415921 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\tT\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 31349) = 31348 <0.000013>
+18:28:13.415941 read(3, "", 1)          = 0 <0.000002>
+18:28:13.415951 close(3)                = 0 <0.000003>
+18:28:13.416160 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.416170 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.416187 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.416200 newfstatat(AT_FDCWD, "/usr/lib/python3.12/string.py", {st_mode=S_IFREG|0644, st_size=11786, ...}, 0) = 0 <0.000003>
+18:28:13.416226 newfstatat(AT_FDCWD, "/usr/lib/python3.12/string.py", {st_mode=S_IFREG|0644, st_size=11786, ...}, 0) = 0 <0.000003>
+18:28:13.416242 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/string.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.416253 fstat(3, {st_mode=S_IFREG|0644, st_size=11482, ...}) = 0 <0.000002>
+18:28:13.416263 ioctl(3, TCGETS, 0x7ffcb243bb30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.416274 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.416283 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.416291 fstat(3, {st_mode=S_IFREG|0644, st_size=11482, ...}) = 0 <0.000002>
+18:28:13.416300 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\n.\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 11483) = 11482 <0.000004>
+18:28:13.416310 read(3, "", 1)          = 0 <0.000002>
+18:28:13.416319 close(3)                = 0 <0.000003>
+18:28:13.416739 brk(0x23d02000)         = 0x23d02000 <0.000005>
+18:28:13.416842 brk(0x23ce2000)         = 0x23ce2000 <0.000011>
+18:28:13.416988 brk(0x23d03000)         = 0x23d03000 <0.000003>
+18:28:13.417063 brk(0x23ce4000)         = 0x23ce4000 <0.000007>
+18:28:13.417654 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000004>
+18:28:13.417668 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.417688 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.417704 newfstatat(AT_FDCWD, "/usr/lib/python3.12/heapq.py", {st_mode=S_IFREG|0644, st_size=23024, ...}, 0) = 0 <0.000004>
+18:28:13.417731 newfstatat(AT_FDCWD, "/usr/lib/python3.12/heapq.py", {st_mode=S_IFREG|0644, st_size=23024, ...}, 0) = 0 <0.000003>
+18:28:13.417746 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/heapq.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.417758 fstat(3, {st_mode=S_IFREG|0644, st_size=17956, ...}) = 0 <0.000002>
+18:28:13.417768 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.417780 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.417789 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.417797 fstat(3, {st_mode=S_IFREG|0644, st_size=17956, ...}) = 0 <0.000002>
+18:28:13.417806 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\360Y\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 17957) = 17956 <0.000005>
+18:28:13.417818 read(3, "", 1)          = 0 <0.000002>
+18:28:13.417827 close(3)                = 0 <0.000003>
+18:28:13.417922 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.417932 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.417948 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.417961 newfstatat(AT_FDCWD, "/usr/lib/python3.12/socket.py", {st_mode=S_IFREG|0644, st_size=37411, ...}, 0) = 0 <0.000004>
+18:28:13.417986 newfstatat(AT_FDCWD, "/usr/lib/python3.12/socket.py", {st_mode=S_IFREG|0644, st_size=37411, ...}, 0) = 0 <0.000003>
+18:28:13.418000 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/socket.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.418010 fstat(3, {st_mode=S_IFREG|0644, st_size=41817, ...}) = 0 <0.000002>
+18:28:13.418020 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.418030 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.418039 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.418047 fstat(3, {st_mode=S_IFREG|0644, st_size=41817, ...}) = 0 <0.000002>
+18:28:13.418056 brk(0x23d05000)         = 0x23d05000 <0.000004>
+18:28:13.418066 read(3, "\313\r\r\n\0\0\0\0\326\320\246i#\222\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 41818) = 41817 <0.000006>
+18:28:13.418079 read(3, "", 1)          = 0 <0.000002>
+18:28:13.418088 close(3)                = 0 <0.000003>
+18:28:13.418372 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000004>
+18:28:13.418384 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.418402 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.418415 newfstatat(AT_FDCWD, "/usr/lib/python3.12/selectors.py", {st_mode=S_IFREG|0644, st_size=19671, ...}, 0) = 0 <0.000003>
+18:28:13.418441 newfstatat(AT_FDCWD, "/usr/lib/python3.12/selectors.py", {st_mode=S_IFREG|0644, st_size=19671, ...}, 0) = 0 <0.000003>
+18:28:13.418456 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/selectors.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.418467 fstat(3, {st_mode=S_IFREG|0644, st_size=26128, ...}) = 0 <0.000002>
+18:28:13.418477 ioctl(3, TCGETS, 0x7ffcb243c810) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.418488 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.418498 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.418505 fstat(3, {st_mode=S_IFREG|0644, st_size=26128, ...}) = 0 <0.000002>
+18:28:13.418515 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\327L\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 26129) = 26128 <0.000010>
+18:28:13.418532 read(3, "", 1)          = 0 <0.000002>
+18:28:13.418541 close(3)                = 0 <0.000003>
+18:28:13.418928 epoll_create1(EPOLL_CLOEXEC) = 3 <0.000006>
+18:28:13.418941 close(3)                = 0 <0.000003>
+18:28:13.419617 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000004>
+18:28:13.419645 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.419664 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.419678 newfstatat(AT_FDCWD, "/usr/lib/python3.12/subprocess.py", {st_mode=S_IFREG|0644, st_size=88725, ...}, 0) = 0 <0.000003>
+18:28:13.419706 newfstatat(AT_FDCWD, "/usr/lib/python3.12/subprocess.py", {st_mode=S_IFREG|0644, st_size=88725, ...}, 0) = 0 <0.000003>
+18:28:13.419721 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/subprocess.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.419732 fstat(3, {st_mode=S_IFREG|0644, st_size=79187, ...}) = 0 <0.000002>
+18:28:13.419742 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.419755 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.419764 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.419772 fstat(3, {st_mode=S_IFREG|0644, st_size=79187, ...}) = 0 <0.000002>
+18:28:13.419781 brk(0x23d29000)         = 0x23d29000 <0.000004>
+18:28:13.419791 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\225Z\1\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 79188) = 79187 <0.000029>
+18:28:13.419827 read(3, "", 1)          = 0 <0.000002>
+18:28:13.419836 close(3)                = 0 <0.000003>
+18:28:13.420005 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46bedf000 <0.000005>
+18:28:13.420077 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.420088 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.420105 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.420119 newfstatat(AT_FDCWD, "/usr/lib/python3.12/locale.py", {st_mode=S_IFREG|0644, st_size=78562, ...}, 0) = 0 <0.000003>
+18:28:13.420145 newfstatat(AT_FDCWD, "/usr/lib/python3.12/locale.py", {st_mode=S_IFREG|0644, st_size=78562, ...}, 0) = 0 <0.000003>
+18:28:13.420161 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/locale.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.420172 fstat(3, {st_mode=S_IFREG|0644, st_size=59536, ...}) = 0 <0.000002>
+18:28:13.420182 ioctl(3, TCGETS, 0x7ffcb243c810) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.420193 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.420202 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.420210 fstat(3, {st_mode=S_IFREG|0644, st_size=59536, ...}) = 0 <0.000002>
+18:28:13.420219 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\3422\1\0\343\0\0\0\0\0\0\0\0\0\0\0\0\f\0\0"..., 59537) = 59536 <0.000007>
+18:28:13.420232 read(3, "", 1)          = 0 <0.000002>
+18:28:13.420241 close(3)                = 0 <0.000003>
+18:28:13.420384 mmap(NULL, 208896, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46beac000 <0.000004>
+18:28:13.420868 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000004>
+18:28:13.420882 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.420900 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.420913 newfstatat(AT_FDCWD, "/usr/lib/python3.12/signal.py", {st_mode=S_IFREG|0644, st_size=2495, ...}, 0) = 0 <0.000003>
+18:28:13.420940 newfstatat(AT_FDCWD, "/usr/lib/python3.12/signal.py", {st_mode=S_IFREG|0644, st_size=2495, ...}, 0) = 0 <0.000003>
+18:28:13.420956 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/signal.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.420967 fstat(3, {st_mode=S_IFREG|0644, st_size=4448, ...}) = 0 <0.000002>
+18:28:13.420977 ioctl(3, TCGETS, 0x7ffcb243c810) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.420988 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.420997 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.421005 fstat(3, {st_mode=S_IFREG|0644, st_size=4448, ...}) = 0 <0.000002>
+18:28:13.421015 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\277\t\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 4449) = 4448 <0.000003>
+18:28:13.421025 read(3, "", 1)          = 0 <0.000002>
+18:28:13.421034 close(3)                = 0 <0.000003>
+18:28:13.421339 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.421350 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.421367 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.421381 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.421394 newfstatat(AT_FDCWD, "/home/xops360/.local/lib/python3.12/site-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.421408 newfstatat(AT_FDCWD, "/usr/local/lib/python3.12/dist-packages", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.421421 newfstatat(AT_FDCWD, "/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.421554 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.421565 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.421581 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.421594 newfstatat(AT_FDCWD, "/usr/lib/python3.12/ssl.py", {st_mode=S_IFREG|0644, st_size=50822, ...}, 0) = 0 <0.000005>
+18:28:13.421667 newfstatat(AT_FDCWD, "/usr/lib/python3.12/ssl.py", {st_mode=S_IFREG|0644, st_size=50822, ...}, 0) = 0 <0.000003>
+18:28:13.421681 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/ssl.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.421692 fstat(3, {st_mode=S_IFREG|0644, st_size=63011, ...}) = 0 <0.000003>
+18:28:13.421702 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000003>
+18:28:13.421714 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.421723 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.421731 fstat(3, {st_mode=S_IFREG|0644, st_size=63011, ...}) = 0 <0.000002>
+18:28:13.421740 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\206\306\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0"..., 63012) = 63011 <0.000008>
+18:28:13.421755 read(3, "", 1)          = 0 <0.000002>
+18:28:13.421764 close(3)                = 0 <0.000003>
+18:28:13.421963 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.421975 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.421992 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.422007 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.422019 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so", {st_mode=S_IFREG|0644, st_size=225488, ...}, 0) = 0 <0.000003>
+18:28:13.422043 openat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_ssl.cpython-312-x86_64-linux-gnu.so", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.422054 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000003>
+18:28:13.422064 fstat(3, {st_mode=S_IFREG|0644, st_size=225488, ...}) = 0 <0.000002>
+18:28:13.422074 mmap(NULL, 227408, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46be74000 <0.000006>
+18:28:13.422086 mmap(0x79a46be87000, 53248, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0x79a46be87000 <0.000009>
+18:28:13.422102 mmap(0x79a46be94000, 57344, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20000) = 0x79a46be94000 <0.000004>
+18:28:13.422112 mmap(0x79a46bea2000, 40960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2d000) = 0x79a46bea2000 <0.000007>
+18:28:13.422134 close(3)                = 0 <0.000003>
+18:28:13.422143 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.422154 fstat(3, {st_mode=S_IFREG|0644, st_size=24523, ...}) = 0 <0.000002>
+18:28:13.422163 mmap(NULL, 24523, PROT_READ, MAP_PRIVATE, 3, 0) = 0x79a46c81f000 <0.000004>
+18:28:13.422172 close(3)                = 0 <0.000002>
+18:28:13.422182 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libssl.so.3", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.422193 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000003>
+18:28:13.422202 fstat(3, {st_mode=S_IFREG|0644, st_size=696512, ...}) = 0 <0.000002>
+18:28:13.422211 mmap(NULL, 694384, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46bdca000 <0.000004>
+18:28:13.422221 mmap(0x79a46bde8000, 401408, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e000) = 0x79a46bde8000 <0.000008>
+18:28:13.422234 mmap(0x79a46be4a000, 114688, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x80000) = 0x79a46be4a000 <0.000004>
+18:28:13.422244 mmap(0x79a46be66000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9c000) = 0x79a46be66000 <0.000004>
+18:28:13.422263 close(3)                = 0 <0.000002>
+18:28:13.422272 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libcrypto.so.3", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.422282 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000003>
+18:28:13.422292 fstat(3, {st_mode=S_IFREG|0644, st_size=5309400, ...}) = 0 <0.000002>
+18:28:13.422301 mmap(NULL, 5323728, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46b800000 <0.000004>
+18:28:13.422310 mmap(0x79a46b8b3000, 3358720, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xb3000) = 0x79a46b8b3000 <0.000005>
+18:28:13.422322 mmap(0x79a46bbe7000, 831488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3e7000) = 0x79a46bbe7000 <0.000004>
+18:28:13.422331 mmap(0x79a46bcb2000, 389120, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4b1000) = 0x79a46bcb2000 <0.000004>
+18:28:13.422344 mmap(0x79a46bd11000, 11216, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x79a46bd11000 <0.000004>
+18:28:13.422359 close(3)                = 0 <0.000002>
+18:28:13.422537 mprotect(0x79a46bcb2000, 376832, PROT_READ) = 0 <0.000009>
+18:28:13.422674 mprotect(0x79a46be66000, 40960, PROT_READ) = 0 <0.000006>
+18:28:13.422748 mprotect(0x79a46bea2000, 4096, PROT_READ) = 0 <0.000005>
+18:28:13.422780 munmap(0x79a46c81f000, 24523) = 0 <0.000006>
+18:28:13.423940 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000008>
+18:28:13.423975 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.423994 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.424008 newfstatat(AT_FDCWD, "/usr/lib/python3.12/base64.py", {st_mode=S_IFREG|0755, st_size=20602, ...}, 0) = 0 <0.000003>
+18:28:13.424036 newfstatat(AT_FDCWD, "/usr/lib/python3.12/base64.py", {st_mode=S_IFREG|0755, st_size=20602, ...}, 0) = 0 <0.000003>
+18:28:13.424051 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/base64.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.424062 fstat(3, {st_mode=S_IFREG|0644, st_size=24408, ...}) = 0 <0.000002>
+18:28:13.424072 ioctl(3, TCGETS, 0x7ffcb243c810) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.424084 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.424094 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.424101 fstat(3, {st_mode=S_IFREG|0644, st_size=24408, ...}) = 0 <0.000002>
+18:28:13.424110 read(3, "\313\r\r\n\0\0\0\0\326\320\246izP\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 24409) = 24408 <0.000005>
+18:28:13.424122 read(3, "", 1)          = 0 <0.000002>
+18:28:13.424131 close(3)                = 0 <0.000003>
+18:28:13.424226 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.424236 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.424253 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.424266 newfstatat(AT_FDCWD, "/usr/lib/python3.12/struct.py", {st_mode=S_IFREG|0644, st_size=257, ...}, 0) = 0 <0.000003>
+18:28:13.424290 newfstatat(AT_FDCWD, "/usr/lib/python3.12/struct.py", {st_mode=S_IFREG|0644, st_size=257, ...}, 0) = 0 <0.000003>
+18:28:13.424305 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/struct.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.424315 fstat(3, {st_mode=S_IFREG|0644, st_size=325, ...}) = 0 <0.000002>
+18:28:13.424324 ioctl(3, TCGETS, 0x7ffcb243c1a0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.424334 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.424344 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.424351 fstat(3, {st_mode=S_IFREG|0644, st_size=325, ...}) = 0 <0.000002>
+18:28:13.424360 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\1\1\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 326) = 325 <0.000003>
+18:28:13.424369 read(3, "", 1)          = 0 <0.000004>
+18:28:13.424379 close(3)                = 0 <0.000003>
+18:28:13.424750 futex(0x79a46bd113ec, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000004>
+18:28:13.424764 futex(0x79a46bd113e0, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000003>
+18:28:13.424773 futex(0x79a46bd113d8, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.424786 openat(AT_FDCWD, "/proc/sys/crypto/fips_enabled", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000007>
+18:28:13.424801 futex(0x79a46bd110ec, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000003>
+18:28:13.424824 futex(0x79a46bd10f08, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.424835 futex(0x79a46bd10e44, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.424843 futex(0x79a46bd11424, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.424852 futex(0x79a46bd10e38, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.425006 futex(0x79a46bd113d0, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.425017 openat(AT_FDCWD, "/usr/lib/ssl/openssl.cnf", O_RDONLY) = 3 <0.000005>
+18:28:13.425031 fstat(3, {st_mode=S_IFREG|0644, st_size=12324, ...}) = 0 <0.000003>
+18:28:13.425041 read(3, "#\n# OpenSSL example configuratio"..., 4096) = 4096 <0.000003>
+18:28:13.425066 read(3, "d attributes must be the same, a"..., 4096) = 4096 <0.000003>
+18:28:13.425096 read(3, "coding of an extension: beware e"..., 4096) = 4096 <0.000003>
+18:28:13.425120 brk(0x23d4a000)         = 0x23d4a000 <0.000004>
+18:28:13.425141 read(3, " = $insta::certout # insta.cert."..., 4096) = 36 <0.000003>
+18:28:13.425150 read(3, "", 4096)       = 0 <0.000002>
+18:28:13.425159 close(3)                = 0 <0.000003>
+18:28:13.425169 futex(0x79a46bd10bf8, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.425181 futex(0x79a46bd10c54, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000003>
+18:28:13.425190 futex(0x79a46bd11394, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.425198 futex(0x79a46bd10bd8, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.425218 futex(0x79a46bd113b8, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000002>
+18:28:13.425364 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.425382 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/constants.py", {st_mode=S_IFREG|0644, st_size=1413, ...}, 0) = 0 <0.000003>
+18:28:13.425409 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/constants.py", {st_mode=S_IFREG|0644, st_size=1413, ...}, 0) = 0 <0.000003>
+18:28:13.425425 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/constants.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.425436 fstat(3, {st_mode=S_IFREG|0644, st_size=955, ...}) = 0 <0.000002>
+18:28:13.425445 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.425458 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.425468 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.425475 fstat(3, {st_mode=S_IFREG|0644, st_size=955, ...}) = 0 <0.000002>
+18:28:13.425486 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\205\5\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 956) = 955 <0.000003>
+18:28:13.425495 read(3, "", 1)          = 0 <0.000002>
+18:28:13.425504 close(3)                = 0 <0.000002>
+18:28:13.425624 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.425640 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/coroutines.py", {st_mode=S_IFREG|0644, st_size=3342, ...}, 0) = 0 <0.000003>
+18:28:13.425665 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/coroutines.py", {st_mode=S_IFREG|0644, st_size=3342, ...}, 0) = 0 <0.000003>
+18:28:13.425679 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/coroutines.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.425689 fstat(3, {st_mode=S_IFREG|0644, st_size=3769, ...}) = 0 <0.000003>
+18:28:13.425699 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.425711 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.425720 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.425727 fstat(3, {st_mode=S_IFREG|0644, st_size=3769, ...}) = 0 <0.000002>
+18:28:13.425737 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\16\r\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 3770) = 3769 <0.000003>
+18:28:13.425747 read(3, "", 1)          = 0 <0.000002>
+18:28:13.425755 close(3)                = 0 <0.000002>
+18:28:13.425798 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.425809 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.425826 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.425840 newfstatat(AT_FDCWD, "/usr/lib/python3.12/inspect.py", {st_mode=S_IFREG|0644, st_size=125420, ...}, 0) = 0 <0.000003>
+18:28:13.425864 newfstatat(AT_FDCWD, "/usr/lib/python3.12/inspect.py", {st_mode=S_IFREG|0644, st_size=125420, ...}, 0) = 0 <0.000003>
+18:28:13.425878 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/inspect.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.425888 fstat(3, {st_mode=S_IFREG|0644, st_size=133446, ...}) = 0 <0.000002>
+18:28:13.425899 ioctl(3, TCGETS, 0x7ffcb243c3a0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000016>
+18:28:13.425924 lseek(3, 0, SEEK_CUR)   = 0 <0.000003>
+18:28:13.425934 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.425942 fstat(3, {st_mode=S_IFREG|0644, st_size=133446, ...}) = 0 <0.000002>
+18:28:13.425950 mmap(NULL, 135168, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46bda9000 <0.000005>
+18:28:13.425964 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\354\351\1\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 133447) = 133446 <0.000038>
+18:28:13.426010 read(3, "", 1)          = 0 <0.000002>
+18:28:13.426019 close(3)                = 0 <0.000003>
+18:28:13.426409 munmap(0x79a46bda9000, 135168) = 0 <0.000014>
+18:28:13.426452 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.426463 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.426481 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.426495 newfstatat(AT_FDCWD, "/usr/lib/python3.12/ast.py", {st_mode=S_IFREG|0644, st_size=64260, ...}, 0) = 0 <0.000003>
+18:28:13.426522 newfstatat(AT_FDCWD, "/usr/lib/python3.12/ast.py", {st_mode=S_IFREG|0644, st_size=64260, ...}, 0) = 0 <0.000003>
+18:28:13.426537 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/ast.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.426548 fstat(3, {st_mode=S_IFREG|0644, st_size=100279, ...}) = 0 <0.000002>
+18:28:13.426558 ioctl(3, TCGETS, 0x7ffcb243bd30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.426569 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.426578 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.426587 fstat(3, {st_mode=S_IFREG|0644, st_size=100279, ...}) = 0 <0.000002>
+18:28:13.426595 brk(0x23d79000)         = 0x23d79000 <0.000005>
+18:28:13.426613 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\4\373\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\21\0\0"..., 100280) = 100279 <0.000030>
+18:28:13.426650 read(3, "", 1)          = 0 <0.000002>
+18:28:13.426660 close(3)                = 0 <0.000003>
+18:28:13.427051 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46b700000 <0.000008>
+18:28:13.427992 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000008>
+18:28:13.428026 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.428046 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.428060 newfstatat(AT_FDCWD, "/usr/lib/python3.12/dis.py", {st_mode=S_IFREG|0644, st_size=30209, ...}, 0) = 0 <0.000003>
+18:28:13.428087 newfstatat(AT_FDCWD, "/usr/lib/python3.12/dis.py", {st_mode=S_IFREG|0644, st_size=30209, ...}, 0) = 0 <0.000003>
+18:28:13.428101 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/dis.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.428113 fstat(3, {st_mode=S_IFREG|0644, st_size=34560, ...}) = 0 <0.000002>
+18:28:13.428122 ioctl(3, TCGETS, 0x7ffcb243bd30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.428135 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.428145 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.428152 fstat(3, {st_mode=S_IFREG|0644, st_size=34560, ...}) = 0 <0.000002>
+18:28:13.428162 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\1v\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\v\0\0"..., 34561) = 34560 <0.000012>
+18:28:13.428180 read(3, "", 1)          = 0 <0.000002>
+18:28:13.428189 close(3)                = 0 <0.000003>
+18:28:13.428323 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.428334 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.428349 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.428363 newfstatat(AT_FDCWD, "/usr/lib/python3.12/opcode.py", {st_mode=S_IFREG|0644, st_size=13174, ...}, 0) = 0 <0.000003>
+18:28:13.428388 newfstatat(AT_FDCWD, "/usr/lib/python3.12/opcode.py", {st_mode=S_IFREG|0644, st_size=13174, ...}, 0) = 0 <0.000003>
+18:28:13.428401 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/opcode.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.428412 fstat(3, {st_mode=S_IFREG|0644, st_size=14716, ...}) = 0 <0.000002>
+18:28:13.428422 ioctl(3, TCGETS, 0x7ffcb243b6c0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.428434 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.428444 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.428451 fstat(3, {st_mode=S_IFREG|0644, st_size=14716, ...}) = 0 <0.000002>
+18:28:13.428460 read(3, "\313\r\r\n\0\0\0\0\326\320\246iv3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\20\0\0"..., 14717) = 14716 <0.000004>
+18:28:13.428470 read(3, "", 1)          = 0 <0.000002>
+18:28:13.428479 close(3)                = 0 <0.000003>
+18:28:13.428742 brk(0x23d9d000)         = 0x23d9d000 <0.000004>
+18:28:13.429783 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000006>
+18:28:13.429803 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/events.py", {st_mode=S_IFREG|0644, st_size=29339, ...}, 0) = 0 <0.000004>
+18:28:13.429831 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/events.py", {st_mode=S_IFREG|0644, st_size=29339, ...}, 0) = 0 <0.000003>
+18:28:13.429846 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/events.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.429858 fstat(3, {st_mode=S_IFREG|0644, st_size=36753, ...}) = 0 <0.000002>
+18:28:13.429868 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.429880 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.429890 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.429898 fstat(3, {st_mode=S_IFREG|0644, st_size=36753, ...}) = 0 <0.000002>
+18:28:13.429908 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\233r\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 36754) = 36753 <0.000015>
+18:28:13.429930 read(3, "", 1)          = 0 <0.000002>
+18:28:13.429939 close(3)                = 0 <0.000003>
+18:28:13.430068 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.430079 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.430096 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.430110 newfstatat(AT_FDCWD, "/usr/lib/python3.12/contextvars.py", {st_mode=S_IFREG|0644, st_size=129, ...}, 0) = 0 <0.000003>
+18:28:13.430135 newfstatat(AT_FDCWD, "/usr/lib/python3.12/contextvars.py", {st_mode=S_IFREG|0644, st_size=129, ...}, 0) = 0 <0.000003>
+18:28:13.430149 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/contextvars.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.430160 fstat(3, {st_mode=S_IFREG|0644, st_size=261, ...}) = 0 <0.000002>
+18:28:13.430170 ioctl(3, TCGETS, 0x7ffcb243c3a0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.430181 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.430191 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.430198 fstat(3, {st_mode=S_IFREG|0644, st_size=261, ...}) = 0 <0.000002>
+18:28:13.430207 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\201\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 262) = 261 <0.000003>
+18:28:13.430216 read(3, "", 1)          = 0 <0.000002>
+18:28:13.430225 close(3)                = 0 <0.000003>
+18:28:13.430253 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.430262 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.430277 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.430291 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.430303 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so", {st_mode=S_IFREG|0644, st_size=14560, ...}, 0) = 0 <0.000003>
+18:28:13.430323 openat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_contextvars.cpython-312-x86_64-linux-gnu.so", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.430333 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000003>
+18:28:13.430342 fstat(3, {st_mode=S_IFREG|0644, st_size=14560, ...}) = 0 <0.000002>
+18:28:13.430351 mmap(NULL, 16712, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46c820000 <0.000006>
+18:28:13.430363 mmap(0x79a46c821000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x79a46c821000 <0.000009>
+18:28:13.430378 mmap(0x79a46c822000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x79a46c822000 <0.000004>
+18:28:13.430388 mmap(0x79a46c823000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x79a46c823000 <0.000004>
+18:28:13.430404 close(3)                = 0 <0.000002>
+18:28:13.430414 mprotect(0x79a46c823000, 4096, PROT_READ) = 0 <0.000004>
+18:28:13.430457 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.430472 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/format_helpers.py", {st_mode=S_IFREG|0644, st_size=2404, ...}, 0) = 0 <0.000003>
+18:28:13.430495 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/format_helpers.py", {st_mode=S_IFREG|0644, st_size=2404, ...}, 0) = 0 <0.000003>
+18:28:13.430508 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/format_helpers.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.430519 fstat(3, {st_mode=S_IFREG|0644, st_size=3865, ...}) = 0 <0.000003>
+18:28:13.430530 ioctl(3, TCGETS, 0x7ffcb243bf30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.430541 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.430549 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.430557 fstat(3, {st_mode=S_IFREG|0644, st_size=3865, ...}) = 0 <0.000002>
+18:28:13.430566 read(3, "\313\r\r\n\0\0\0\0\326\320\246id\t\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 3866) = 3865 <0.000003>
+18:28:13.430575 read(3, "", 1)          = 0 <0.000002>
+18:28:13.430584 close(3)                = 0 <0.000002>
+18:28:13.430734 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.430745 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.430759 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.430773 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.430785 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so", {st_mode=S_IFREG|0644, st_size=82184, ...}, 0) = 0 <0.000003>
+18:28:13.430803 openat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_asyncio.cpython-312-x86_64-linux-gnu.so", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.430813 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000002>
+18:28:13.430822 fstat(3, {st_mode=S_IFREG|0644, st_size=82184, ...}) = 0 <0.000002>
+18:28:13.430831 mmap(NULL, 84264, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46c4eb000 <0.000004>
+18:28:13.430841 mmap(0x79a46c4ef000, 36864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x79a46c4ef000 <0.000008>
+18:28:13.430855 mmap(0x79a46c4f8000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x79a46c4f8000 <0.000004>
+18:28:13.430864 mmap(0x79a46c4fd000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x11000) = 0x79a46c4fd000 <0.000004>
+18:28:13.430880 close(3)                = 0 <0.000002>
+18:28:13.430903 mprotect(0x79a46c4fd000, 4096, PROT_READ) = 0 <0.000005>
+18:28:13.430966 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.430980 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/base_futures.py", {st_mode=S_IFREG|0644, st_size=1974, ...}, 0) = 0 <0.000003>
+18:28:13.431004 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/base_futures.py", {st_mode=S_IFREG|0644, st_size=1974, ...}, 0) = 0 <0.000003>
+18:28:13.431019 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/base_futures.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.431029 fstat(3, {st_mode=S_IFREG|0644, st_size=3086, ...}) = 0 <0.000002>
+18:28:13.431039 ioctl(3, TCGETS, 0x7ffcb243bca0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.431049 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431059 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431066 fstat(3, {st_mode=S_IFREG|0644, st_size=3086, ...}) = 0 <0.000002>
+18:28:13.431076 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\266\7\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 3087) = 3086 <0.000003>
+18:28:13.431085 read(3, "", 1)          = 0 <0.000002>
+18:28:13.431094 close(3)                = 0 <0.000002>
+18:28:13.431150 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.431164 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/exceptions.py", {st_mode=S_IFREG|0644, st_size=1752, ...}, 0) = 0 <0.000003>
+18:28:13.431186 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/exceptions.py", {st_mode=S_IFREG|0644, st_size=1752, ...}, 0) = 0 <0.000003>
+18:28:13.431199 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/exceptions.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.431209 fstat(3, {st_mode=S_IFREG|0644, st_size=3081, ...}) = 0 <0.000002>
+18:28:13.431218 ioctl(3, TCGETS, 0x7ffcb243bca0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.431238 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431247 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431255 fstat(3, {st_mode=S_IFREG|0644, st_size=3081, ...}) = 0 <0.000002>
+18:28:13.431265 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\330\6\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 3082) = 3081 <0.000003>
+18:28:13.431275 read(3, "", 1)          = 0 <0.000002>
+18:28:13.431283 close(3)                = 0 <0.000002>
+18:28:13.431384 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.431399 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/base_tasks.py", {st_mode=S_IFREG|0644, st_size=2672, ...}, 0) = 0 <0.000003>
+18:28:13.431423 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/base_tasks.py", {st_mode=S_IFREG|0644, st_size=2672, ...}, 0) = 0 <0.000003>
+18:28:13.431437 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/base_tasks.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.431447 fstat(3, {st_mode=S_IFREG|0644, st_size=4087, ...}) = 0 <0.000002>
+18:28:13.431457 ioctl(3, TCGETS, 0x7ffcb243bca0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.431468 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431476 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431484 fstat(3, {st_mode=S_IFREG|0644, st_size=4087, ...}) = 0 <0.000002>
+18:28:13.431493 read(3, "\313\r\r\n\0\0\0\0\326\320\246ip\n\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 4088) = 4087 <0.000003>
+18:28:13.431502 read(3, "", 1)          = 0 <0.000002>
+18:28:13.431511 close(3)                = 0 <0.000002>
+18:28:13.431593 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.431623 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/futures.py", {st_mode=S_IFREG|0644, st_size=14210, ...}, 0) = 0 <0.000003>
+18:28:13.431646 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/futures.py", {st_mode=S_IFREG|0644, st_size=14210, ...}, 0) = 0 <0.000003>
+18:28:13.431660 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/futures.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.431670 fstat(3, {st_mode=S_IFREG|0644, st_size=17256, ...}) = 0 <0.000002>
+18:28:13.431680 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.431690 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431699 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431707 fstat(3, {st_mode=S_IFREG|0644, st_size=17256, ...}) = 0 <0.000002>
+18:28:13.431718 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\2027\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 17257) = 17256 <0.000007>
+18:28:13.431732 read(3, "", 1)          = 0 <0.000002>
+18:28:13.431741 close(3)                = 0 <0.000002>
+18:28:13.431904 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.431919 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/protocols.py", {st_mode=S_IFREG|0644, st_size=6957, ...}, 0) = 0 <0.000003>
+18:28:13.431943 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/protocols.py", {st_mode=S_IFREG|0644, st_size=6957, ...}, 0) = 0 <0.000003>
+18:28:13.431956 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/protocols.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.431967 fstat(3, {st_mode=S_IFREG|0644, st_size=8782, ...}) = 0 <0.000002>
+18:28:13.431977 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.431988 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.431996 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.432004 fstat(3, {st_mode=S_IFREG|0644, st_size=8782, ...}) = 0 <0.000002>
+18:28:13.432013 read(3, "\313\r\r\n\0\0\0\0\326\320\246i-\33\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 8783) = 8782 <0.000003>
+18:28:13.432022 read(3, "", 1)          = 0 <0.000002>
+18:28:13.432031 close(3)                = 0 <0.000002>
+18:28:13.432123 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.432139 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/sslproto.py", {st_mode=S_IFREG|0644, st_size=31739, ...}, 0) = 0 <0.000003>
+18:28:13.432161 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/sslproto.py", {st_mode=S_IFREG|0644, st_size=31739, ...}, 0) = 0 <0.000003>
+18:28:13.432175 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/sslproto.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.432185 fstat(3, {st_mode=S_IFREG|0644, st_size=41547, ...}) = 0 <0.000002>
+18:28:13.432195 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.432205 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.432213 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.432221 fstat(3, {st_mode=S_IFREG|0644, st_size=41547, ...}) = 0 <0.000002>
+18:28:13.432231 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\373{\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 41548) = 41547 <0.000013>
+18:28:13.432250 read(3, "", 1)          = 0 <0.000002>
+18:28:13.432258 close(3)                = 0 <0.000002>
+18:28:13.432346 brk(0x23dbe000)         = 0x23dbe000 <0.000004>
+18:28:13.432403 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.432418 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/transports.py", {st_mode=S_IFREG|0644, st_size=10722, ...}, 0) = 0 <0.000003>
+18:28:13.432441 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/transports.py", {st_mode=S_IFREG|0644, st_size=10722, ...}, 0) = 0 <0.000003>
+18:28:13.432455 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/transports.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.432465 fstat(3, {st_mode=S_IFREG|0644, st_size=14004, ...}) = 0 <0.000002>
+18:28:13.432475 ioctl(3, TCGETS, 0x7ffcb243bf30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.432485 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.432493 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.432501 fstat(3, {st_mode=S_IFREG|0644, st_size=14004, ...}) = 0 <0.000002>
+18:28:13.432510 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\342)\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 14005) = 14004 <0.000004>
+18:28:13.432520 read(3, "", 1)          = 0 <0.000002>
+18:28:13.432528 close(3)                = 0 <0.000002>
+18:28:13.432664 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.432680 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/log.py", {st_mode=S_IFREG|0644, st_size=124, ...}, 0) = 0 <0.000003>
+18:28:13.432703 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/log.py", {st_mode=S_IFREG|0644, st_size=124, ...}, 0) = 0 <0.000003>
+18:28:13.432716 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/log.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.432727 fstat(3, {st_mode=S_IFREG|0644, st_size=281, ...}) = 0 <0.000002>
+18:28:13.432736 ioctl(3, TCGETS, 0x7ffcb243c3a0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.432746 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.432755 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.432763 fstat(3, {st_mode=S_IFREG|0644, st_size=281, ...}) = 0 <0.000002>
+18:28:13.432772 read(3, "\313\r\r\n\0\0\0\0\326\320\246i|\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\3\0\0"..., 282) = 281 <0.000002>
+18:28:13.432781 read(3, "", 1)          = 0 <0.000002>
+18:28:13.432789 close(3)                = 0 <0.000002>
+18:28:13.432996 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.433011 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/staggered.py", {st_mode=S_IFREG|0644, st_size=5992, ...}, 0) = 0 <0.000003>
+18:28:13.433035 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/staggered.py", {st_mode=S_IFREG|0644, st_size=5992, ...}, 0) = 0 <0.000003>
+18:28:13.433048 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/staggered.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.433059 fstat(3, {st_mode=S_IFREG|0644, st_size=6240, ...}) = 0 <0.000002>
+18:28:13.433069 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.433080 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.433089 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.433097 fstat(3, {st_mode=S_IFREG|0644, st_size=6240, ...}) = 0 <0.000002>
+18:28:13.433105 read(3, "\313\r\r\n\0\0\0\0\326\320\246ih\27\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\16\0\0"..., 6241) = 6240 <0.000003>
+18:28:13.433115 read(3, "", 1)          = 0 <0.000002>
+18:28:13.433124 close(3)                = 0 <0.000002>
+18:28:13.433166 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.433176 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.433192 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.433205 newfstatat(AT_FDCWD, "/usr/lib/python3.12/typing.py", {st_mode=S_IFREG|0644, st_size=117428, ...}, 0) = 0 <0.000003>
+18:28:13.433230 newfstatat(AT_FDCWD, "/usr/lib/python3.12/typing.py", {st_mode=S_IFREG|0644, st_size=117428, ...}, 0) = 0 <0.000003>
+18:28:13.433243 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/typing.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.433253 fstat(3, {st_mode=S_IFREG|0644, st_size=141860, ...}) = 0 <0.000002>
+18:28:13.433262 ioctl(3, TCGETS, 0x7ffcb243c3a0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.433273 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.433282 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.433289 fstat(3, {st_mode=S_IFREG|0644, st_size=141860, ...}) = 0 <0.000002>
+18:28:13.433298 mmap(NULL, 143360, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46bda7000 <0.000005>
+18:28:13.433311 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\264\312\1\0\343\0\0\0\0\0\0\0\0\0\0\0\0\17\0\0"..., 141861) = 141860 <0.000040>
+18:28:13.433358 read(3, "", 1)          = 0 <0.000002>
+18:28:13.433368 close(3)                = 0 <0.000002>
+18:28:13.434209 munmap(0x79a46bda7000, 143360) = 0 <0.000016>
+18:28:13.435294 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000006>
+18:28:13.435334 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/locks.py", {st_mode=S_IFREG|0644, st_size=18994, ...}, 0) = 0 <0.000003>
+18:28:13.435362 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/locks.py", {st_mode=S_IFREG|0644, st_size=18994, ...}, 0) = 0 <0.000003>
+18:28:13.435377 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/locks.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.435388 fstat(3, {st_mode=S_IFREG|0644, st_size=27502, ...}) = 0 <0.000003>
+18:28:13.435398 ioctl(3, TCGETS, 0x7ffcb243bf30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.435410 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.435419 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.435427 fstat(3, {st_mode=S_IFREG|0644, st_size=27502, ...}) = 0 <0.000002>
+18:28:13.435437 read(3, "\313\r\r\n\0\0\0\0\326\320\246i2J\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 27503) = 27502 <0.000010>
+18:28:13.435453 read(3, "", 1)          = 0 <0.000002>
+18:28:13.435463 close(3)                = 0 <0.000003>
+18:28:13.435560 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.435575 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/mixins.py", {st_mode=S_IFREG|0644, st_size=481, ...}, 0) = 0 <0.000003>
+18:28:13.435600 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/mixins.py", {st_mode=S_IFREG|0644, st_size=481, ...}, 0) = 0 <0.000004>
+18:28:13.435616 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/mixins.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.435627 fstat(3, {st_mode=S_IFREG|0644, st_size=1036, ...}) = 0 <0.000002>
+18:28:13.435637 ioctl(3, TCGETS, 0x7ffcb243b450) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.435648 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.435657 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.435664 fstat(3, {st_mode=S_IFREG|0644, st_size=1036, ...}) = 0 <0.000002>
+18:28:13.435674 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\341\1\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 1037) = 1036 <0.000003>
+18:28:13.435683 read(3, "", 1)          = 0 <0.000002>
+18:28:13.435692 close(3)                = 0 <0.000002>
+18:28:13.435890 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.435905 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/tasks.py", {st_mode=S_IFREG|0644, st_size=37362, ...}, 0) = 0 <0.000003>
+18:28:13.435930 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/tasks.py", {st_mode=S_IFREG|0644, st_size=37362, ...}, 0) = 0 <0.000003>
+18:28:13.435944 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/tasks.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.435955 fstat(3, {st_mode=S_IFREG|0644, st_size=40371, ...}) = 0 <0.000002>
+18:28:13.435965 ioctl(3, TCGETS, 0x7ffcb243bf30) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.435975 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.435984 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.435991 fstat(3, {st_mode=S_IFREG|0644, st_size=40371, ...}) = 0 <0.000002>
+18:28:13.436000 brk(0x23de6000)         = 0x23de6000 <0.000004>
+18:28:13.436010 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\362\221\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 40372) = 40371 <0.000014>
+18:28:13.436031 read(3, "", 1)          = 0 <0.000002>
+18:28:13.436040 close(3)                = 0 <0.000003>
+18:28:13.436189 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.436204 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/timeouts.py", {st_mode=S_IFREG|0644, st_size=5321, ...}, 0) = 0 <0.000003>
+18:28:13.436227 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/timeouts.py", {st_mode=S_IFREG|0644, st_size=5321, ...}, 0) = 0 <0.000003>
+18:28:13.436241 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/timeouts.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.436252 fstat(3, {st_mode=S_IFREG|0644, st_size=7797, ...}) = 0 <0.000003>
+18:28:13.436262 ioctl(3, TCGETS, 0x7ffcb243b450) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.436273 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.436281 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.436289 fstat(3, {st_mode=S_IFREG|0644, st_size=7797, ...}) = 0 <0.000002>
+18:28:13.436298 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\311\24\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 7798) = 7797 <0.000003>
+18:28:13.436307 read(3, "", 1)          = 0 <0.000002>
+18:28:13.436316 close(3)                = 0 <0.000002>
+18:28:13.436504 mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x79a46b600000 <0.000005>
+18:28:13.436751 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.436768 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/trsock.py", {st_mode=S_IFREG|0644, st_size=2475, ...}, 0) = 0 <0.000003>
+18:28:13.436793 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/trsock.py", {st_mode=S_IFREG|0644, st_size=2475, ...}, 0) = 0 <0.000003>
+18:28:13.436808 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/trsock.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.436819 fstat(3, {st_mode=S_IFREG|0644, st_size=5079, ...}) = 0 <0.000002>
+18:28:13.436829 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.436840 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.436849 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.436856 fstat(3, {st_mode=S_IFREG|0644, st_size=5079, ...}) = 0 <0.000002>
+18:28:13.436865 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\253\t\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 5080) = 5079 <0.000003>
+18:28:13.436875 read(3, "", 1)          = 0 <0.000002>
+18:28:13.436884 close(3)                = 0 <0.000003>
+18:28:13.437015 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.437032 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/runners.py", {st_mode=S_IFREG|0644, st_size=7159, ...}, 0) = 0 <0.000003>
+18:28:13.437056 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/runners.py", {st_mode=S_IFREG|0644, st_size=7159, ...}, 0) = 0 <0.000003>
+18:28:13.437070 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/runners.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.437081 fstat(3, {st_mode=S_IFREG|0644, st_size=9936, ...}) = 0 <0.000003>
+18:28:13.437091 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.437101 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.437110 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.437118 fstat(3, {st_mode=S_IFREG|0644, st_size=9936, ...}) = 0 <0.000002>
+18:28:13.437127 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\367\33\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 9937) = 9936 <0.000003>
+18:28:13.437137 read(3, "", 1)          = 0 <0.000002>
+18:28:13.437145 close(3)                = 0 <0.000002>
+18:28:13.437294 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.437308 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/queues.py", {st_mode=S_IFREG|0644, st_size=7974, ...}, 0) = 0 <0.000003>
+18:28:13.437331 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/queues.py", {st_mode=S_IFREG|0644, st_size=7974, ...}, 0) = 0 <0.000003>
+18:28:13.437345 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/queues.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.437355 fstat(3, {st_mode=S_IFREG|0644, st_size=11941, ...}) = 0 <0.000002>
+18:28:13.437365 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.437376 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.437385 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.437393 fstat(3, {st_mode=S_IFREG|0644, st_size=11941, ...}) = 0 <0.000002>
+18:28:13.437402 read(3, "\313\r\r\n\0\0\0\0\326\320\246i&\37\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 11942) = 11941 <0.000005>
+18:28:13.437414 read(3, "", 1)          = 0 <0.000002>
+18:28:13.437422 close(3)                = 0 <0.000002>
+18:28:13.437540 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.437555 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/streams.py", {st_mode=S_IFREG|0644, st_size=27619, ...}, 0) = 0 <0.000003>
+18:28:13.437577 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/streams.py", {st_mode=S_IFREG|0644, st_size=27619, ...}, 0) = 0 <0.000003>
+18:28:13.437590 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/streams.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.437602 fstat(3, {st_mode=S_IFREG|0644, st_size=33380, ...}) = 0 <0.000002>
+18:28:13.437612 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.437622 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.437631 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.437638 fstat(3, {st_mode=S_IFREG|0644, st_size=33380, ...}) = 0 <0.000002>
+18:28:13.437648 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\343k\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 33381) = 33380 <0.000011>
+18:28:13.437666 read(3, "", 1)          = 0 <0.000002>
+18:28:13.437675 close(3)                = 0 <0.000002>
+18:28:13.437845 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.437860 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/subprocess.py", {st_mode=S_IFREG|0644, st_size=7737, ...}, 0) = 0 <0.000003>
+18:28:13.437883 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/subprocess.py", {st_mode=S_IFREG|0644, st_size=7737, ...}, 0) = 0 <0.000003>
+18:28:13.437896 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/subprocess.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.437907 fstat(3, {st_mode=S_IFREG|0644, st_size=12096, ...}) = 0 <0.000002>
+18:28:13.437916 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.437928 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.437937 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.437944 fstat(3, {st_mode=S_IFREG|0644, st_size=12096, ...}) = 0 <0.000002>
+18:28:13.437953 read(3, "\313\r\r\n\0\0\0\0\326\320\246i9\36\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 12097) = 12096 <0.000003>
+18:28:13.437963 read(3, "", 1)          = 0 <0.000002>
+18:28:13.437972 close(3)                = 0 <0.000002>
+18:28:13.438077 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.438092 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/taskgroups.py", {st_mode=S_IFREG|0644, st_size=8747, ...}, 0) = 0 <0.000003>
+18:28:13.438113 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/taskgroups.py", {st_mode=S_IFREG|0644, st_size=8747, ...}, 0) = 0 <0.000003>
+18:28:13.438126 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/taskgroups.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.438137 fstat(3, {st_mode=S_IFREG|0644, st_size=7927, ...}) = 0 <0.000002>
+18:28:13.438146 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.438156 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.438165 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.438172 fstat(3, {st_mode=S_IFREG|0644, st_size=7927, ...}) = 0 <0.000002>
+18:28:13.438181 read(3, "\313\r\r\n\0\0\0\0\326\320\246i+\"\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 7928) = 7927 <0.000003>
+18:28:13.438191 read(3, "", 1)          = 0 <0.000002>
+18:28:13.438199 close(3)                = 0 <0.000002>
+18:28:13.438323 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.438340 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/threads.py", {st_mode=S_IFREG|0644, st_size=790, ...}, 0) = 0 <0.000003>
+18:28:13.438365 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/threads.py", {st_mode=S_IFREG|0644, st_size=790, ...}, 0) = 0 <0.000003>
+18:28:13.438379 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/threads.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.438390 fstat(3, {st_mode=S_IFREG|0644, st_size=1258, ...}) = 0 <0.000003>
+18:28:13.438400 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.438410 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.438419 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.438426 fstat(3, {st_mode=S_IFREG|0644, st_size=1258, ...}) = 0 <0.000002>
+18:28:13.438435 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\26\3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\2\0\0"..., 1259) = 1258 <0.000002>
+18:28:13.438444 read(3, "", 1)          = 0 <0.000002>
+18:28:13.438453 close(3)                = 0 <0.000002>
+18:28:13.438495 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.438509 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/unix_events.py", {st_mode=S_IFREG|0644, st_size=53124, ...}, 0) = 0 <0.000003>
+18:28:13.438530 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/unix_events.py", {st_mode=S_IFREG|0644, st_size=53124, ...}, 0) = 0 <0.000003>
+18:28:13.438543 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/unix_events.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.438554 fstat(3, {st_mode=S_IFREG|0644, st_size=67814, ...}) = 0 <0.000002>
+18:28:13.438563 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.438574 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.438582 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.438590 fstat(3, {st_mode=S_IFREG|0644, st_size=67814, ...}) = 0 <0.000002>
+18:28:13.438598 brk(0x23e07000)         = 0x23e07000 <0.000006>
+18:28:13.438611 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\204\317\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 67815) = 67814 <0.000022>
+18:28:13.438640 read(3, "", 1)          = 0 <0.000002>
+18:28:13.438649 close(3)                = 0 <0.000003>
+18:28:13.438846 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.438863 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/base_subprocess.py", {st_mode=S_IFREG|0644, st_size=8869, ...}, 0) = 0 <0.000003>
+18:28:13.438886 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/base_subprocess.py", {st_mode=S_IFREG|0644, st_size=8869, ...}, 0) = 0 <0.000003>
+18:28:13.438899 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/base_subprocess.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.438909 fstat(3, {st_mode=S_IFREG|0644, st_size=16102, ...}) = 0 <0.000002>
+18:28:13.438918 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.438928 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.438937 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.438944 fstat(3, {st_mode=S_IFREG|0644, st_size=16102, ...}) = 0 <0.000002>
+18:28:13.438952 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\245\"\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 16103) = 16102 <0.000003>
+18:28:13.438961 read(3, "", 1)          = 0 <0.000002>
+18:28:13.438969 close(3)                = 0 <0.000002>
+18:28:13.439093 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.439107 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/selector_events.py", {st_mode=S_IFREG|0644, st_size=48282, ...}, 0) = 0 <0.000003>
+18:28:13.439128 newfstatat(AT_FDCWD, "/usr/lib/python3.12/asyncio/selector_events.py", {st_mode=S_IFREG|0644, st_size=48282, ...}, 0) = 0 <0.000002>
+18:28:13.439140 openat(AT_FDCWD, "/usr/lib/python3.12/asyncio/__pycache__/selector_events.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.439150 fstat(3, {st_mode=S_IFREG|0644, st_size=63124, ...}) = 0 <0.000002>
+18:28:13.439159 ioctl(3, TCGETS, 0x7ffcb243ca10) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.439169 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.439177 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.439184 fstat(3, {st_mode=S_IFREG|0644, st_size=63124, ...}) = 0 <0.000002>
+18:28:13.439193 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\232\274\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 63125) = 63124 <0.000020>
+18:28:13.439219 read(3, "", 1)          = 0 <0.000002>
+18:28:13.439228 close(3)                = 0 <0.000002>
+18:28:13.439659 newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.439676 newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.439691 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.439704 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.439716 openat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000004>
+18:28:13.439726 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.439735 getdents64(3, 0x23dee290 /* 8 entries */, 32768) = 240 <0.000007>
+18:28:13.439750 getdents64(3, 0x23dee290 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.439758 close(3)                = 0 <0.000003>
+18:28:13.439771 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243da50, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.439784 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/__init__.abi3.so", 0x7ffcb243da50, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.439795 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/__init__.so", 0x7ffcb243da50, 0) = -1 ENOENT (No such file or directory) <0.000002>
+18:28:13.439805 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/__init__.py", {st_mode=S_IFREG|0664, st_size=0, ...}, 0) = 0 <0.000003>
+18:28:13.439830 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/__init__.py", {st_mode=S_IFREG|0664, st_size=0, ...}, 0) = 0 <0.000003>
+18:28:13.439845 openat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.439855 fstat(3, {st_mode=S_IFREG|0664, st_size=160, ...}) = 0 <0.000002>
+18:28:13.439865 ioctl(3, TCGETS, 0x7ffcb243d6f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.439876 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.439885 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.439892 fstat(3, {st_mode=S_IFREG|0664, st_size=160, ...}) = 0 <0.000002>
+18:28:13.439900 read(3, "\313\r\r\n\0\0\0\0\272\21\333i\0\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 161) = 160 <0.000003>
+18:28:13.439909 read(3, "", 1)          = 0 <0.000002>
+18:28:13.439917 close(3)                = 0 <0.000002>
+18:28:13.439940 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.439953 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000002>
+18:28:13.439968 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000002>
+18:28:13.439979 openat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000003>
+18:28:13.439988 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.439996 getdents64(3, 0x23dee290 /* 9 entries */, 32768) = 288 <0.000005>
+18:28:13.440008 getdents64(3, 0x23dee290 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.440015 close(3)                = 0 <0.000002>
+18:28:13.440027 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/executor.py", {st_mode=S_IFREG|0664, st_size=1665, ...}, 0) = 0 <0.000003>
+18:28:13.440049 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/executor.py", {st_mode=S_IFREG|0664, st_size=1665, ...}, 0) = 0 <0.000003>
+18:28:13.440062 openat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc/src/__pycache__/executor.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.440072 fstat(3, {st_mode=S_IFREG|0664, st_size=2858, ...}) = 0 <0.000002>
+18:28:13.440081 ioctl(3, TCGETS, 0x7ffcb243db60) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.440090 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.440098 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.440105 fstat(3, {st_mode=S_IFREG|0664, st_size=2858, ...}) = 0 <0.000002>
+18:28:13.440113 read(3, "\313\r\r\n\0\0\0\0\7\22\333i\201\6\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0"..., 2859) = 2858 <0.000002>
+18:28:13.440122 read(3, "", 1)          = 0 <0.000002>
+18:28:13.440130 close(3)                = 0 <0.000002>
+18:28:13.440166 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.440181 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000002>
+18:28:13.440190 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.440203 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.440216 newfstatat(AT_FDCWD, "/usr/lib/python3.12/hashlib.py", {st_mode=S_IFREG|0644, st_size=9349, ...}, 0) = 0 <0.000003>
+18:28:13.440237 newfstatat(AT_FDCWD, "/usr/lib/python3.12/hashlib.py", {st_mode=S_IFREG|0644, st_size=9349, ...}, 0) = 0 <0.000002>
+18:28:13.440248 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/hashlib.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.440258 fstat(3, {st_mode=S_IFREG|0644, st_size=8087, ...}) = 0 <0.000002>
+18:28:13.440267 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.440277 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.440285 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.440292 fstat(3, {st_mode=S_IFREG|0644, st_size=8087, ...}) = 0 <0.000002>
+18:28:13.440301 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\205$\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\6\0\0"..., 8088) = 8087 <0.000003>
+18:28:13.440310 read(3, "", 1)          = 0 <0.000002>
+18:28:13.440319 close(3)                = 0 <0.000002>
+18:28:13.440365 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.440379 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000002>
+18:28:13.440388 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000002>
+18:28:13.440400 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.440413 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000002>
+18:28:13.440424 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so", {st_mode=S_IFREG|0644, st_size=64368, ...}, 0) = 0 <0.000003>
+18:28:13.440442 openat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_hashlib.cpython-312-x86_64-linux-gnu.so", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.440450 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000002>
+18:28:13.440459 fstat(3, {st_mode=S_IFREG|0644, st_size=64368, ...}) = 0 <0.000002>
+18:28:13.440468 mmap(NULL, 66288, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46bdb9000 <0.000005>
+18:28:13.440479 mmap(0x79a46bdbd000, 24576, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x79a46bdbd000 <0.000116>
+18:28:13.440616 mmap(0x79a46bdc3000, 16384, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x79a46bdc3000 <0.000007>
+18:28:13.440637 mmap(0x79a46bdc7000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0x79a46bdc7000 <0.000008>
+18:28:13.440733 close(3)                = 0 <0.000005>
+18:28:13.440827 mprotect(0x79a46bdc7000, 4096, PROT_READ) = 0 <0.000007>
+18:28:13.440926 futex(0x79a46bd114e0, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000005>
+18:28:13.440987 futex(0x79a46bd113c8, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000003>
+18:28:13.441007 futex(0x79a46bd113c0, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000003>
+18:28:13.441432 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.441480 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.441492 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.441507 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.441520 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/__init__.cpython-312-x86_64-linux-gnu.so", 0x7ffcb243d850, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.441536 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/__init__.abi3.so", 0x7ffcb243d850, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.441547 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/__init__.so", 0x7ffcb243d850, 0) = -1 ENOENT (No such file or directory) <0.000003>
+18:28:13.441558 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/__init__.py", {st_mode=S_IFREG|0644, st_size=14020, ...}, 0) = 0 <0.000003>
+18:28:13.441584 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/__init__.py", {st_mode=S_IFREG|0644, st_size=14020, ...}, 0) = 0 <0.000003>
+18:28:13.441599 openat(AT_FDCWD, "/usr/lib/python3.12/json/__pycache__/__init__.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000005>
+18:28:13.441618 fstat(3, {st_mode=S_IFREG|0644, st_size=13620, ...}) = 0 <0.000002>
+18:28:13.441628 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.441645 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.441655 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.441663 fstat(3, {st_mode=S_IFREG|0644, st_size=13620, ...}) = 0 <0.000002>
+18:28:13.441678 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\3046\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0"..., 13621) = 13620 <0.000006>
+18:28:13.441692 read(3, "", 1)          = 0 <0.000002>
+18:28:13.441701 close(3)                = 0 <0.000003>
+18:28:13.441751 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.441765 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.441781 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.441792 openat(AT_FDCWD, "/usr/lib/python3.12/json", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3 <0.000003>
+18:28:13.441802 fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000002>
+18:28:13.441812 brk(0x23e2f000)         = 0x23e2f000 <0.000004>
+18:28:13.441822 getdents64(3, 0x23e06950 /* 8 entries */, 32768) = 240 <0.000006>
+18:28:13.441837 getdents64(3, 0x23e06950 /* 0 entries */, 32768) = 0 <0.000002>
+18:28:13.441845 close(3)                = 0 <0.000003>
+18:28:13.441858 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/decoder.py", {st_mode=S_IFREG|0644, st_size=12473, ...}, 0) = 0 <0.000003>
+18:28:13.441881 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/decoder.py", {st_mode=S_IFREG|0644, st_size=12473, ...}, 0) = 0 <0.000003>
+18:28:13.441895 openat(AT_FDCWD, "/usr/lib/python3.12/json/__pycache__/decoder.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.441906 fstat(3, {st_mode=S_IFREG|0644, st_size=13825, ...}) = 0 <0.000002>
+18:28:13.441915 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.441926 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.441936 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.441944 fstat(3, {st_mode=S_IFREG|0644, st_size=13825, ...}) = 0 <0.000002>
+18:28:13.441953 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\2710\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\t\0\0"..., 13826) = 13825 <0.000006>
+18:28:13.441966 read(3, "", 1)          = 0 <0.000002>
+18:28:13.441974 close(3)                = 0 <0.000002>
+18:28:13.442042 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.442057 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/scanner.py", {st_mode=S_IFREG|0644, st_size=2425, ...}, 0) = 0 <0.000003>
+18:28:13.442079 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/scanner.py", {st_mode=S_IFREG|0644, st_size=2425, ...}, 0) = 0 <0.000003>
+18:28:13.442093 openat(AT_FDCWD, "/usr/lib/python3.12/json/__pycache__/scanner.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.442103 fstat(3, {st_mode=S_IFREG|0644, st_size=3321, ...}) = 0 <0.000002>
+18:28:13.442112 ioctl(3, TCGETS, 0x7ffcb243c3a0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.442123 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.442132 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.442139 fstat(3, {st_mode=S_IFREG|0644, st_size=3321, ...}) = 0 <0.000002>
+18:28:13.442148 read(3, "\313\r\r\n\0\0\0\0\326\320\246iy\t\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 3322) = 3321 <0.000003>
+18:28:13.442157 read(3, "", 1)          = 0 <0.000002>
+18:28:13.442166 close(3)                = 0 <0.000002>
+18:28:13.442204 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.442219 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.442229 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.442244 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.442257 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload", {st_mode=S_IFDIR|0755, st_size=12288, ...}, 0) = 0 <0.000003>
+18:28:13.442269 newfstatat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so", {st_mode=S_IFREG|0644, st_size=48952, ...}, 0) = 0 <0.000003>
+18:28:13.442290 openat(AT_FDCWD, "/usr/lib/python3.12/lib-dynload/_json.cpython-312-x86_64-linux-gnu.so", O_RDONLY|O_CLOEXEC) = 3 <0.000003>
+18:28:13.442300 read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832 <0.000003>
+18:28:13.442309 fstat(3, {st_mode=S_IFREG|0644, st_size=48952, ...}) = 0 <0.000002>
+18:28:13.442319 mmap(NULL, 51104, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x79a46c813000 <0.000007>
+18:28:13.442332 mmap(0x79a46c815000, 28672, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x79a46c815000 <0.000007>
+18:28:13.442346 mmap(0x79a46c81c000, 8192, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x9000) = 0x79a46c81c000 <0.000004>
+18:28:13.442356 mmap(0x79a46c81e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xa000) = 0x79a46c81e000 <0.000004>
+18:28:13.442371 close(3)                = 0 <0.000002>
+18:28:13.442389 mprotect(0x79a46c81e000, 4096, PROT_READ) = 0 <0.000006>
+18:28:13.442685 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000004>
+18:28:13.442701 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/encoder.py", {st_mode=S_IFREG|0644, st_size=16070, ...}, 0) = 0 <0.000003>
+18:28:13.442727 newfstatat(AT_FDCWD, "/usr/lib/python3.12/json/encoder.py", {st_mode=S_IFREG|0644, st_size=16070, ...}, 0) = 0 <0.000003>
+18:28:13.442742 openat(AT_FDCWD, "/usr/lib/python3.12/json/__pycache__/encoder.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.442753 fstat(3, {st_mode=S_IFREG|0644, st_size=15098, ...}) = 0 <0.000002>
+18:28:13.442762 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.442774 lseek(3, 0, SEEK_CUR)   = 0 <0.000003>
+18:28:13.442783 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.442791 fstat(3, {st_mode=S_IFREG|0644, st_size=15098, ...}) = 0 <0.000002>
+18:28:13.442801 read(3, "\313\r\r\n\0\0\0\0\326\320\246i\306>\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\n\0\0"..., 15099) = 15098 <0.000005>
+18:28:13.442813 read(3, "", 1)          = 0 <0.000002>
+18:28:13.442822 close(3)                = 0 <0.000002>
+18:28:13.443098 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000018>
+18:28:13.443130 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.443141 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.443156 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.443169 newfstatat(AT_FDCWD, "/usr/lib/python3.12/random.py", {st_mode=S_IFREG|0644, st_size=34683, ...}, 0) = 0 <0.000003>
+18:28:13.443195 newfstatat(AT_FDCWD, "/usr/lib/python3.12/random.py", {st_mode=S_IFREG|0644, st_size=34683, ...}, 0) = 0 <0.000003>
+18:28:13.443209 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/random.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.443220 fstat(3, {st_mode=S_IFREG|0644, st_size=33153, ...}) = 0 <0.000003>
+18:28:13.443229 ioctl(3, TCGETS, 0x7ffcb243d4f0) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.443241 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.443250 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.443258 fstat(3, {st_mode=S_IFREG|0644, st_size=33153, ...}) = 0 <0.000002>
+18:28:13.443268 read(3, "\313\r\r\n\0\0\0\0\326\320\246i{\207\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 33154) = 33153 <0.000012>
+18:28:13.443287 read(3, "", 1)          = 0 <0.000002>
+18:28:13.443296 close(3)                = 0 <0.000002>
+18:28:13.443410 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.443425 getcwd("/home/xops360/repos/indeterminate-emergence/poc", 1024) = 48 <0.000003>
+18:28:13.443435 newfstatat(AT_FDCWD, "/home/xops360/repos/indeterminate-emergence/poc", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0 <0.000003>
+18:28:13.443449 newfstatat(AT_FDCWD, "/usr/lib/python3.12", {st_mode=S_IFDIR|0755, st_size=20480, ...}, 0) = 0 <0.000003>
+18:28:13.443464 newfstatat(AT_FDCWD, "/usr/lib/python3.12/bisect.py", {st_mode=S_IFREG|0644, st_size=3423, ...}, 0) = 0 <0.000003>
+18:28:13.443486 newfstatat(AT_FDCWD, "/usr/lib/python3.12/bisect.py", {st_mode=S_IFREG|0644, st_size=3423, ...}, 0) = 0 <0.000003>
+18:28:13.443500 openat(AT_FDCWD, "/usr/lib/python3.12/__pycache__/bisect.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 3 <0.000004>
+18:28:13.443511 fstat(3, {st_mode=S_IFREG|0644, st_size=3641, ...}) = 0 <0.000003>
+18:28:13.443521 ioctl(3, TCGETS, 0x7ffcb243ce80) = -1 ENOTTY (Inappropriate ioctl for device) <0.000002>
+18:28:13.443531 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.443540 lseek(3, 0, SEEK_CUR)   = 0 <0.000002>
+18:28:13.443548 fstat(3, {st_mode=S_IFREG|0644, st_size=3641, ...}) = 0 <0.000002>
+18:28:13.443557 read(3, "\313\r\r\n\0\0\0\0\326\320\246i_\r\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\4\0\0"..., 3642) = 3641 <0.000003>
+18:28:13.443566 read(3, "", 1)          = 0 <0.000002>
+18:28:13.443575 close(3)                = 0 <0.000002>
+18:28:13.443711 getrandom("\xbc\x55\xac\xc1\xcc\xce\x02\xc1\x25\x51\x48\x59\xf4\x04\xa4\x9d\xc7\xaf\x45\x7b\x40\x06\x3f\x5a\x65\xd2\x63\x8f\x61\xe7\x88\xe1"..., 2496, GRND_NONBLOCK) = 2496 <0.000007>
+18:28:13.443768 epoll_create1(EPOLL_CLOEXEC) = 3 <0.000005>
+18:28:13.443786 socketpair(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC, 0, [4, 5]) = 0 <0.000009>
+18:28:13.443808 getsockname(4, {sa_family=AF_UNIX}, [128 => 2]) = 0 <0.000003>
+18:28:13.443821 getsockname(5, {sa_family=AF_UNIX}, [128 => 2]) = 0 <0.000002>
+18:28:13.443834 ioctl(4, FIONBIO, [1])  = 0 <0.000002>
+18:28:13.443844 ioctl(5, FIONBIO, [1])  = 0 <0.000002>
+18:28:13.443866 epoll_ctl(3, EPOLL_CTL_ADD, 4, {events=EPOLLIN, data={u32=4, u64=133745281597444}}) = 0 <0.000004>
+18:28:13.443901 rt_sigaction(SIGINT, {sa_handler=0x6e7170, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, {sa_handler=0x6e7170, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, 8) = 0 <0.000003>
+18:28:13.443924 epoll_wait(3, [], 1, 0) = 0 <0.000003>
+18:28:13.443951 epoll_wait(3, [], 1, 115) = 0 <0.115448>
+18:28:13.559963 epoll_wait(3, [], 1, 0) = 0 <0.000255>
+18:28:13.561025 epoll_wait(3, [], 1, 0) = 0 <0.000246>
+18:28:13.561908 rt_sigaction(SIGINT, {sa_handler=0x6e7170, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, {sa_handler=0x6e7170, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, 8) = 0 <0.000255>
+18:28:13.562890 epoll_wait(3, [], 1, 0) = 0 <0.000050>
+18:28:13.563258 epoll_wait(3, [], 1, 0) = 0 <0.000143>
+18:28:13.563945 epoll_wait(3, [], 1, 0) = 0 <0.000232>
+18:28:13.564582 epoll_wait(3, [], 1, 0) = 0 <0.000133>
+18:28:13.565054 epoll_ctl(3, EPOLL_CTL_DEL, 4, 0x7ffcb243e034) = 0 <0.000060>
+18:28:13.565206 close(4)                = 0 <0.000052>
+18:28:13.565318 close(5)                = 0 <0.000046>
+18:28:13.565443 close(3)                = 0 <0.000031>
+18:28:13.565819 rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, {sa_handler=0x6e7170, sa_mask=[], sa_flags=SA_RESTORER|SA_ONSTACK, sa_restorer=0x79a46c645330}, 8) = 0 <0.000028>
+18:28:13.582622 munmap(0x79a46beac000, 208896) = 0 <0.000028>
+18:28:13.582740 munmap(0x79a46c9a2000, 16384) = 0 <0.000007>
+18:28:13.582849 exit_group(0)           = ?
+18:28:13.583381 +++ exited with 0 +++

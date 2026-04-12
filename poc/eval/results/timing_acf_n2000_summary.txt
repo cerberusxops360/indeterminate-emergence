@@ -1,0 +1,19 @@
+Experiment 5 (n=2000 rerun): Timing Autocorrelation
+============================================================
+KS statistic: 0.033000  p=0.226242  PASS
+
+  lag      authorized   unauthorized
+  ----------------------------------
+  1            0.0159         0.0111
+  2           -0.0018         0.0317
+  3           -0.0062         0.0240
+  4            0.0041        -0.0114
+  5            0.0230         0.0217
+
+  Max |ACF| lags 1-5 — authorized:   0.0230
+  Max |ACF| lags 1-5 — unauthorized: 0.0317
+
+  n=500 reference (lag-3 authorized): -0.1125
+  n=2000 result   (lag-3 authorized):  -0.0062
+
+Verdict: COLLAPSED — sampling noise at n=500. Report as noise in AGORA seed.

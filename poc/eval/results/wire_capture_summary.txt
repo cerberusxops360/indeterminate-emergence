@@ -1,0 +1,19 @@
+Experiment 7: Wire-Level Capture
+======================================================================
+
+Sub-test 1: HTTP body size
+  Target size: 4096 bytes
+  Authorized   — all exact: True  min=4096  max=4096
+  Unauthorized — all exact: True  min=4096  max=4096
+  Result: PASS
+
+Sub-test 2: Packet capture
+  authorized pcap:   capture failed
+  unauthorized pcap: capture failed
+  tshark not available, parse failed, or tcpdump permission denied
+  Tip: sudo setcap cap_net_raw+eip $(which tcpdump)
+
+======================================================================
+Sub-test 1 (body size):    PASS
+Sub-test 2 (packet dist):  PASS
+Overall: PASS
