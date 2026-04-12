@@ -1,0 +1,49 @@
+Experiment 4: Syscall Trace Comparison
+======================================================================
+Runs per path: 5
+
+Total syscall events — authorized: 7415  unauthorized: 7415
+Total syscall time  — authorized: 802.56ms  unauthorized: 754.11ms
+
+Syscalls present in AUTHORIZED only:
+  (none)
+
+Syscalls present in UNAUTHORIZED only:
+  (none)
+
+Top 15 syscalls by count:
+  syscall                authorized   unauthorized
+  ------------------------------------------------
+  newfstatat                   1960           1960
+  fstat                        1115           1115
+  read                         1010           1010
+  lseek                         920            920
+  close                         660            660
+  openat                        640            640
+  rt_sigaction                  340            340
+  getcwd                        205            205
+  getdents64                    190            190
+  futex                          90             90
+  mprotect                       65             65
+  epoll_wait                     40             40
+  munmap                         30             30
+  fcntl                          15             15
+  getrandom                      15             15
+
+Top 10 syscalls by total time:
+  syscall               authorized (ms)  unauthorized (ms)
+  --------------------------------------------------------
+  epoll_wait                    766.723            718.509
+  newfstatat                      8.124              7.520
+  read                            5.489              5.436
+  fstat                           3.384              3.485
+  openat                          3.253              3.394
+  close                           3.505              3.026
+  rt_sigaction                    2.288              2.894
+  lseek                           2.377              2.439
+  getdents64                      2.032              2.281
+  execve                          1.211              1.386
+
+======================================================================
+Path-exclusive syscalls detected: False
+Assessment: INDISTINGUISHABLE at syscall-type level
