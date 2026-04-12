@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 ## Infrastructure Governance
 This repo is classified as **T4 — Isolated** under the Infrastructure Governance Standard.
 Before modifying shared infrastructure, read: `shared-library/standards/INFRASTRUCTURE-GOVERNANCE.md`
@@ -25,7 +29,7 @@ Before modifying shared infrastructure, read: `shared-library/standards/INFRASTR
 **ORCID:** https://orcid.org/0009-0000-4569-3726  
 **License:** Paper: CC BY 4.0 | Code: MIT  
 **ADAM Project ID:** ADAM-PROJ-IE  
-**Status:** Phase 1 — Repository Setup & Paper Finalization  
+**Status:** Phase 3 — PoC Build (next)  
 
 ---
 
@@ -117,10 +121,13 @@ indeterminate-emergence/
 │   ├── indeterminate-emergence-v1.md    # Revised paper (source of truth)
 │   ├── indeterminate-emergence-v1.tex   # LaTeX for arXiv submission
 │   ├── indeterminate-emergence-v1.pdf   # Rendered PDF
+│   ├── references.bib                   # BibTeX bibliography
+│   ├── abstract.txt                     # Plain-text abstract
+│   ├── IACR_SUBMISSION_NOTES.md         # Submission metadata
 │   └── figures/                         # Any diagrams or charts
 ├── blog/
 │   └── what-if-security-meant-non-existence.md  # Blog post
-├── poc/
+├── poc/                                 # ** Not yet built — target structure below **
 │   ├── README.md                    # PoC overview, setup, usage
 │   ├── requirements.txt             # Python dependencies (pinned)
 │   ├── src/
@@ -153,6 +160,7 @@ indeterminate-emergence/
 │   ├── index.yaml                   # ADAM manifest index for this repo
 │   └── objects/                     # Individual object manifests
 └── .github/
+    ├── CODEOWNERS                   # Requires owner approval on all PRs
     └── ISSUE_TEMPLATE/
         ├── bug_report.md
         └── research_question.md
@@ -234,9 +242,9 @@ The paper uses formal mathematical language. Terms like "indistinguishability," 
 ### Local Development
 ```bash
 # Setup
-cd C:\Projects\active\indeterminate-emergence
 python -m venv .venv
-.venv\Scripts\activate
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scripts\activate   # Windows
 pip install -r poc/requirements.txt
 
 # Run proxy
@@ -245,6 +253,9 @@ uvicorn src.proxy:app --host 0.0.0.0 --port 8000
 
 # Run tests
 pytest poc/tests/ -v
+
+# Run a single test file
+pytest poc/tests/test_executor.py -v
 
 # Run evaluations (proxy must be running)
 python -m eval.divergence_test
@@ -256,18 +267,18 @@ python -m eval.budget_depletion
 
 ## Current Phase
 
-### Phase 1: Repository Setup & Paper Finalization (Active)
+### Phase 1: Repository Setup & Paper Finalization (Complete)
 
 **Author:** Adam Bishop, XOps360 LLC
 
-- [x] Create local repo at C:\Projects\active\indeterminate-emergence
+- [x] Create local repo
 - [x] Create GitHub repo: cerberusxops360/indeterminate-emergence (public)
 - [x] Commit directory structure, CLAUDE.md, licenses
 - [x] Commit paper (markdown)
 - [x] Commit blog post
 - [x] Commit project plan and PoC specification to docs/
-- [ ] Convert paper to LaTeX
-- [ ] Generate PDF
+- [x] Convert paper to LaTeX
+- [x] Generate PDF
 - [ ] Run paper through writing standards audit (banned words, em dashes, patterns)
 - [ ] Run blog post through writing standards audit
 - [ ] Tag: v0.1-paper
