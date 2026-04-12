@@ -1,0 +1,30 @@
+Experiment 6: Active Burst Injection
+======================================================================
+Burst size: 10  |  Bursts: 50  |  Total per path: 500
+
+RTT distribution (milliseconds):
+                                     authorized   unauthorized
+  ------------------------------------------------------------
+  mean                                  311.511        317.667
+  std                                    55.006         55.700
+  p50                                   310.754        314.608
+  p95                                   398.947        403.393
+  p99                                   411.708        410.807
+  max                                   417.180        415.681
+
+Burst queuing (within-burst std, mean over all bursts):
+  authorized:   52.151ms
+  unauthorized: 52.903ms
+  (Large difference here = event loop starvation from CPU-bound path)
+
+Tail divergence (absolute difference):
+  |p95_auth - p95_unauth| = 4.445ms
+  |p99_auth - p99_unauth| = 0.902ms
+  (Agora H4 signature: tail divergence > 20ms under burst)
+
+  KS statistic:  0.054000
+  KS p-value:    0.459923
+  KS result:     PASS (alpha=0.05)
+
+======================================================================
+Overall: PASS
