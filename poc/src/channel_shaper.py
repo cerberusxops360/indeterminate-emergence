@@ -63,13 +63,17 @@ def pad_payload(raw_result: str) -> dict:
 
 
 async def shape_timing(execution_start: float) -> None:
-    """Ensure total response time falls within [MIN_LATENCY, MAX_LATENCY]."""
+    """Ensure total response time falls within [MIN_LATENCY, MAX_LATENCY].
+
+    Target is always drawn unconditionally from U(MIN, MAX). If the executor
+    already exceeded the target (overshoot), remaining is negative and
+    max(0, ...) produces a zero sleep — the response exits immediately with
+    no additional delay. This preserves a uniform target distribution even in
+    the overshoot case, rather than clamping all overshoots to a fixed value.
+    """
     target = random.uniform(MIN_LATENCY, MAX_LATENCY)
     elapsed = time.monotonic() - execution_start
-    remaining = target - elapsed
-
-    if remaining > 0:
-        await asyncio.sleep(remaining)
+    await asyncio.sleep(max(0.0, target - elapsed))
 
 
 async def shape_response(raw_result: str, execution_start: float) -> dict:
