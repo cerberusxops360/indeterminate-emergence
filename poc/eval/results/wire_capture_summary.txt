@@ -7,13 +7,32 @@ Sub-test 1: HTTP body size
   Unauthorized — all exact: True  min=4096  max=4096
   Result: PASS
 
-Sub-test 2: Packet capture
-  authorized pcap:   capture failed
-  unauthorized pcap: capture failed
-  tshark not available, parse failed, or tcpdump permission denied
-  Tip: sudo setcap cap_net_raw+eip $(which tcpdump)
+Sub-test 2: Packet payload distribution
+                         authorized   unauthorized
+  ------------------------------------------------
+  packets                        58             58
+  mean (bytes)               2111.5         2111.5
+  std (bytes)                1984.5         1984.5
+  max (bytes)                  4096           4096
+
+  KS statistic: 0.000000
+  KS p-value:   1.000000
+  Result: PASS (alpha=0.05)
+
+Sub-test 3: Inter-segment timing (KI-001)
+                                 authorized   unauthorized
+  --------------------------------------------------------
+  intra-response deltas                  48             48
+  mean (µs)                           134.7          150.9
+  std (µs)                             56.7           84.6
+  p99 (µs)                            229.3          411.4
+
+  KS statistic: 0.145833
+  KS p-value:   0.692660
+  Result: PASS (alpha=0.05)
 
 ======================================================================
-Sub-test 1 (body size):    PASS
-Sub-test 2 (packet dist):  PASS
+Sub-test 1 (body size):       PASS
+Sub-test 2 (packet dist):     PASS
+Sub-test 3 (inter-seg timing):PASS [KI-001 CLOSED]
 Overall: PASS
