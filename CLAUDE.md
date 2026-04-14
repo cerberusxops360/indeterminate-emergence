@@ -155,7 +155,10 @@ indeterminate-emergence/
 │   ├── THREAT_MODEL.md              # Adversary tier definitions
 │   ├── POC_SPECIFICATION.md         # Full PoC build spec
 │   ├── PROJECT_PLAN.md              # Publication and launch plan
-│   └── CONTRIBUTING.md              # How to contribute
+│   ├── CONTRIBUTING.md              # How to contribute
+│   └── EMPIRICAL_FINDINGS.md        # Canon: Level 2/3 empirical assessment results
+├── agora-seeds/
+│   └── ie-level23-empirical.md      # Seed for AGI_9fac33d528a5453dbda3 (closed)
 ├── manifest/
 │   ├── index.yaml                   # ADAM manifest index for this repo
 │   └── objects/                     # Individual object manifests
@@ -247,9 +250,9 @@ source .venv/bin/activate  # Linux/macOS
 # .venv\Scripts\activate   # Windows
 pip install -r poc/requirements.txt
 
-# Run proxy
+# Run proxy (use port 8100 for eval scripts)
 cd poc
-uvicorn src.proxy:app --host 0.0.0.0 --port 8000
+uvicorn src.proxy:app --host 127.0.0.1 --port 8100
 
 # Run tests
 pytest poc/tests/ -v
@@ -257,10 +260,20 @@ pytest poc/tests/ -v
 # Run a single test file
 pytest poc/tests/test_executor.py -v
 
-# Run evaluations (proxy must be running)
+# Run Level 1 evaluations (proxy must be running on 8100)
 python -m eval.divergence_test
 python -m eval.classifier_attack
 python -m eval.budget_depletion
+
+# Run Level 2/3 evaluations (experiments 4-7)
+python -m eval.syscall_trace            # no proxy needed
+python -m eval.timing_autocorrelation   # no proxy needed
+python -m eval.burst_injection          # proxy required
+python -m eval.wire_capture             # proxy required; tshark needs cap_net_raw
+
+# Sub-tests 2+3 of wire_capture require:
+#   sudo setcap cap_net_raw+eip $(which tcpdump)
+#   sudo setcap cap_net_raw+eip $(which tshark)
 ```
 
 ---
@@ -301,22 +314,28 @@ arXiv submission deferred until IACR ePrint publication establishes a portfolio 
 - [ ] Cross-list to cs.AI
 - [ ] Update README with arXiv link
 
-### Phase 3: PoC Build
+### Phase 3: PoC Build (Complete)
 
-- [ ] Scaffold: proxy.py returning constant responses
-- [ ] config.py: session capability tokens
-- [ ] executor.py: normal + dummy execution paths
-- [ ] channel_shaper.py: fixed-size + fixed-timing responses
-- [ ] accountant.py: budget tracking + absorption trigger
-- [ ] Integration: full request-response flow
+- [x] Scaffold: proxy.py returning constant responses
+- [x] config.py: session capability tokens
+- [x] executor.py: normal + dummy execution paths
+- [x] channel_shaper.py: fixed-size + fixed-timing responses
+- [x] accountant.py: budget tracking + absorption trigger
+- [x] Integration: full request-response flow
 - [ ] Tests: all modules passing
 
-### Phase 4: Evaluation
+### Phase 4: Evaluation (Level 1 complete; Level 2/3 complete)
 
-- [ ] Experiment 1: divergence test (TV distance, KL divergence)
-- [ ] Experiment 2: classifier attack (4 classifiers, target ≤ 52% accuracy)
-- [ ] Experiment 3: budget depletion (posterior convergence chart)
-- [ ] Results committed to poc/results/
+- [x] Experiment 1: divergence test — PASS
+- [x] Experiment 2: classifier attack — PASS (≤52% accuracy)
+- [x] Experiment 3: budget depletion — PASS
+- [x] Experiment 4: syscall trace comparison — PASS (paths indistinguishable)
+- [x] Experiment 5: timing autocorrelation — PASS (KS p=0.226, n=2000)
+- [x] Experiment 6: burst injection — PASS (H4 starvation not observed)
+- [x] Experiment 7: wire capture — PASS (body size, packet dist, inter-segment timing)
+- [x] Overshoot bug fixed in channel_shaper.py (KS p=0.401 post-fix)
+- [x] Empirical findings documented: docs/EMPIRICAL_FINDINGS.md
+- [x] KI-001 (TCP fragmentation timing) closed
 - [ ] Tag: v0.2-poc
 
 ### Phase 5: Publication
@@ -347,6 +366,7 @@ arXiv submission deferred until IACR ePrint publication establishes a portfolio 
 - **PoC Specification:** `docs/POC_SPECIFICATION.md` (the TDP for the code)
 - **Project Plan:** `docs/PROJECT_PLAN.md` (timeline and publishing strategy)
 - **Full Paper:** `paper/indeterminate-emergence-v1.md`
+- **Empirical Findings:** `docs/EMPIRICAL_FINDINGS.md` (canon: Level 2/3 assessment results)
 - **ADAM System Spec:** see `cerberusxops360/adam-system` for fingerprint format and manifest conventions
 - **XOps360 Writing Standards:** see Gap Analysis v5 Section 7.1 for filter rules
 
@@ -357,3 +377,4 @@ arXiv submission deferred until IACR ePrint publication establishes a portfolio 
 | Version | Date       | Author | Changes              |
 |---------|------------|--------|----------------------|
 | 1.0.0   | 2026-03-13 | Adam   | Initial CLAUDE.md    |
+| 1.1.0   | 2026-04-13 | Adam   | Phase 3/4 complete; Level 2/3 eval; overshoot fix; KI-001 closed |
