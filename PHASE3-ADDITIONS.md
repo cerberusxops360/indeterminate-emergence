@@ -384,7 +384,7 @@ Add `docs/DEPLOYMENT-ASSUMPTIONS.md` to the IE repo:
 IE's timing normalization guarantees are conditioned on
 the following network path assumptions:
 
-### Development / Testing (oracle-prime)
+### Development / Testing (local loopback)
 - Client and credential store proxy on same host
 - Network jitter: ~0ms (loopback)
 - Confounding variables: none

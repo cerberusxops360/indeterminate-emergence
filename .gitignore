@@ -13,6 +13,12 @@ poc/results/*.csv
 .DS_Store
 Thumbs.db
 
+# Local execution contract and infrastructure config (never commit)
+CLAUDE.md
+.mcp.json
+seeds/
+agora-seeds/
+
 # LaTeX build artifacts
 *.aux
 *.bbl

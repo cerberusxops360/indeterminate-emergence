@@ -10,7 +10,7 @@
 
 ## Summary
 
-This document records the findings from the first empirical assessment of the IE PoC against Level 2 (system-level) and Level 3 (co-located) adversaries. All findings are grounded in source code and measurements on oracle-prime (Python 3.12.3, single uvicorn worker, loopback interface).
+This document records the findings from the first empirical assessment of the IE PoC against Level 2 (system-level) and Level 3 (co-located) adversaries. All findings are grounded in source code and measurements on a local test server (Python 3.12.3, single uvicorn worker, loopback interface).
 
 Experiments 1–3 (Level 1) were previously reported and all pass. Experiments 4–7 cover Level 2/3 observables.
 
