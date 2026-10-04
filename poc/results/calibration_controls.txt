@@ -1,0 +1,14 @@
+Calibration controls (in-process harness, probe level)
+======================================================================
+N_SESS=200/class, N_PROBES=24, N_PERM=40, N_BOOT=300, bias=3.0ms
+
+  web_search  REAL auth-vs-unauth n=9600 best=MLP          adv=3.91pct perm_p=0.024390243902439025 MDE=1.43pct
+  web_search  NEG  auth-vs-auth   n=9600 best=LogReg       adv=1.81pct perm_p=0.0975609756097561 MDE=1.43pct
+  web_search  POS  +bias on cls1  n=9600 best=MLP          adv=3.79pct perm_p=0.024390243902439025 MDE=1.43pct
+
+  file_read   REAL auth-vs-unauth n=9600 best=kNN          adv=1.79pct perm_p=0.12195121951219512 MDE=1.43pct
+  file_read   NEG  auth-vs-auth   n=9600 best=GradBoost    adv=2.99pct perm_p=0.024390243902439025 MDE=1.43pct
+  file_read   POS  +bias on cls1  n=9600 best=kNN          adv=7.06pct perm_p=0.024390243902439025 MDE=1.43pct
+
+Read: REAL advantage at or below NEG floor means indistinguishable within precision.
+POS must show a clear jump with low perm_p, confirming the battery detects a real effect.

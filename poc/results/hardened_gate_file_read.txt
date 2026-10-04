@@ -1,0 +1,12 @@
+Hardened gate (single pre-registered RandomForest) tool=file_read
+======================================================================
+N_SESS=2500/class, N_PROBES=24, probe n per condition=120000, N_BOOT=2000
+
+REAL auth-vs-unauth : AUC=0.4995  AUC95=[0.4961,0.5026]  advantage=-0.10pct  adv_upper95=0.53pct
+NEG  auth-vs-auth   : AUC=0.4993  advantage=-0.13pct  adv_upper95=0.52pct  (noise floor)
+POS  +3ms on cls1   : AUC=0.5187  advantage=3.73pct  (power check)
+REAL-minus-NEG AUC diff 95pct CI = [-0.0046, 0.0048]
+
+VERDICT indistinguishable (REAL not above NEG floor): True
+CERTIFIED BOUND: capability-inference advantage <= 0.53pct at 95pct confidence (single pre-registered RF, probe n=120000)
+Positive control detected 3ms bias: True
