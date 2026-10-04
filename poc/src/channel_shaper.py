@@ -4,7 +4,7 @@ import random
 import time
 
 RESPONSE_SIZE = 4096  # bytes, fixed
-MIN_LATENCY = 0.2     # 200ms minimum
+MIN_LATENCY = 0.25     # floor above executor max to eliminate timing overshoot
 MAX_LATENCY = 0.4     # 400ms maximum
 
 

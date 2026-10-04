@@ -20,7 +20,6 @@
 ## [0.1.1] - 2026-03-13
 
 ### Added
-- IACR ePrint publication: https://eprint.iacr.org/2026/108326
 - BibTeX citation in README
 - LaTeX source and bibliography (paper/indeterminate-emergence-v1.tex)
 - Submission-ready PDF (paper/indeterminate-emergence-v1.pdf)

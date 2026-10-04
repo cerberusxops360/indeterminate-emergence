@@ -19,9 +19,7 @@ composition to provide formal guarantees against capability inference attacks.
 
 ## Paper
 
-The full paper is available on the
-[IACR Cryptology ePrint Archive](https://eprint.iacr.org/2026/108326)
-and in `paper/indeterminate-emergence-v1.md`. It defines the formal security
+The full paper is in `paper/indeterminate-emergence-v1.md`. It defines the formal security
 model, proves non-collapse guarantees, specifies four adversary tiers, and works
 through a concrete application to AI capability-set inference resistance.
 
@@ -51,7 +49,7 @@ has access to. See `docs/POC_SPECIFICATION.md` for the full build spec.
 
 - [x] Theory paper (revised draft with full citations)
 - [x] Blog post
-- [x] IACR ePrint submission
+- [ ] IACR ePrint submission
 - [ ] Proof of concept
 - [ ] Empirical evaluation
 
@@ -61,9 +59,9 @@ has access to. See `docs/POC_SPECIFICATION.md` for the full build spec.
 @misc{bishop2026indeterminate,
   author = {Adam Bishop},
   title = {Indeterminate Emergence: Security Through Non-Existence},
-  howpublished = {Cryptology ePrint Archive, Paper 2026/108326},
+  howpublished = {Independent research preprint, XOps360 LLC},
   year = {2026},
-  url = {https://eprint.iacr.org/2026/108326}
+  url = {https://github.com/cerberusxops360/indeterminate-emergence}
 }
 ```
 

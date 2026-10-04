@@ -1,3 +1,5 @@
+> **CORRECTION 2026-10-04 (read first).** The experiments below were run with a harness defect: eval scripts registered sessions in their own process but sent requests to a SEPARATE uvicorn process whose session store was empty, so the server ran the dummy / absorption path for BOTH the authorized and unauthorized configs. Every result below therefore compared the dummy path to itself and is NOT valid evidence of indistinguishability. They must be re-run under the in-process ASGI harness (as in tests/test_proxy.py). See results/gate-rebuild-2026-10-04.md for the corrected classifier gate.
+
 # Empirical Findings: Level 2/3 Adversary Analysis
 
 **Investigation:** AGI_9fac33d528a5453dbda3  
