@@ -25,10 +25,22 @@ through a concrete application to AI capability-set inference resistance.
 
 ## Proof of Concept
 
-A planned demonstration of capability-set inference resistance for AI agent
-systems. The proxy service will sit between an external observer and an AI
-agent's tool registry, making it impossible to determine which tools the agent
-has access to. See `docs/POC_SPECIFICATION.md` for the full build spec.
+A reference implementation is in `poc/`: a proxy that sits between an outside
+observer and an AI agent's tool registry (five components, FastAPI, with a test
+suite). See `docs/POC_SPECIFICATION.md` for the build spec.
+
+**Level 1 result (network observer).** A pre-registered classifier, trained to
+tell authorized from unauthorized sessions from response content, size, and
+timing, did no better than the noise floor on any of five tools. The certified
+95 percent upper bound on adversary advantage is 0.46 to 1.09 percent, with a
+planted 3 ms timing bias detected as a positive control. Method and data:
+`poc/results/gate-rebuild-2026-10-04.md`.
+
+**What is not established.** Level 2 (process isolation) and Level 3 (shared
+hardware) are not covered. The PoC tools have no real side effect; a deployment
+with side-effecting tools needs a sealed or constant-time executor. Several
+April 2026 experiments were run on a faulty harness and are withdrawn pending a
+re-run (`docs/EMPIRICAL_FINDINGS.md`).
 
 ## Core Ideas
 
@@ -49,9 +61,13 @@ has access to. See `docs/POC_SPECIFICATION.md` for the full build spec.
 
 - [x] Theory paper (revised draft with full citations)
 - [x] Blog post
-- [ ] IACR ePrint submission
-- [ ] Proof of concept
-- [ ] Empirical evaluation
+- [x] Proof of concept (reference implementation and tests)
+- [x] Level 1 empirical certification
+- [x] Formal separation from ORAM, constant-time execution, and deniable encryption (paper, Section 12.7)
+- [ ] Level 2 and Level 3 evaluation
+- [ ] Re-run of withdrawn April 2026 experiments
+- [ ] Outside review
+- [ ] Archive or venue submission
 
 ## Citation
 

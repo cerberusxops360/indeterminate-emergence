@@ -4,7 +4,7 @@
 **Author:** Adam Bishop, XOps360 LLC
 **ORCID:** https://orcid.org/0009-0000-4569-3726
 **Date:** March 2026
-**Status:** Preprint -- submitted to IACR Cryptology ePrint Archive
+**Status:** Preprint -- GitHub only; not yet submitted to an archive or venue
 **License:** CC BY 4.0
 
 ---
@@ -13,7 +13,7 @@
 
 Traditional security systems rely on the concealment of information through cryptographic transformation. In contrast, this paper reconstructs security from first principles, focusing on the *intent* of encryption rather than its historical form. We propose a new security primitive based on **indeterminate emergence**, wherein meaningful information or system effects do not exist outside authorized contexts and are indistinguishable from non-existence or benign noise to unauthorized observers.
 
-We formalize this primitive using transcript-level indistinguishability over designer-specified hypothesis pairs, drawing on the Pufferfish privacy framework to define composable leakage bounds across adaptive interaction sequences. We introduce a three-plane model (observation, assumption, and action) and define a class of systems capable of real-world efficacy without information collapse. Central to this design is **absorptive execution**, a mode in which systems maintain computationally indistinguishable observational signals while silently nullifying effects under elevated inference risk.
+We formalize this primitive using transcript-level indistinguishability over designer-specified hypothesis pairs, drawing on the Pufferfish privacy framework to define composable leakage bounds across adaptive interaction sequences. We introduce a three-plane model (observation, assumption, and action) and define a class of systems capable of real-world efficacy without information collapse. Central to this design is **absorptive execution**, a mode in which systems maintain statistically indistinguishable observational signals while silently nullifying effects under elevated inference risk.
 
 We define explicit adversary models, prove security properties against each, provide a concrete instantiation for AI capability-set inference resistance, and position the framework against differential privacy, deniable encryption, ORAM, and zero-knowledge proofs. We analyze buildability, limits, and failure modes, and discuss applications in autonomous systems, AI governance, and secure pipelines.
 
@@ -136,6 +136,20 @@ $$\sum_{t=1}^{n} \varepsilon_t \le \varepsilon_{total}, \quad 1 - \prod_{t=1}^{n
 (or tighter bounds under advanced composition).
 
 When the budget is exhausted, the system transitions to absorption mode (Section 5.2).
+
+**Definition 3 (Capability-Inference Game, CIG).** Fix a system SYS, a secret bit $b \in \{0,1\}$ drawn
+by a challenger ($b = 1$: SYS holds and will exercise capability $c$; $b = 0$: SYS absorbs for $c$),
+and an adaptive adversary $\mathcal{A}$ with budget $B = (\varepsilon_{total}, \delta_{total})$.
+
+1. Challenger samples $b$ and configures SYS accordingly.
+2. For $t = 1,\ldots,n$ (bounded only by $B$): $\mathcal{A}$ selects probe $a_t$ from $T_{t-1}$; SYS
+   returns $O_t \sim \mathcal{M}(b, a_t)$ per Definition 1; the accountant debits $(\varepsilon_t, \delta_t)$.
+3. $\mathcal{A}$ outputs a guess $b'$.
+
+$\mathrm{CIG\text{-}adv}(\mathcal{A}) := 2 \cdot |\Pr[b' = b] - 1/2|$. SYS is
+$(\varepsilon_{total}, \delta_{total})$-CIG-secure if for every $\mathcal{A}$,
+$\mathrm{CIG\text{-}adv}(\mathcal{A}) \le e^{\varepsilon_{total}} - 1 + \delta_{total}$.
+This is Definition 1 composed under Definition 2, read as a distinguishing game.
 
 ### 4.4 Non-Collapse Guarantee
 
@@ -263,7 +277,7 @@ We instantiate the framework for a concrete and timely problem: preventing an ex
 
 ### 7.1 Setting
 
-An AI agent operates with access to a tool registry (file system, web APIs, code execution, database queries). An external observer watches the agent's API calls and outputs. The adversary's goal is to determine the agent's **capability set**—which tools are authorized for the current session.
+An AI agent operates with access to a tool registry (file system, web APIs, code execution, database queries). An external observer watches the agent's API calls and outputs. The adversary's goal is to determine the agent's **capability set**: which tools are authorized for the current session.
 
 **Why this matters.** Knowledge of the capability set enables targeted attacks: social engineering the agent toward a capability it has but shouldn't use in context, inferring organizational security posture from capability footprint, or identifying high-value targets by capability profile.
 
@@ -312,13 +326,21 @@ When the budget for a session is near exhaustion (e.g., an adversary has made ma
 
 The agent's behavior in absorption may itself be informative (e.g., it may change its strategy). This is a known limitation: the framework protects the *system's* observation channel, not the *agent's* downstream behavior. Protecting agent behavior is a separate research problem .
 
-### 7.6 Evaluation Plan
+### 7.6 Evaluation Results
 
-To validate the framework empirically:
+The PoC was evaluated against a Level 1 adversary: an outside observer of response content, response size, and timing. The service was run in process (Python 3.12, FastAPI driven through an ASGI transport). Method and data are in `poc/results/gate-rebuild-2026-10-04.md` and the `hardened_gate_*.txt` files beside it.
 
-1. **Divergence measurement.** For each discriminative pair, sample transcripts under both hypotheses and estimate $D_{TV}$ and $D_{KL}$ between transcript distributions. Verify that measured divergence falls within the theoretical bound $\eta$.
-2. **Distinguisher evaluation.** Train a binary classifier on transcripts labeled by tool presence/absence. Measure classifier advantage. Verify advantage is bounded by $e^{\varepsilon_{total}} - 1 + \delta_{total}$.
-3. **Budget depletion test.** Simulate an adaptive adversary executing an optimal probing strategy. Measure the number of queries required to achieve a target posterior concentration. Verify this exceeds the budget.
+**Level 1 certification.** One pre-registered classifier (a random forest of 300 trees) was trained to separate authorized from unauthorized sessions using probe observables, at up to 120,000 probe observations per condition, with a bootstrap confidence interval. Two controls ran in the same harness: a negative control (authorized against authorized, which gives the noise floor) and a positive control (a 3 ms timing bias added to one class). On all five tools the authorized-versus-unauthorized result was statistically indistinguishable from the negative-control floor, and the positive control was detected. The certified 95 percent upper bound on single-adversary advantage is 0.94 percent (calculator), 0.53 percent (file_read), 0.46 percent (code_exec), 0.94 percent (database_query), and 1.09 percent (web_search).
+
+**Level 2 observations (partial).** Two April 2026 experiments call the executor paths directly and were unaffected by the harness fault described below. Both were re-run on the current code in November 2026. Syscall traces: the real and absorption paths produce the same syscall types and the same event counts (7,395 per path over five runs), with no path-exclusive syscall. This holds because both paths do the same work, not because of process isolation, so it is an observation and not a designed Level 2 guarantee. Timing autocorrelation: the latency series of the two paths are indistinguishable in distribution (KS p = 0.41, n = 500 per path) and show no serial correlation above 0.05 at lags 1 to 10.
+
+**Withdrawn results.** Earlier versions of this section reported classifier accuracy at chance level, transcript divergence, budget depletion, wire-capture, and burst-injection results from April 2026. Those five ran through a harness that registered sessions in the evaluation process and sent requests to a separate server process with an empty session store. Both configurations therefore ran the absorption path, and each comparison was the absorption path against itself. Those results are not evidence and are withdrawn; the classifier result is replaced by the certification above and the other four await a re-run under the in-process harness. `docs/EMPIRICAL_FINDINGS.md` marks which results are affected.
+
+**Budget depletion.** The budget-depletion experiment has two further faults and its reported posterior of 0.81 is withdrawn outright. Its simulated adversary used a likelihood ratio that could only be at or above one, so the posterior rose toward 0.8 whether the tool was present or absent. And at the PoC defaults (per-query epsilon 1.0, total budget 50) the bound of Theorem 1 is vacuous. The accountant in the PoC charges a configured constant per query; that constant has not been calibrated against measured per-query leakage. An empirical demonstration of non-collapse therefore remains open: it needs a calibrated epsilon and an adversary that uses the observations.
+
+**Implementation corrections.** Two faults were found and fixed during evaluation. First, `shape_timing` skipped its sleep when the executor overran the drawn target, which exposed raw completion time on a subpopulation of responses. It now always sleeps to the drawn target, and the shaping floor (0.25 s) sits above the executor maximum (0.15 s). Second, the real and absorption executor paths did unequal work. They now perform the same latency draw, the same hashing, and the same content build.
+
+**Scope.** These results establish Level 1 and give partial Level 2 observations. Content-independence of the observable path relies on build-and-discard, which is possible because the PoC tools have no real side effect. A deployment with side-effecting tools requires a sealed or constant-time executor (Section 13). Level 2 guarantees (process isolation, memory and CPU channels) and Level 3 (shared hardware; designed in `docs/LEVEL3-AND-DEFERRED-ADVERSARIES.md`, not run) are not established by this PoC.
 
 ---
 
@@ -401,11 +423,19 @@ Differential privacy [2] provides composable indistinguishability guarantees for
 
 ### 12.2 Deniable Encryption and Steganography
 
-Deniable encryption [4] ensures that a ciphertext is consistent with multiple possible plaintexts, preventing coercion. Steganography hides the existence of communication within innocuous cover traffic. Our framework extends deniability from stored data to **real-time effects and capabilities**: the system doesn't just deny what message was sent, but whether any meaningful action was taken.
+Deniable encryption [4] ensures that a ciphertext is consistent with multiple possible plaintexts, preventing coercion. Steganography hides the existence of communication within innocuous cover traffic. IE pursues a deniability-flavored goal on the action plane -- whether a real-world effect occurred -- through a different mechanism than deniable encryption uses on the data plane. DE's mechanism is dual-opening of a ciphertext under coercion, requiring the defender's active, after-the-fact cooperation. IE's mechanism is channel shaping plus effect suppression against a passive-or-active observer who never coerces and receives no alternate opening. The goal is analogous -- the adversary cannot determine which hypothesis holds -- but the mechanism is not inherited from DE, and the adversary model is strictly different (live adaptive probing vs. after-the-fact coercion).
 
 ### 12.3 Oblivious RAM
 
 ORAM [5] hides memory access patterns from an adversary observing storage. Our channel shaper serves an analogous function for the observation plane, ensuring that observable behavior is independent of system state. The key difference is that ORAM protects data access patterns within a computation, while our framework protects the existence and nature of the computation itself.
+
+This separation is not symmetric. IE at Level 1 contains a generalized constant-time obligation as a
+component: the channel shaper must render observable behavior a function of public inputs only, treating
+the authorization-and-effect bit as the protected secret. That is precisely a CT-style requirement over a
+non-standard secret choice. CT is therefore not a sibling that IE merely resembles; it is machinery IE
+requires. The genuinely new element over that shaping obligation is effect suppression -- suppressing the
+real-world action while holding the observable fixed -- which ORAM, CT, and DE together do not provide
+(see Section 12.7).
 
 ### 12.4 Zero-Knowledge Proofs
 
@@ -421,7 +451,34 @@ Honeypots [7] are systems that appear functional but produce no real effects, de
 
 ### 12.7 Novelty Summary
 
-We unify transcript indistinguishability (from DP), deniability of existence (from deniable encryption), access pattern hiding (from ORAM), proof without revelation (from ZK), and non-existence of intermediate values (from MPC) into a single action-centric framework. The novel primitive is absorptive execution, which extends deniability from stored data to real-time effects and capabilities, enforced by a composable leakage budget.
+**Separation (Proposition 1).** There exists a system SYS that is perfectly ORAM-secure, perfectly
+constant-time, and perfectly deniable-encryption-secure, and that nonetheless achieves CIG-advantage 1:
+the adversary wins with certainty. Construction: SYS performs the real side-effecting action on an
+authorized request and returns a denial otherwise, with a correct ORAM scheme on all storage, a
+constant-time code path, and deniable encryption on all transmitted data. One probe suffices -- observe
+whether the external effect occurred. The effect leaks the secret bit directly. The three baselines are
+aimed at the storage plane, the compute plane, and the stored-data plane; none constrains whether an
+external action was taken. The missing control is exactly what IE names: suppress the effect while
+holding the observable fixed. That is absorptive execution, and Proposition 1 shows it is not derivable
+from the union of the three.
+
+**Reduction (Proposition 2).** Level 1 IE requires no cryptographic primitive beyond a constant-time
+channel shaper and a DP accountant. Given those two components, absorptive execution needs no further
+assumption: on $b = 0$ or budget exhaustion, run a resource-matched dummy of equal observable profile and
+suppress the effect; on $b = 1$, run the real path. The novelty is located precisely: not in a new
+primitive (none is introduced), but in the control's target (the action plane, Proposition 1), the choice
+of protected secret (the authorization-and-effect bit), and the budget-triggered sticky absorption pairing
+in which the enforcement mechanism does not leak at the moment it fires (Section 5.3). The synthesis of
+transcript indistinguishability (from DP), access pattern hiding (from ORAM), and deniability-of-effect
+(from this framing) is real but secondary to the separation; a skeptical reviewer will not be satisfied by
+synthesis alone.
+
+*Note on terminology.* Prior versions of this document described absorptive execution as a "novel
+primitive." That framing overstates. A primitive in the cryptographic sense carries an independent
+hardness assumption or a new computational object. Absorptive execution is a new security mechanism and a
+new mode, and it is the locus of the separation, but its per-query guarantee reduces to channel shaping
+and its cumulative guarantee reduces to DP composition. The term "mechanism" is used throughout this
+revision.
 
 ---
 
@@ -599,7 +656,7 @@ At Levels 2 and 3, the claim depends on the executor's ability to match resource
 
 [3] C. Dwork, G. N. Rothblum, and S. Vadhan, "Boosting and Differential Privacy," in *Proceedings of the 51st Annual IEEE Symposium on Foundations of Computer Science (FOCS 2010)*, pp. 51–60, IEEE, 2010. https://doi.org/10.1109/FOCS.2010.12
 
-[4] R. Canetti, C. Dwork, M. Naor, and R. Ostrovsky, "Deniable Encryption," in *Advances in Cryptology — CRYPTO '97*, Lecture Notes in Computer Science, vol. 1294, pp. 90–104, Springer, 1997. https://doi.org/10.1007/BFb0052229
+[4] R. Canetti, C. Dwork, M. Naor, and R. Ostrovsky, "Deniable Encryption," in *Advances in Cryptology – CRYPTO '97*, Lecture Notes in Computer Science, vol. 1294, pp. 90–104, Springer, 1997. https://doi.org/10.1007/BFb0052229
 
 [5] O. Goldreich and R. Ostrovsky, "Software Protection and Simulation on Oblivious RAMs," *Journal of the ACM*, vol. 43, no. 3, pp. 431–473, 1996.
 

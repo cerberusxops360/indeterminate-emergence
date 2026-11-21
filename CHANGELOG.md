@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0] - 2026-11-21
+
+### Changed
+- Paper: Capability-Inference Game added as Definition 3; Section 12 rewritten with a separation
+  proposition (ORAM, constant-time execution, deniable encryption) and a reduction proposition
+  (Level 1 needs no new cryptographic primitive); "novel primitive" retired in favor of "mechanism"
+- Paper: Section 7.6 now reports the certified Level 1 results, the partial Level 2 observations
+  (syscall traces and timing autocorrelation, re-run 2026-11-21), and withdraws the five April 2026
+  results that came from the faulty harness, including the budget-depletion figure
+- docs/EMPIRICAL_FINDINGS.md: correction notice scoped to the experiments actually affected
+- Paper: abstract says "statistically indistinguishable", matching the formal definitions
+- Paper status line, LaTeX source, PDF, and blog post no longer state an IACR ePrint submission
+- README: proof of concept and Level 1 result described; status list brought up to date
+- Manifest content hashes updated for the changed files
+
 ## [0.2.0] - 2026-04-11
 
 ### Added

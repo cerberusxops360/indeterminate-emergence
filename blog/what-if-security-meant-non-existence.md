@@ -103,4 +103,4 @@ If you want the one-sentence version:
 
 ---
 
-*Adam Bishop is the founder of XOps360 LLC, a service-disabled veteran-owned small business specializing in federal IT modernization. The full paper is available on [IACR ePrint](link TBD) and the code at [github.com/cerberusxops360/indeterminate-emergence](https://github.com/cerberusxops360/indeterminate-emergence).*
+*Adam Bishop is the founder of XOps360 LLC, a service-disabled veteran-owned small business specializing in federal IT modernization. The full paper and the code are at [github.com/cerberusxops360/indeterminate-emergence](https://github.com/cerberusxops360/indeterminate-emergence).*
