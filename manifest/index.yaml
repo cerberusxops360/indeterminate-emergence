@@ -130,7 +130,7 @@ objects:
   - fingerprint: "fp-pocc-20260411-515d799b-515d"
     type: poc_component
     name: "Intent Interface (Proxy)"
-    content_hash: "sha256:515d799baeaf9d17d31cc6ab3f2025de080f800809205a7f31e67f8b9b66e282"
+    content_hash: "sha256:6297389e321260efd922539b4769746d68e8b8d0b50ec30d16e35c5a1d8d1e50"
     tier: T1
     status: active
     path: "poc/src/proxy.py"

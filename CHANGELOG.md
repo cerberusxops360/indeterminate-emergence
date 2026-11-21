@@ -15,6 +15,16 @@
 - README: proof of concept and Level 1 result described; status list brought up to date
 - Manifest content hashes updated for the changed files
 
+### Fixed
+- proxy: the timing shaper can no longer be switched off by sending the request body slowly (KI-002)
+- proxy: malformed bodies, non-string fields, wrong paths and wrong methods all receive the same shaped
+  response as any other request (KI-003)
+- proxy: OpenAPI schema and interactive docs are no longer served (KI-004)
+- Six regression tests added for the above
+
+### Known issues recorded
+- KI-001 reopened (its evidence came from the faulty harness); KI-005, KI-006, KI-007 opened
+
 ## [0.2.0] - 2026-04-11
 
 ### Added

@@ -168,3 +168,81 @@ class TestAbsorption:
         # Verify accountant is in absorption state
         assert "tiny_budget" in accountants
         assert accountants["tiny_budget"].absorbing is True
+
+
+class TestRedTeamFixes:
+    """Regression tests for the red team findings of 2026-11-21."""
+
+    @staticmethod
+    def _is_shaped(resp):
+        body = resp.json()
+        return (resp.status_code == 200 and len(resp.content) == 4096
+                and set(body) == {"status", "receipt", "payload", "padding"})
+
+    @pytest.mark.asyncio
+    async def test_malformed_inputs_get_the_shaped_response(self, setup_sessions):
+        bodies = [b"[1,2,3]", b"42", b'"with_search"', b"{bad json", b"",
+                  b'{"tool":"web_search","params":{},"session_id":{"id":"with_search"}}',
+                  b'{"tool":"web_search","params":{},"session_id":["with_search"]}',
+                  b'{"tool":["web_search"],"params":"x","session_id":"with_search"}',
+                  b'{"tool":null,"params":null,"session_id":null}']
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            for raw in bodies:
+                resp = await client.post("/action", content=raw, headers={"Content-Type": "application/json"})
+                assert self._is_shaped(resp), raw
+
+    @pytest.mark.asyncio
+    async def test_wrong_paths_and_methods_get_the_shaped_response(self, setup_sessions):
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            for method, path in [("GET", "/action"), ("PUT", "/action"), ("DELETE", "/action"), ("POST", "/action/"),
+                                 ("POST", "/actions"), ("GET", "/"), ("GET", "/openapi.json"), ("GET", "/docs"), ("GET", "/redoc")]:
+                resp = await client.request(method, path)
+                assert self._is_shaped(resp), (method, path)
+
+    @pytest.mark.asyncio
+    async def test_schema_is_not_served(self):
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            resp = await client.get("/openapi.json")
+            assert "openapi" not in resp.json() and "paths" not in resp.json()
+
+    @pytest.mark.asyncio
+    async def test_malformed_input_takes_as_long_as_a_normal_request(self, setup_sessions):
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            for kwargs in ({"content": b"[1,2,3]"}, {"content": b'{"session_id":{"x":1}}'}):
+                t0 = time.monotonic()
+                await client.post("/action", headers={"Content-Type": "application/json"}, **kwargs)
+                assert 0.24 <= time.monotonic() - t0 <= 0.6
+            t0 = time.monotonic()
+            await client.get("/nope")
+            assert 0.24 <= time.monotonic() - t0 <= 0.6
+
+    @pytest.mark.asyncio
+    async def test_slow_body_does_not_switch_off_the_timing_shaper(self, setup_sessions):
+        """Before the fix the clock started before the body was read: a body sent 0.5 s late came back
+        after 0.5 s plus raw executor time (at most about 0.65 s). The shaped floor is 0.25 s after the read."""
+        import asyncio
+        delay = 0.5
+
+        async def slow():
+            await asyncio.sleep(delay)
+            yield json.dumps({"tool": "web_search", "params": {}, "session_id": "with_search"}).encode()
+
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            for _ in range(5):
+                t0 = time.monotonic()
+                resp = await client.post("/action", content=slow(), headers={"Content-Type": "application/json"})
+                elapsed = time.monotonic() - t0
+                assert self._is_shaped(resp)
+                assert elapsed >= delay + 0.24, elapsed
+
+    @pytest.mark.asyncio
+    async def test_non_string_session_id_does_not_charge_any_budget(self, setup_sessions):
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            await client.post("/action", json={"tool": "web_search", "params": {}, "session_id": ["with_search"]})
+        assert accountants == {}
