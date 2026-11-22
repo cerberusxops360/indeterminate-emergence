@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.4.1] - 2026-11-22
+
+### Fixed
+- eval/results/syscall_trace_*.txt: the local account name in file paths is replaced with
+  /home/user. Syscall names, order, timestamps and durations are unchanged; the getcwd
+  return length still reflects the original path
+- eval/syscall_trace.py: saved traces are normalized the same way
+
+### Added
+- tests/test_repo_hygiene.py: fails if a tracked text file carries a local home-directory path
+
 ## [0.4.0] - 2026-11-21
 
 ### Added

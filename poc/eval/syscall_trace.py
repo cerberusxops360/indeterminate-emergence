@@ -37,6 +37,8 @@ _SCRIPT_UNAUTHORIZED = textwrap.dedent("""\
 """)
 
 # strace line format: HH:MM:SS.usec syscall(args) = retval <duration>
+_HOME_RE = re.compile(r"/home/[A-Za-z0-9_.-]+")
+
 _STRACE_RE = re.compile(
     r"^\d{2}:\d{2}:\d{2}\.\d+\s+"    # timestamp
     r"(\w+)\s*\("                       # syscall name
@@ -64,8 +66,12 @@ def _run_strace(script: str, label: str) -> list[str]:
         # Non-zero exit from the traced process itself is fine;
         # strace errors go to stdout.
         pass
-    lines = out_path.read_text().splitlines() if out_path.exists() else []
-    return lines
+    if not out_path.exists():
+        return []
+    # Raw traces are committed as evidence, so the local account name is stripped.
+    text = _HOME_RE.sub("/home/user", out_path.read_text())
+    out_path.write_text(text)
+    return text.splitlines()
 
 
 def _parse_strace(lines: list[str]) -> dict:
