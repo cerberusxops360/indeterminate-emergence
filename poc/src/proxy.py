@@ -1,6 +1,8 @@
+import hmac
 import json
 import logging
 import time
+from typing import Callable
 
 from fastapi import FastAPI, Request
 from fastapi.responses import Response
@@ -23,14 +25,40 @@ accountants: dict[str, PrivacyAccountant] = {}
 _ALL_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
 
 
-def _get_or_create_accountant(session: SessionConfig) -> PrivacyAccountant:
-    if session.session_id not in accountants:
-        accountants[session.session_id] = PrivacyAccountant(
+# Called out of band when a budget runs out: listener(session_id, caller) with caller "owner" or "anon".
+# This is how the session's owner learns that real work has stopped, or that someone is probing the
+# session, without anything changing on the observable channel.
+absorption_listeners: list[Callable[[str, str], None]] = []
+
+_ANON_SUFFIX = "\x00anon"
+
+
+def _get_or_create_accountant(session: SessionConfig, caller: str = "owner") -> PrivacyAccountant:
+    key = session.session_id if caller == "owner" else session.session_id + _ANON_SUFFIX
+    if key not in accountants:
+        accountants[key] = PrivacyAccountant(
             budget=session.budget,
             per_query_cost=session.per_query_epsilon,
             margin=session.absorption_margin,
         )
-    return accountants[session.session_id]
+    return accountants[key]
+
+
+def _classify_caller(session: SessionConfig, caller_token: str) -> str:
+    """"owner" or "anon". A session with no owner token keeps the original behaviour: every caller is the owner."""
+    if session.owner_token is None:
+        return "owner"
+    same = hmac.compare_digest(caller_token.encode("utf-8"), session.owner_token.encode("utf-8"))
+    return "owner" if same else "anon"
+
+
+def _notify_absorption(session_id: str, caller: str) -> None:
+    logger.warning("absorption started: session=%s caller=%s", session_id, caller)
+    for listener in list(absorption_listeners):
+        try:
+            listener(session_id, caller)
+        except Exception:
+            logger.exception("absorption listener failed")
 
 
 async def _read_body(request: Request) -> dict:
@@ -60,19 +88,30 @@ async def _respond(body: dict) -> Response:
         tool = ""
     if not isinstance(params, dict):
         params = {}
+    caller_token = body.get("caller_token", "")
+    if not isinstance(caller_token, str):
+        caller_token = ""
 
     session = session_store.get(session_id) if isinstance(session_id, str) else None
     policy = check_policy(session, tool)
 
+    # KI-005: the budget measures what one observer has learned, so it is charged to the observer.
+    # A caller who does not hold the owner token spends the anonymous budget, can never cause real
+    # work, and cannot touch the owner's budget. The observable response is the same either way.
+    caller = "owner"
     is_absorbing = False
     if session is not None:
-        accountant = _get_or_create_accountant(session)
+        caller = _classify_caller(session, caller_token)
+        accountant = _get_or_create_accountant(session, caller)
+        was_absorbing = accountant.absorbing
         is_absorbing = accountant.record_query()
+        if is_absorbing and not was_absorbing:
+            _notify_absorption(session.session_id, caller)
 
     await execute(
         tool_name=tool,
         params=params,
-        authorized=policy["authorized"],
+        authorized=policy["authorized"] and caller == "owner",
         absorbing=is_absorbing,
     )
 
@@ -84,8 +123,8 @@ async def _respond(body: dict) -> Response:
     content = json.dumps(shaped)
 
     logger.debug(
-        "action=%s session=%s authorized=%s absorbing=%s",
-        tool, session_id, policy["authorized"], is_absorbing,
+        "action=%s session=%s authorized=%s caller=%s absorbing=%s",
+        tool, session_id, policy["authorized"], caller, is_absorbing,
     )
 
     return Response(

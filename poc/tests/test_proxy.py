@@ -4,7 +4,8 @@ import time
 import pytest
 from httpx import ASGITransport, AsyncClient
 
-from src.proxy import app, session_store, accountants
+import src.proxy as proxy_module
+from src.proxy import app, session_store, accountants, absorption_listeners
 from src.config import SessionConfig
 
 
@@ -246,3 +247,83 @@ class TestRedTeamFixes:
         async with AsyncClient(transport=transport, base_url="http://test") as client:
             await client.post("/action", json={"tool": "web_search", "params": {}, "session_id": ["with_search"]})
         assert accountants == {}
+
+
+class TestOwnerToken:
+    """KI-005: the budget is charged to the observer, and only the owner can cause real work."""
+
+    @pytest.fixture
+    def owned(self, monkeypatch):
+        session_store.register(SessionConfig(session_id="owned", authorized_tools=["web_search"], budget=50.0,
+                                             per_query_epsilon=1.0, absorption_margin=5.0, owner_token="s3cret-owner-token"))
+        calls = []
+        real_execute = proxy_module.execute
+
+        async def spy(tool_name, params, authorized, absorbing):
+            calls.append((tool_name, authorized, absorbing))
+            return await real_execute(tool_name=tool_name, params=params, authorized=authorized, absorbing=absorbing)
+
+        monkeypatch.setattr(proxy_module, "execute", spy)
+        events = []
+        absorption_listeners.append(lambda sid, caller: events.append((sid, caller)))
+        yield calls, events
+        absorption_listeners.clear()
+
+    @staticmethod
+    async def _post(client, **body):
+        return await client.post("/action", json=body)
+
+    @pytest.mark.asyncio
+    async def test_anonymous_drain_cannot_switch_the_owner_off(self, owned):
+        calls, events = owned
+        import asyncio
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            await asyncio.gather(*[self._post(client, tool="not_a_real_tool", params={}, session_id="owned") for _ in range(30)])
+            await asyncio.gather(*[self._post(client, tool="web_search", params={}, session_id="owned", caller_token="wrong") for _ in range(30)])
+            assert "owned" not in accountants                               # the owner's budget was never touched
+            assert accountants["owned\x00anon"].absorbing                    # the prober's budget is spent
+            assert all(authorized is False for _, authorized, _ in calls)   # no anonymous call caused real work
+            assert events == [("owned", "anon")]                            # the owner was told, once
+            calls.clear()
+            resp = await self._post(client, tool="web_search", params={}, session_id="owned", caller_token="s3cret-owner-token")
+            assert calls == [("web_search", True, False)]                   # the owner still gets real work
+            assert accountants["owned"].query_count == 1 and resp.status_code == 200
+
+    @pytest.mark.asyncio
+    async def test_owner_anonymous_and_wrong_token_responses_look_the_same(self, owned):
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            a = await self._post(client, tool="web_search", params={}, session_id="owned", caller_token="s3cret-owner-token")
+            b = await self._post(client, tool="web_search", params={}, session_id="owned")
+            c = await self._post(client, tool="web_search", params={}, session_id="owned", caller_token="wrong")
+            d = await self._post(client, tool="web_search", params={}, session_id="owned", caller_token=["s3cret-owner-token"])
+            assert a.status_code == b.status_code == c.status_code == d.status_code == 200
+            assert a.content == b.content == c.content == d.content and len(a.content) == 4096
+            assert dict(a.headers) == dict(b.headers) == dict(c.headers) == dict(d.headers)
+
+    @pytest.mark.asyncio
+    async def test_owner_is_told_when_own_budget_runs_out(self, owned):
+        calls, events = owned
+        import asyncio
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            await asyncio.gather(*[self._post(client, tool="web_search", params={}, session_id="owned", caller_token="s3cret-owner-token") for _ in range(55)])
+        assert events == [("owned", "owner")]
+        assert calls[-1] == ("web_search", True, True)
+
+    @pytest.mark.asyncio
+    async def test_session_without_owner_token_behaves_as_before(self, monkeypatch):
+        session_store.register(SessionConfig(session_id="legacy", authorized_tools=["web_search"]))
+        calls = []
+
+        async def spy(tool_name, params, authorized, absorbing):
+            calls.append((authorized, absorbing))
+            return "{}"
+
+        monkeypatch.setattr(proxy_module, "execute", spy)
+        transport = ASGITransport(app=app)
+        async with AsyncClient(transport=transport, base_url="http://test") as client:
+            await self._post(client, tool="web_search", params={}, session_id="legacy")
+            await self._post(client, tool="web_search", params={}, session_id="legacy", caller_token="anything")
+        assert calls == [(True, False), (True, False)] and accountants["legacy"].query_count == 2

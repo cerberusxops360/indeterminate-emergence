@@ -36,6 +36,13 @@ timing, did no better than the noise floor on any of five tools. The certified
 planted 3 ms timing bias detected as a positive control. Method and data:
 `poc/results/gate-rebuild-2026-10-04.md`.
 
+**Stronger attackers and fuzzing (November 2026).** Six further adversaries, including sequence models
+over whole sessions and one that contrasts a session's target-tool timing with its own control-tool
+timing, flagged no leak on any tool, with a 3 ms positive control detected on every tool. A differential
+fuzz of 40 probe types across five session states found no difference in status, headers, body or timing.
+The fuzz did find proxy defects, since fixed; see `KNOWN_ISSUES.md`. Scripts: `poc/eval/adversary_battery.py`,
+`poc/eval/redteam_fuzz.py`.
+
 **What is not established.** Level 2 (process isolation) and Level 3 (shared
 hardware) are not covered. The PoC tools have no real side effect; a deployment
 with side-effecting tools needs a sealed or constant-time executor. Several

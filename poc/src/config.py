@@ -21,6 +21,9 @@ class SessionConfig:
     budget: float = DEFAULT_BUDGET
     per_query_epsilon: float = DEFAULT_PER_QUERY_EPSILON
     absorption_margin: float = DEFAULT_ABSORPTION_MARGIN
+    # Optional secret held by the session's owner. When set, only a caller presenting it can cause real
+    # work or spend the owner's budget; every other caller is absorbed on a separate budget (KI-005).
+    owner_token: Optional[str] = None
 
 
 class SessionStore:

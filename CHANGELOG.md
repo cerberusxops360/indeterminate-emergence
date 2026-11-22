@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.4.0] - 2026-11-21
+
+### Added
+- proxy: optional owner token per session (KI-005). The leakage budget is charged to the caller, only
+  the owner can cause real work, anonymous callers are absorbed on their own budget, and
+  `absorption_listeners` are called out of band when a budget runs out
+- eval/redteam_fuzz.py: differential fuzz over real HTTP (40 probe types, five session states per tool)
+- eval/adversary_battery.py: six stronger statistical adversaries with a Bonferroni rule and a 3 ms
+  positive control
+- results/redteam_fuzz.json, results/adversary_battery.json
+- eval/wire_capture_tls.py and eval/sequential_adversary.py, with results
+
+### Results
+- Adversary battery, five tools, 400 sessions per class: no leak flagged in 30 comparisons; the positive
+  control was detected on every tool
+- Differential fuzz: no difference between session states in status, headers or body; no latency
+  difference beyond chance
+- Wire capture under TLS (loopback): identical byte counts and segment sequences across authorized,
+  unauthorized and absorbing connections; KI-001 closed again on valid evidence
+- Sequential adversary over 48 probes: guesses at chance (47.9 percent), against 75.8 percent with a
+  planted 3 ms difference
+
 ## [0.3.0] - 2026-11-21
 
 ### Changed

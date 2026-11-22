@@ -1,0 +1,66 @@
+{
+ "connections_per_state": {
+  "authorized": 400,
+  "unauthorized": 400,
+  "absorbing": 400
+ },
+ "seconds": 51.9,
+ "total_bytes_distinct_values": {
+  "authorized": [
+   6157
+  ],
+  "unauthorized": [
+   6157
+  ],
+  "absorbing": [
+   6157
+  ]
+ },
+ "segments_median": {
+  "authorized": 5.0,
+  "unauthorized": 5.0,
+  "absorbing": 5.0
+ },
+ "span_ms_median": {
+  "authorized": 327.4,
+  "unauthorized": 326.79,
+  "absorbing": 325.6
+ },
+ "top_sequences": {
+  "authorized": [
+   [
+    "1337,510,168,4118,24",
+    400
+   ]
+  ],
+  "unauthorized": [
+   [
+    "1337,510,168,4118,24",
+    400
+   ]
+  ],
+  "absorbing": [
+   [
+    "1337,510,168,4118,24",
+    400
+   ]
+  ]
+ },
+ "tests": {
+  "unauthorized": {
+   "distinct_sequences": 1,
+   "same_sequence_set": true,
+   "chi2_p": 1.0,
+   "span_ks_p": 0.9068
+  },
+  "absorbing": {
+   "distinct_sequences": 1,
+   "same_sequence_set": true,
+   "chi2_p": 1.0,
+   "span_ks_p": 0.9416
+  }
+ },
+ "W1_total_bytes_identical": true,
+ "W2_sequences_do_not_differ": true,
+ "W3_span_does_not_differ": true
+}

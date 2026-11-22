@@ -7,7 +7,7 @@ objects:
   - fingerprint: "fp-rpap-20260313-572b0581-572b"
     type: research_paper
     name: "Indeterminate Emergence Paper v1"
-    content_hash: "sha256:9abfc149a4dfe1fba82f905a0d22a2e27f6545c5744b2fcc81c11a2727a8758b"
+    content_hash: "sha256:6713065ae888b4897713c9dcda3715613efece4a4f3b7f2c8f9bdb4a9be2e800"
     tier: T1
     status: draft
     path: "paper/indeterminate-emergence-v1.md"
@@ -55,7 +55,7 @@ objects:
   - fingerprint: "fp-docu-20260313-ecbac609-ecba"
     type: document
     name: "LaTeX Source"
-    content_hash: "sha256:2171881e83843ebdf5134dc7e41d57ec75c5718e61d959e29e0b39e8de3ae821"
+    content_hash: "sha256:906cb0c25aa7c193670a47256d0897462b4bb3ad025c92d263e2617bd9c9939c"
     tier: T1
     status: active
     path: "paper/indeterminate-emergence-v1.tex"
@@ -74,7 +74,7 @@ objects:
   - fingerprint: "fp-docu-20260313-1f2e72db-1f2e"
     type: document
     name: "Submission PDF"
-    content_hash: "sha256:ceef48446acf2cd6814060aa498af822716a5a7e0412e8c29a29abd96c7b3997"
+    content_hash: "sha256:15f7d295e5b27ca366fd23f87ade2489f4e6d0349a9492da9256edda24eab42a"
     tier: T1
     status: draft
     path: "paper/indeterminate-emergence-v1.pdf"
@@ -86,7 +86,7 @@ objects:
   - fingerprint: "fp-pocc-20260411-917d8794-917d"
     type: poc_component
     name: "Configuration & Policy"
-    content_hash: "sha256:917d87947652869a3c37e500f9225cce8092738a1daab9c199bbbf99b9c1ba09"
+    content_hash: "sha256:c953a593a64561c1641cd0f6677773acbaec03378b523f8ff598dc1c060f98fb"
     tier: T1
     status: active
     path: "poc/src/config.py"
@@ -130,7 +130,7 @@ objects:
   - fingerprint: "fp-pocc-20260411-515d799b-515d"
     type: poc_component
     name: "Intent Interface (Proxy)"
-    content_hash: "sha256:6297389e321260efd922539b4769746d68e8b8d0b50ec30d16e35c5a1d8d1e50"
+    content_hash: "sha256:1cf19ce7be7fcd5f7637110abc257f74be97cc6f51cd97c0eeb48b8452f40189"
     tier: T1
     status: active
     path: "poc/src/proxy.py"

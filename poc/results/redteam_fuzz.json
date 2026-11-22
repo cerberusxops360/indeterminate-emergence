@@ -1,0 +1,1282 @@
+{
+ "probes": {
+  "baseline": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 328.6,
+    "unauthorized": 317.6,
+    "other_tools_only": 336.7,
+    "absorbing": 319.1,
+    "no_such_session": 337.4
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.81541,
+    "other_tools_only": 0.36819,
+    "absorbing": 0.96841,
+    "no_such_session": 0.58301
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "params_realistic": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 332.9,
+    "unauthorized": 329.3,
+    "other_tools_only": 334.1,
+    "absorbing": 330.9,
+    "no_such_session": 325.5
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.70206,
+    "other_tools_only": 0.58301,
+    "absorbing": 0.70206,
+    "no_such_session": 0.90841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "tool_crash_params": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 317.9,
+    "unauthorized": 331.0,
+    "other_tools_only": 338.0,
+    "absorbing": 328.7,
+    "no_such_session": 327.8
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.36819,
+    "other_tools_only": 0.58301,
+    "absorbing": 0.28194,
+    "no_such_session": 0.70206
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "oversized_params_150k": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 331.9,
+    "unauthorized": 317.2,
+    "other_tools_only": 330.7,
+    "absorbing": 338.8,
+    "no_such_session": 327.6
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.46951,
+    "other_tools_only": 0.90841,
+    "absorbing": 0.46951,
+    "no_such_session": 0.90841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "deep_nested_params": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 324.9,
+    "unauthorized": 326.0,
+    "other_tools_only": 318.7,
+    "absorbing": 333.6,
+    "no_such_session": 331.4
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.90841,
+    "other_tools_only": 0.90841,
+    "absorbing": 0.58301,
+    "no_such_session": 0.96841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "params_string": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 332.2,
+    "unauthorized": 330.6,
+    "other_tools_only": 328.8,
+    "absorbing": 331.4,
+    "no_such_session": 336.6
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.28194,
+    "other_tools_only": 0.28194,
+    "absorbing": 0.21117,
+    "no_such_session": 0.96841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "params_array": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 324.4,
+    "unauthorized": 319.7,
+    "other_tools_only": 320.1,
+    "absorbing": 328.0,
+    "no_such_session": 333.4
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.36819,
+    "other_tools_only": 0.81541,
+    "absorbing": 0.90841,
+    "no_such_session": 0.36819
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "params_null": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 319.6,
+    "unauthorized": 335.3,
+    "other_tools_only": 315.9,
+    "absorbing": 323.2,
+    "no_such_session": 346.5
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.28194,
+    "other_tools_only": 0.81541,
+    "absorbing": 0.81541,
+    "no_such_session": 0.02406
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "missing_params": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 325.1,
+    "unauthorized": 337.2,
+    "other_tools_only": 333.7,
+    "absorbing": 317.1,
+    "no_such_session": 348.2
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.58301,
+    "other_tools_only": 0.70206,
+    "absorbing": 0.36819,
+    "no_such_session": 0.15484
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "tool_as_list": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 315.4,
+    "unauthorized": 336.7,
+    "other_tools_only": 347.8,
+    "absorbing": 328.7,
+    "no_such_session": 323.6
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.36819,
+    "other_tools_only": 0.03638,
+    "absorbing": 0.81541,
+    "no_such_session": 0.81541
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "tool_as_object": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 326.0,
+    "unauthorized": 324.1,
+    "other_tools_only": 330.7,
+    "absorbing": 324.4,
+    "no_such_session": 332.7
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.81541,
+    "other_tools_only": 0.90841,
+    "absorbing": 0.81541,
+    "no_such_session": 0.81541
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "tool_as_number": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 327.7,
+    "unauthorized": 319.3,
+    "other_tools_only": 331.2,
+    "absorbing": 326.8,
+    "no_such_session": 327.6
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.58301,
+    "other_tools_only": 0.70206,
+    "absorbing": 0.58301,
+    "no_such_session": 0.96841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "tool_null": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 335.6,
+    "unauthorized": 330.1,
+    "other_tools_only": 320.2,
+    "absorbing": 335.7,
+    "no_such_session": 323.5
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.96841,
+    "other_tools_only": 0.58301,
+    "absorbing": 0.99424,
+    "no_such_session": 0.36819
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "unknown_tool": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 334.2,
+    "unauthorized": 327.9,
+    "other_tools_only": 328.6,
+    "absorbing": 330.7,
+    "no_such_session": 338.1
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.81541,
+    "other_tools_only": 0.96841,
+    "absorbing": 0.58301,
+    "no_such_session": 0.81541
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "duplicate_tool_key": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 330.9,
+    "unauthorized": 331.3,
+    "other_tools_only": 329.5,
+    "absorbing": 318.1,
+    "no_such_session": 329.4
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.70206,
+    "other_tools_only": 0.70206,
+    "absorbing": 0.07822,
+    "no_such_session": 0.36819
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "duplicate_tool_key_rev": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 330.9,
+    "unauthorized": 326.1,
+    "other_tools_only": 325.2,
+    "absorbing": 327.8,
+    "no_such_session": 325.8
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.70206,
+    "other_tools_only": 0.70206,
+    "absorbing": 0.46951,
+    "no_such_session": 0.28194
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "tool_zero_width": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 323.6,
+    "unauthorized": 329.1,
+    "other_tools_only": 335.8,
+    "absorbing": 332.0,
+    "no_such_session": 338.0
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.81541,
+    "other_tools_only": 0.46951,
+    "absorbing": 0.81541,
+    "no_such_session": 0.70206
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "tool_upper": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 323.9,
+    "unauthorized": 331.4,
+    "other_tools_only": 332.2,
+    "absorbing": 326.1,
+    "no_such_session": 319.0
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.81541,
+    "other_tools_only": 0.81541,
+    "absorbing": 0.90841,
+    "no_such_session": 0.58301
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "tool_trailing_space": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 319.5,
+    "unauthorized": 320.4,
+    "other_tools_only": 325.8,
+    "absorbing": 322.0,
+    "no_such_session": 320.9
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.46951,
+    "other_tools_only": 0.90841,
+    "absorbing": 0.99969,
+    "no_such_session": 0.36819
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "session_as_object": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 339.2,
+    "unauthorized": 329.6,
+    "other_tools_only": 333.5,
+    "absorbing": 330.5,
+    "no_such_session": 317.3
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.70206,
+    "other_tools_only": 0.90841,
+    "absorbing": 0.58301,
+    "no_such_session": 0.1112
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "session_as_list": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 327.9,
+    "unauthorized": 334.8,
+    "other_tools_only": 338.6,
+    "absorbing": 327.5,
+    "no_such_session": 328.8
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.81541,
+    "other_tools_only": 0.70206,
+    "absorbing": 0.70206,
+    "no_such_session": 0.70206
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "session_null": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 324.2,
+    "unauthorized": 313.9,
+    "other_tools_only": 316.2,
+    "absorbing": 320.5,
+    "no_such_session": 318.5
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.46951,
+    "other_tools_only": 0.96841,
+    "absorbing": 0.70206,
+    "no_such_session": 0.58301
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "body_array": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 328.5,
+    "unauthorized": 323.7,
+    "other_tools_only": 318.3,
+    "absorbing": 335.0,
+    "no_such_session": 321.2
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.81541,
+    "other_tools_only": 0.46951,
+    "absorbing": 0.36819,
+    "no_such_session": 0.81541
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "body_scalar": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 326.1,
+    "unauthorized": 319.5,
+    "other_tools_only": 315.6,
+    "absorbing": 319.2,
+    "no_such_session": 325.2
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.36819,
+    "other_tools_only": 0.46951,
+    "absorbing": 0.90841,
+    "no_such_session": 0.96841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "body_string": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 327.6,
+    "unauthorized": 328.6,
+    "other_tools_only": 324.9,
+    "absorbing": 315.0,
+    "no_such_session": 328.0
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.99969,
+    "other_tools_only": 0.81541,
+    "absorbing": 0.36819,
+    "no_such_session": 0.90841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "malformed_json": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 323.3,
+    "unauthorized": 336.0,
+    "other_tools_only": 323.2,
+    "absorbing": 330.1,
+    "no_such_session": 333.3
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.58301,
+    "other_tools_only": 0.90841,
+    "absorbing": 0.46951,
+    "no_such_session": 0.36819
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "empty_body": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 329.5,
+    "unauthorized": 309.5,
+    "other_tools_only": 323.5,
+    "absorbing": 331.1,
+    "no_such_session": 324.8
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.0539,
+    "other_tools_only": 0.46951,
+    "absorbing": 0.96841,
+    "no_such_session": 0.58301
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "empty_object": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 316.5,
+    "unauthorized": 335.1,
+    "other_tools_only": 331.8,
+    "absorbing": 326.4,
+    "no_such_session": 317.5
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.07822,
+    "other_tools_only": 0.21117,
+    "absorbing": 0.58301,
+    "no_such_session": 0.46951
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "wrong_content_type": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 334.0,
+    "unauthorized": 317.8,
+    "other_tools_only": 314.7,
+    "absorbing": 317.1,
+    "no_such_session": 330.9
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.36819,
+    "other_tools_only": 0.21117,
+    "absorbing": 0.21117,
+    "no_such_session": 0.28194
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "no_content_type": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 317.0,
+    "unauthorized": 324.7,
+    "other_tools_only": 331.7,
+    "absorbing": 319.3,
+    "no_such_session": 329.6
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.81541,
+    "other_tools_only": 0.15484,
+    "absorbing": 0.81541,
+    "no_such_session": 0.36819
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "extra_headers": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 336.5,
+    "unauthorized": 323.5,
+    "other_tools_only": 325.5,
+    "absorbing": 327.3,
+    "no_such_session": 314.6
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.70206,
+    "other_tools_only": 0.58301,
+    "absorbing": 0.36819,
+    "no_such_session": 0.0539
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "query_string": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 334.2,
+    "unauthorized": 326.8,
+    "other_tools_only": 334.0,
+    "absorbing": 329.9,
+    "no_such_session": 317.2
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.21117,
+    "other_tools_only": 0.46951,
+    "absorbing": 0.70206,
+    "no_such_session": 0.0539
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "get_method": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 324.3,
+    "unauthorized": 326.8,
+    "other_tools_only": 335.7,
+    "absorbing": 325.5,
+    "no_such_session": 332.7
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.46951,
+    "other_tools_only": 0.36819,
+    "absorbing": 0.70206,
+    "no_such_session": 0.58301
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "put_method": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 325.6,
+    "unauthorized": 328.3,
+    "other_tools_only": 333.7,
+    "absorbing": 326.7,
+    "no_such_session": 337.4
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.58301,
+    "other_tools_only": 0.15484,
+    "absorbing": 0.70206,
+    "no_such_session": 0.36819
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "trailing_slash": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 323.1,
+    "unauthorized": 330.4,
+    "other_tools_only": 333.5,
+    "absorbing": 334.7,
+    "no_such_session": 324.8
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.96841,
+    "other_tools_only": 0.90841,
+    "absorbing": 0.46951,
+    "no_such_session": 0.96841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "wrong_path": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 327.6,
+    "unauthorized": 318.7,
+    "other_tools_only": 327.0,
+    "absorbing": 327.0,
+    "no_such_session": 315.9
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.36819,
+    "other_tools_only": 0.90841,
+    "absorbing": 0.90841,
+    "no_such_session": 0.36819
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "docs_path": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 321.5,
+    "unauthorized": 336.9,
+    "other_tools_only": 328.3,
+    "absorbing": 322.1,
+    "no_such_session": 328.4
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.28194,
+    "other_tools_only": 0.81541,
+    "absorbing": 0.46951,
+    "no_such_session": 0.90841
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "pipeline2": {
+   "responses": {
+    "authorized": 200,
+    "unauthorized": 200,
+    "other_tools_only": 200,
+    "absorbing": 200,
+    "no_such_session": 200
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100,
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 661.9,
+    "unauthorized": 642.3,
+    "other_tools_only": 648.5,
+    "absorbing": 650.4,
+    "no_such_session": 651.4
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.06802,
+    "other_tools_only": 0.17793,
+    "absorbing": 0.54527,
+    "no_such_session": 0.54527
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "burst20": {
+   "responses": {
+    "authorized": 200,
+    "unauthorized": 200,
+    "other_tools_only": 200,
+    "absorbing": 200,
+    "no_such_session": 200
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 200
+   },
+   "median_ms": {
+    "authorized": 335.0,
+    "unauthorized": 326.8,
+    "other_tools_only": 328.9,
+    "absorbing": 330.1,
+    "no_such_session": 343.7
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.06802,
+    "other_tools_only": 0.27047,
+    "absorbing": 0.27047,
+    "no_such_session": 0.11228
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  },
+  "slow_body": {
+   "responses": {
+    "authorized": 100,
+    "unauthorized": 100,
+    "other_tools_only": 100,
+    "absorbing": 100,
+    "no_such_session": 100
+   },
+   "authorized_signatures": {
+    "[\"200 OK\", [[\"connection\", \"close\"], [\"content-length\", \"4096\"], [\"content-type\", \"application/json\"], [\"server\", \"uvicorn\"]], 4096, \"01b9706eaf39\"]": 100
+   },
+   "median_ms": {
+    "authorized": 1325.5,
+    "unauthorized": 1321.0,
+    "other_tools_only": 1322.9,
+    "absorbing": 1327.6,
+    "no_such_session": 1329.0
+   },
+   "ks_p_vs_authorized": {
+    "unauthorized": 0.46951,
+    "other_tools_only": 0.36819,
+    "absorbing": 0.70206,
+    "no_such_session": 0.21117
+   },
+   "signature_sets_equal": {
+    "unauthorized": true,
+    "other_tools_only": true,
+    "absorbing": true,
+    "no_such_session": true
+   }
+  }
+ },
+ "seconds": 343.4,
+ "tests": 160,
+ "bonferroni_alpha": 0.0003125,
+ "flagged_signature_differences": [],
+ "flagged_timing_differences": [],
+ "smallest_ks_p": [
+  0.02406,
+  0.03638,
+  0.0539,
+  0.0539,
+  0.0539
+ ],
+ "share_p_below_0.05": 0.013,
+ "interference": {
+  "web_search": {
+   "flood_authorized_phase_medians_ms": [
+    327.6,
+    334.5,
+    310.0,
+    330.4
+   ],
+   "flood_unauthorized_phase_medians_ms": [
+    344.3,
+    294.1,
+    318.6,
+    324.4
+   ],
+   "mann_whitney_p": 0.6857
+  }
+ },
+ "budget_drain": {
+  "accountant_existed_before": false,
+  "queries": 60,
+  "spent": 60.0,
+  "threshold": 49.83,
+  "absorbing_after_60_unknown_tool_calls": true
+ }
+}
